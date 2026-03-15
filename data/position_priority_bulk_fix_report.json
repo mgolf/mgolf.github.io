@@ -1,0 +1,1674 @@
+{
+  "generated_at_unix": 1773592492,
+  "total_records": 2764,
+  "changed_count": 16,
+  "skipped_count": 1503,
+  "changed_examples": [
+    {
+      "index": 291,
+      "distance_km": 0.464,
+      "atlas_name": "An der Promenade",
+      "atlas_postcode": "24960",
+      "atlas_place": "Glücksburg-Holnis",
+      "atlas_address_raw": "An der Promenade",
+      "old": {
+        "latitude": 54.8637082,
+        "longitude": 9.5960952,
+        "osm_id": "1091175350",
+        "osm_type": "way",
+        "osm_class": null,
+        "geocode_source": "nominatim",
+        "geocode_display_name": "An der Promenade, Drei, Schausende, Glücksburg, Kreis Schleswig-Flensburg, Schleswig-Holstein, 24960, Deutschland"
+      },
+      "new": {
+        "latitude": 54.8601726,
+        "longitude": 9.5922545,
+        "osm_id": "141629647",
+        "osm_type": "way",
+        "osm_class": "miniature_golf",
+        "geocode_source": "atlas_position_corrected_from_osm"
+      },
+      "matched_osm_name": "Adventure Fjordgolf",
+      "matched_osm_postcode": "24960",
+      "matched_osm_place": "Glücksburg",
+      "matched_osm_source_url": "https://www.openstreetmap.org/way/141629647"
+    },
+    {
+      "index": 314,
+      "distance_km": 0.395,
+      "atlas_name": "Norddorf auf Amrum",
+      "atlas_postcode": "25946",
+      "atlas_place": "Norddorf",
+      "atlas_address_raw": "",
+      "old": {
+        "latitude": 54.6795702,
+        "longitude": 8.3340657,
+        "osm_id": "1428592",
+        "osm_type": "relation",
+        "osm_class": null,
+        "geocode_source": "nominatim",
+        "geocode_display_name": "Norddorf auf Amrum, Föhr-Amrum, Kreis Nordfriesland, Schleswig-Holstein, Deutschland"
+      },
+      "new": {
+        "latitude": 54.6767304,
+        "longitude": 8.3303822,
+        "osm_id": "104130071",
+        "osm_type": "way",
+        "osm_class": "miniature_golf",
+        "geocode_source": "atlas_position_corrected_from_osm"
+      },
+      "matched_osm_name": "Minigolf Amrum",
+      "matched_osm_postcode": "25946",
+      "matched_osm_place": "Norddorf auf Amrum",
+      "matched_osm_source_url": "https://www.openstreetmap.org/way/104130071"
+    },
+    {
+      "index": 345,
+      "distance_km": 0.8,
+      "atlas_name": "Hindenburgstraße",
+      "atlas_postcode": "26757",
+      "atlas_place": "Borkum",
+      "atlas_address_raw": "Hindenburgstr",
+      "old": {
+        "latitude": 53.5918909,
+        "longitude": 6.6643874,
+        "osm_id": "4913379",
+        "osm_type": "way",
+        "osm_class": "miniature_golf",
+        "geocode_source": "nominatim",
+        "geocode_display_name": "Hindenburgstraße, Borkum, Landkreis Leer, Niedersachsen, 26757, Deutschland"
+      },
+      "new": {
+        "latitude": 53.5938644,
+        "longitude": 6.6760396,
+        "osm_id": "2412783598",
+        "osm_type": "node",
+        "osm_class": "miniature_golf",
+        "geocode_source": "atlas_position_corrected_from_osm"
+      },
+      "matched_osm_name": "Pit Pat Hindernis Billard",
+      "matched_osm_postcode": "26757",
+      "matched_osm_place": "Borkum",
+      "matched_osm_source_url": "https://www.openstreetmap.org/node/2412783598"
+    },
+    {
+      "index": 349,
+      "distance_km": 0.355,
+      "atlas_name": "Waldstraße",
+      "atlas_postcode": "26903",
+      "atlas_place": "Surwold",
+      "atlas_address_raw": "Waldstr.",
+      "old": {
+        "latitude": 52.9684838,
+        "longitude": 7.5190467,
+        "osm_id": "199890448",
+        "osm_type": "way",
+        "osm_class": null,
+        "geocode_source": "nominatim",
+        "geocode_display_name": "Waldstraße, Börgerwald, Surwold, Samtgemeinde Nordhümmling, Landkreis Emsland, Niedersachsen, 26903, Deutschland"
+      },
+      "new": {
+        "latitude": 52.9674692,
+        "longitude": 7.5140187,
+        "osm_id": "41119365",
+        "osm_type": "way",
+        "osm_class": "miniature_golf",
+        "geocode_source": "atlas_position_corrected_from_osm"
+      },
+      "matched_osm_name": "Minigolf Surwolds Wald",
+      "matched_osm_postcode": "26903",
+      "matched_osm_place": "Surwold",
+      "matched_osm_source_url": "https://www.openstreetmap.org/way/41119365"
+    },
+    {
+      "index": 473,
+      "distance_km": 0.511,
+      "atlas_name": "Kollostraße",
+      "atlas_postcode": "33647",
+      "atlas_place": "Bielefeld",
+      "atlas_address_raw": "Kollostr.",
+      "old": {
+        "latitude": 51.9893079,
+        "longitude": 8.5133239,
+        "osm_id": "22323438",
+        "osm_type": "way",
+        "osm_class": null,
+        "geocode_source": "nominatim",
+        "geocode_display_name": "Kollostraße, Brackwede, Bielefeld, Nordrhein-Westfalen, 33647, Deutschland"
+      },
+      "new": {
+        "latitude": 51.9924764,
+        "longitude": 8.5187351,
+        "osm_id": "61282496",
+        "osm_type": "way",
+        "osm_class": "miniature_golf",
+        "geocode_source": "atlas_position_corrected_from_osm"
+      },
+      "matched_osm_name": "Minigolfanlage Brackwede",
+      "matched_osm_postcode": "33647",
+      "matched_osm_place": "Bielefeld",
+      "matched_osm_source_url": "https://www.openstreetmap.org/way/61282496"
+    },
+    {
+      "index": 477,
+      "distance_km": 0.063,
+      "atlas_name": "Baunsbergstraße 32",
+      "atlas_postcode": "34131",
+      "atlas_place": "Kassel",
+      "atlas_address_raw": "Baunsberg Straße 32",
+      "old": {
+        "latitude": 51.3088486,
+        "longitude": 9.4281881,
+        "osm_id": "204882785",
+        "osm_type": "way",
+        "osm_class": null,
+        "geocode_source": "google_geocoding_validated",
+        "geocode_display_name": "Baunsbergstraße 32, 34131 Kassel, Deutschland"
+      },
+      "new": {
+        "latitude": 51.30941,
+        "longitude": 9.4283294,
+        "osm_id": "193799917",
+        "osm_type": "way",
+        "osm_class": "miniature_golf",
+        "geocode_source": "atlas_position_corrected_from_osm"
+      },
+      "matched_osm_name": "Minigolf Oase",
+      "matched_osm_postcode": "",
+      "matched_osm_place": "",
+      "matched_osm_source_url": "https://www.openstreetmap.org/way/193799917"
+    },
+    {
+      "index": 521,
+      "distance_km": 0.352,
+      "atlas_name": "Europastraße",
+      "atlas_postcode": "35614",
+      "atlas_place": "Asslar",
+      "atlas_address_raw": "Europastraße",
+      "old": {
+        "latitude": 50.5865806,
+        "longitude": 8.4814961,
+        "osm_id": "13483446",
+        "osm_type": "way",
+        "osm_class": null,
+        "geocode_source": "nominatim",
+        "geocode_display_name": "Europastraße, Gewerbegebiet OST, Aßlar, Lahn-Dill-Kreis, Hessen, 35614, Deutschland"
+      },
+      "new": {
+        "latitude": 50.5880169,
+        "longitude": 8.4770533,
+        "osm_id": "14314068",
+        "osm_type": "way",
+        "osm_class": "miniature_golf",
+        "geocode_source": "atlas_position_corrected_from_osm"
+      },
+      "matched_osm_name": "Bahnen-Golf-Sportverein Aßlar 1987 e.V.",
+      "matched_osm_postcode": "35614",
+      "matched_osm_place": "Aßlar",
+      "matched_osm_source_url": "https://www.openstreetmap.org/way/14314068"
+    },
+    {
+      "index": 575,
+      "distance_km": 0.103,
+      "atlas_name": "Lindenstraße 8",
+      "atlas_postcode": "37603",
+      "atlas_place": "Holzminden",
+      "atlas_address_raw": "Lindenstr. 8",
+      "old": {
+        "latitude": 51.75153400000001,
+        "longitude": 9.5233705,
+        "osm_id": "603602861",
+        "osm_type": "node",
+        "osm_class": null,
+        "geocode_source": "google_geocoding_validated",
+        "geocode_display_name": "Lindenstraße 8, 37603 Holzminden, Deutschland"
+      },
+      "new": {
+        "latitude": 51.752325,
+        "longitude": 9.5241502,
+        "osm_id": "1217820066",
+        "osm_type": "way",
+        "osm_class": "miniature_golf",
+        "geocode_source": "atlas_position_corrected_from_osm"
+      },
+      "matched_osm_name": "Bahnengolfanlage Neuhaus",
+      "matched_osm_postcode": "",
+      "matched_osm_place": "",
+      "matched_osm_source_url": "https://www.openstreetmap.org/way/1217820066"
+    },
+    {
+      "index": 627,
+      "distance_km": 0.549,
+      "atlas_name": "Jahnstraße",
+      "atlas_postcode": "40764",
+      "atlas_place": "Langenfeld",
+      "atlas_address_raw": "Jahnstraße 11",
+      "old": {
+        "latitude": 51.1214149,
+        "longitude": 6.9473984,
+        "osm_id": "364955626",
+        "osm_type": "way",
+        "osm_class": null,
+        "geocode_source": "nominatim",
+        "geocode_display_name": "Jahnstraße, Richrath, Langenfeld (Rheinland), Kreis Mettmann, Nordrhein-Westfalen, 40764, Deutschland"
+      },
+      "new": {
+        "latitude": 51.1165458,
+        "longitude": 6.9486808,
+        "osm_id": "147964184",
+        "osm_type": "way",
+        "osm_class": "miniature_golf",
+        "geocode_source": "atlas_position_corrected_from_osm"
+      },
+      "matched_osm_name": "Jahngolf",
+      "matched_osm_postcode": "40764",
+      "matched_osm_place": "Langenfeld",
+      "matched_osm_source_url": "https://www.openstreetmap.org/way/147964184"
+    },
+    {
+      "index": 709,
+      "distance_km": 0.693,
+      "atlas_name": "Florastraße",
+      "atlas_postcode": "45888",
+      "atlas_place": "Gelsenkirchen",
+      "atlas_address_raw": "Florastraße 175",
+      "old": {
+        "latitude": 51.5187862,
+        "longitude": 7.1269114,
+        "osm_id": "639464295",
+        "osm_type": "way",
+        "osm_class": null,
+        "geocode_source": "nominatim",
+        "geocode_display_name": "Florastraße, Bulmke-Hüllen, Gelsenkirchen-Mitte, Gelsenkirchen, Nordrhein-Westfalen, 45888, Deutschland"
+      },
+      "new": {
+        "latitude": 51.5180724,
+        "longitude": 7.116966,
+        "osm_id": "506026225",
+        "osm_type": "way",
+        "osm_class": "miniature_golf",
+        "geocode_source": "atlas_position_corrected_from_osm"
+      },
+      "matched_osm_name": "Minigolf Bulmker Park",
+      "matched_osm_postcode": "45888",
+      "matched_osm_place": "Gelsenkirchen",
+      "matched_osm_source_url": "https://www.openstreetmap.org/way/506026225"
+    },
+    {
+      "index": 861,
+      "distance_km": 0.525,
+      "atlas_name": "Sülztalstraße",
+      "atlas_postcode": "53797",
+      "atlas_place": "Lohmar",
+      "atlas_address_raw": "Sülztalstraße (Meigermühle) 1",
+      "old": {
+        "latitude": 50.8664901,
+        "longitude": 7.206647,
+        "osm_id": "640384333",
+        "osm_type": "way",
+        "osm_class": null,
+        "geocode_source": "nominatim",
+        "geocode_display_name": "Sülztalstraße, Scheiderhöhe, Meigermühle, Scheiderhöhe, Lohmar, Rhein-Sieg-Kreis, Nordrhein-Westfalen, 53797, Deutschland"
+      },
+      "new": {
+        "latitude": 50.8634513,
+        "longitude": 7.2123678,
+        "osm_id": "130454623",
+        "osm_type": "way",
+        "osm_class": "miniature_golf",
+        "geocode_source": "atlas_position_corrected_from_osm"
+      },
+      "matched_osm_name": "Minigolf Bergzeit Lohmar",
+      "matched_osm_postcode": "53797",
+      "matched_osm_place": "Lohmar",
+      "matched_osm_source_url": "https://www.openstreetmap.org/way/130454623"
+    },
+    {
+      "index": 866,
+      "distance_km": 0.125,
+      "atlas_name": "Talsperrenstraße",
+      "atlas_postcode": "53881",
+      "atlas_place": "Euskirchen",
+      "atlas_address_raw": "Talsperrenstraße",
+      "old": {
+        "latitude": 50.5861827,
+        "longitude": 6.8306296,
+        "osm_id": "948459060",
+        "osm_type": "way",
+        "osm_class": null,
+        "geocode_source": "google_geocoding_validated",
+        "geocode_display_name": "Talsperrenstraße, 53881 Euskirchen, Deutschland"
+      },
+      "new": {
+        "latitude": 50.5851536,
+        "longitude": 6.8299306,
+        "osm_id": "122274928",
+        "osm_type": "way",
+        "osm_class": "miniature_golf",
+        "geocode_source": "atlas_position_corrected_from_osm"
+      },
+      "matched_osm_name": "Minigolf Steinbachtalsperre",
+      "matched_osm_postcode": "",
+      "matched_osm_place": "",
+      "matched_osm_source_url": "https://www.openstreetmap.org/way/122274928"
+    },
+    {
+      "index": 1061,
+      "distance_km": 0.416,
+      "atlas_name": "Am Stadtwald",
+      "atlas_postcode": "63906",
+      "atlas_place": "Erlenbach",
+      "atlas_address_raw": "Am Stadtwald",
+      "old": {
+        "latitude": 49.806026,
+        "longitude": 9.1706224,
+        "osm_id": "254622698",
+        "osm_type": "way",
+        "osm_class": null,
+        "geocode_source": "nominatim",
+        "geocode_display_name": "Am Stadtwald, Erlenbach, Erlenbach am Main, Landkreis Miltenberg, Bayern, 63906, Deutschland"
+      },
+      "new": {
+        "latitude": 49.809461,
+        "longitude": 9.1683271,
+        "osm_id": "581260238",
+        "osm_type": "way",
+        "osm_class": "miniature_golf",
+        "geocode_source": "atlas_position_corrected_from_osm"
+      },
+      "matched_osm_name": "Minigolfplatz Erlenbach",
+      "matched_osm_postcode": "63906",
+      "matched_osm_place": "Erlenbach am Main",
+      "matched_osm_source_url": "https://www.openstreetmap.org/way/581260238"
+    },
+    {
+      "index": 1310,
+      "distance_km": 0.432,
+      "atlas_name": "Ostendstraße 9",
+      "atlas_postcode": "75223",
+      "atlas_place": "Niefern-Öschelbronn",
+      "atlas_address_raw": "Ostendstr. 9",
+      "old": {
+        "latitude": 48.9190712,
+        "longitude": 8.7874746,
+        "osm_id": "8266371996",
+        "osm_type": "node",
+        "osm_class": null,
+        "geocode_source": "nominatim",
+        "geocode_display_name": "9, Ostendstraße, Niefern, Niefern-Öschelbronn, Enzkreis, Baden-Württemberg, 75223, Deutschland"
+      },
+      "new": {
+        "latitude": 48.9202613,
+        "longitude": 8.7930975,
+        "osm_id": "203310138",
+        "osm_type": "way",
+        "osm_class": "miniature_golf",
+        "geocode_source": "atlas_position_corrected_from_osm"
+      },
+      "matched_osm_name": "Minigolf Weller",
+      "matched_osm_postcode": "75223",
+      "matched_osm_place": "Niefern-Öschelbronn",
+      "matched_osm_source_url": "https://www.openstreetmap.org/way/203310138"
+    },
+    {
+      "index": 1419,
+      "distance_km": 0.463,
+      "atlas_name": "Schwimmbadstraße",
+      "atlas_postcode": "79268",
+      "atlas_place": "Bötzingen",
+      "atlas_address_raw": "Schwimmbadstr.",
+      "old": {
+        "latitude": 48.066643,
+        "longitude": 7.7120964,
+        "osm_id": "917953998",
+        "osm_type": "way",
+        "osm_class": null,
+        "geocode_source": "nominatim",
+        "geocode_display_name": "Schwimmbadstraße, Bötzingen, GVV Kaiserstuhl-Tuniberg, Landkreis Breisgau-Hochschwarzwald, Baden-Württemberg, 79268, Deutschland"
+      },
+      "new": {
+        "latitude": 48.0628997,
+        "longitude": 7.7148147,
+        "osm_id": "1412589973",
+        "osm_type": "way",
+        "osm_class": "miniature_golf",
+        "geocode_source": "atlas_position_corrected_from_osm"
+      },
+      "matched_osm_name": "Minigolf",
+      "matched_osm_postcode": "79268",
+      "matched_osm_place": "Bötzingen",
+      "matched_osm_source_url": "https://www.openstreetmap.org/way/1412589973"
+    },
+    {
+      "index": 1729,
+      "distance_km": 0.756,
+      "atlas_name": "Irlaching",
+      "atlas_postcode": "92421",
+      "atlas_place": "Schwandorf",
+      "atlas_address_raw": "Irlaching 39",
+      "old": {
+        "latitude": 49.3618055,
+        "longitude": 12.1026828,
+        "osm_id": "11125290672",
+        "osm_type": "node",
+        "osm_class": null,
+        "geocode_source": "nominatim",
+        "geocode_display_name": "Irlaching, Schwandorf, Landkreis Schwandorf, Bayern, 92421, Deutschland"
+      },
+      "new": {
+        "latitude": 49.359148,
+        "longitude": 12.0930817,
+        "osm_id": "228050660",
+        "osm_type": "way",
+        "osm_class": "miniature_golf",
+        "geocode_source": "atlas_position_corrected_from_osm"
+      },
+      "matched_osm_name": "Minigolfanlage Schwandorf",
+      "matched_osm_postcode": "92421",
+      "matched_osm_place": "Schwandorf",
+      "matched_osm_source_url": "https://www.openstreetmap.org/way/228050660"
+    }
+  ],
+  "skipped_examples": [
+    {
+      "index": 0,
+      "reason": "too_far",
+      "distance_km": 7.173,
+      "name": "Wachstube"
+    },
+    {
+      "index": 1,
+      "reason": "too_far",
+      "distance_km": 4.522,
+      "name": "Emilienstraße 20"
+    },
+    {
+      "index": 2,
+      "reason": "too_far",
+      "distance_km": 15.154,
+      "name": "Moselbruchweg 11"
+    },
+    {
+      "index": 3,
+      "reason": "too_far",
+      "distance_km": 11.621,
+      "name": "Freizeithof Nieschütz"
+    },
+    {
+      "index": 4,
+      "reason": "postcode_mismatch_and_not_very_close",
+      "distance_km": 0.491,
+      "name": "Gießener Straße"
+    },
+    {
+      "index": 5,
+      "reason": "too_far",
+      "distance_km": 16.951,
+      "name": "Talsperre Malter"
+    },
+    {
+      "index": 6,
+      "reason": "too_far",
+      "distance_km": 8.348,
+      "name": "Ahorn Waldhotel Altenberg"
+    },
+    {
+      "index": 7,
+      "reason": "too_far",
+      "distance_km": 3.319,
+      "name": "Hotel \"Neue Schänke\""
+    },
+    {
+      "index": 8,
+      "reason": "too_far",
+      "distance_km": 14.635,
+      "name": "Forellenschänke"
+    },
+    {
+      "index": 9,
+      "reason": "too_far",
+      "distance_km": 18.68,
+      "name": "Bahnhofstraße 1"
+    },
+    {
+      "index": 11,
+      "reason": "too_far",
+      "distance_km": 2.327,
+      "name": "Nordstraße"
+    },
+    {
+      "index": 12,
+      "reason": "postcode_mismatch_and_not_very_close",
+      "distance_km": 0.584,
+      "name": "Straße zur Südsee"
+    },
+    {
+      "index": 14,
+      "reason": "too_far",
+      "distance_km": 11.802,
+      "name": "Bahnengolfanlage"
+    },
+    {
+      "index": 16,
+      "reason": "too_far",
+      "distance_km": 12.489,
+      "name": "Lärchenbergweg 2"
+    },
+    {
+      "index": 17,
+      "reason": "too_far",
+      "distance_km": 8.244,
+      "name": "Schrammstraße 63"
+    },
+    {
+      "index": 18,
+      "reason": "too_far",
+      "distance_km": 3.353,
+      "name": "Jonsdorfer Straße"
+    },
+    {
+      "index": 19,
+      "reason": "too_far",
+      "distance_km": 15.22,
+      "name": "Am Kulturhaus 6"
+    },
+    {
+      "index": 20,
+      "reason": "too_far",
+      "distance_km": 23.495,
+      "name": "Seeweg 2 C"
+    },
+    {
+      "index": 23,
+      "reason": "too_far",
+      "distance_km": 17.119,
+      "name": "Ristorante Il Fienile"
+    },
+    {
+      "index": 24,
+      "reason": "too_far",
+      "distance_km": 13.717,
+      "name": "Zum Erlebnispark 1"
+    },
+    {
+      "index": 25,
+      "reason": "too_far",
+      "distance_km": 9.356,
+      "name": "Poststraße 10"
+    },
+    {
+      "index": 26,
+      "reason": "too_far",
+      "distance_km": 6.432,
+      "name": "STARCAR"
+    },
+    {
+      "index": 27,
+      "reason": "too_far",
+      "distance_km": 7.241,
+      "name": "AOK Sportplatz"
+    },
+    {
+      "index": 29,
+      "reason": "too_far",
+      "distance_km": 4.922,
+      "name": "Connewitzer Str. 21"
+    },
+    {
+      "index": 30,
+      "reason": "too_far",
+      "distance_km": 4.304,
+      "name": "Lene-Voigt-Straße 2"
+    },
+    {
+      "index": 31,
+      "reason": "too_far",
+      "distance_km": 11.537,
+      "name": "Ernst-Grube-Straße"
+    },
+    {
+      "index": 32,
+      "reason": "too_far",
+      "distance_km": 6.922,
+      "name": "Freibad Vollmershain"
+    },
+    {
+      "index": 33,
+      "reason": "too_far",
+      "distance_km": 0.987,
+      "name": "Linda 33"
+    },
+    {
+      "index": 34,
+      "reason": "too_far",
+      "distance_km": 20.265,
+      "name": "Nimbschener Landstraße 1"
+    },
+    {
+      "index": 35,
+      "reason": "too_far",
+      "distance_km": 20.873,
+      "name": "Zur Schiffsmühle 2"
+    },
+    {
+      "index": 36,
+      "reason": "too_far",
+      "distance_km": 21.34,
+      "name": "Dorfstraße 17"
+    },
+    {
+      "index": 37,
+      "reason": "too_far",
+      "distance_km": 19.924,
+      "name": "Fichtestraße 10"
+    },
+    {
+      "index": 39,
+      "reason": "too_far",
+      "distance_km": 13.181,
+      "name": "Eis Cafe Bar Bönisch"
+    },
+    {
+      "index": 41,
+      "reason": "too_far",
+      "distance_km": 1.054,
+      "name": "Böllberger Weg 185"
+    },
+    {
+      "index": 42,
+      "reason": "too_far",
+      "distance_km": 2.657,
+      "name": "Bergstraße"
+    },
+    {
+      "index": 43,
+      "reason": "too_far",
+      "distance_km": 11.02,
+      "name": "Pizzeria \"Fantasia Romana\""
+    },
+    {
+      "index": 44,
+      "reason": "too_far",
+      "distance_km": 1.374,
+      "name": "Hauptstraße"
+    },
+    {
+      "index": 45,
+      "reason": "too_far",
+      "distance_km": 15.075,
+      "name": "Arnstedter Str. 2"
+    },
+    {
+      "index": 47,
+      "reason": "too_far",
+      "distance_km": 28.329,
+      "name": "Brumbyer Str. 5"
+    },
+    {
+      "index": 49,
+      "reason": "too_far",
+      "distance_km": 3.515,
+      "name": "Mühlweg 159A"
+    },
+    {
+      "index": 50,
+      "reason": "too_far",
+      "distance_km": 6.317,
+      "name": "Talstation Kabinenbahn Hexentanzplatz"
+    },
+    {
+      "index": 51,
+      "reason": "too_far",
+      "distance_km": 11.059,
+      "name": "Teichstraße 28"
+    },
+    {
+      "index": 52,
+      "reason": "too_far",
+      "distance_km": 5.984,
+      "name": "Hexentanzpl. 4"
+    },
+    {
+      "index": 53,
+      "reason": "too_far",
+      "distance_km": 9.264,
+      "name": "Am Festpl. 9"
+    },
+    {
+      "index": 54,
+      "reason": "too_far",
+      "distance_km": 14.901,
+      "name": "Am Quellgrund 14"
+    },
+    {
+      "index": 55,
+      "reason": "too_far",
+      "distance_km": 21.847,
+      "name": "Str. d. Einheit 29"
+    },
+    {
+      "index": 56,
+      "reason": "too_far",
+      "distance_km": 19.346,
+      "name": "Rodler-Treff"
+    },
+    {
+      "index": 57,
+      "reason": "postcode_mismatch_and_not_very_close",
+      "distance_km": 0.493,
+      "name": "Güldene Hufe 10"
+    },
+    {
+      "index": 58,
+      "reason": "too_far",
+      "distance_km": 18.605,
+      "name": "Kreuzbergstraße 179"
+    },
+    {
+      "index": 59,
+      "reason": "too_far",
+      "distance_km": 9.845,
+      "name": "Wiesenstraße"
+    },
+    {
+      "index": 61,
+      "reason": "too_far",
+      "distance_km": 11.709,
+      "name": "Am Brink 3"
+    },
+    {
+      "index": 62,
+      "reason": "too_far",
+      "distance_km": 7.916,
+      "name": "Ortsstraße"
+    },
+    {
+      "index": 63,
+      "reason": "too_far",
+      "distance_km": 16.39,
+      "name": "Zum alten Forsthaus"
+    },
+    {
+      "index": 64,
+      "reason": "postcode_mismatch_and_not_very_close",
+      "distance_km": 0.502,
+      "name": "Campingplatz Neumannshof"
+    },
+    {
+      "index": 65,
+      "reason": "too_far",
+      "distance_km": 2.712,
+      "name": "Hofwiesenpark"
+    },
+    {
+      "index": 66,
+      "reason": "too_far",
+      "distance_km": 3.296,
+      "name": "Faulenzerweg"
+    },
+    {
+      "index": 67,
+      "reason": "too_far",
+      "distance_km": 8.793,
+      "name": "McMahon’s B ‘ Irish Pub"
+    },
+    {
+      "index": 68,
+      "reason": "too_far",
+      "distance_km": 6.893,
+      "name": "Liebsdorfer Str. 6"
+    },
+    {
+      "index": 70,
+      "reason": "postcode_mismatch_and_not_very_close",
+      "distance_km": 0.423,
+      "name": "Tierparkstraße 5"
+    },
+    {
+      "index": 71,
+      "reason": "too_far",
+      "distance_km": 11.733,
+      "name": "Hotel Gasthof zum Walfisch"
+    },
+    {
+      "index": 72,
+      "reason": "too_far",
+      "distance_km": 5.363,
+      "name": "Kleinbernsdorfer Str. 10"
+    },
+    {
+      "index": 73,
+      "reason": "too_far",
+      "distance_km": 17.64,
+      "name": "Freizeitanlagen Syratal mit Parkeisenbahn"
+    },
+    {
+      "index": 74,
+      "reason": "too_far",
+      "distance_km": 10.834,
+      "name": "Talsperre Pöhl"
+    },
+    {
+      "index": 75,
+      "reason": "too_far",
+      "distance_km": 1.252,
+      "name": "Rathaus"
+    },
+    {
+      "index": 76,
+      "reason": "too_far",
+      "distance_km": 8.613,
+      "name": "Dittmannsdorfer Str. 48"
+    },
+    {
+      "index": 77,
+      "reason": "too_far",
+      "distance_km": 5.342,
+      "name": "Bildungs- und Freizeitzentrum Tabakstanne"
+    },
+    {
+      "index": 78,
+      "reason": "too_far",
+      "distance_km": 10.56,
+      "name": "Villa Wilisch"
+    },
+    {
+      "index": 79,
+      "reason": "postcode_mismatch_and_not_very_close",
+      "distance_km": 0.512,
+      "name": "Campingpark Greifensteine"
+    },
+    {
+      "index": 80,
+      "reason": "too_far",
+      "distance_km": 0.846,
+      "name": "Panorama Hotel Oberwiesenthal"
+    },
+    {
+      "index": 81,
+      "reason": "too_far",
+      "distance_km": 5.276,
+      "name": "Oberwiesenthaler Str. 14"
+    },
+    {
+      "index": 82,
+      "reason": "too_far",
+      "distance_km": 6.943,
+      "name": "Feriendorf Schwarzwassertal"
+    },
+    {
+      "index": 83,
+      "reason": "too_far",
+      "distance_km": 3.301,
+      "name": "Stockhausen"
+    },
+    {
+      "index": 84,
+      "reason": "too_far",
+      "distance_km": 6.873,
+      "name": "Ferienpark Seiffen"
+    },
+    {
+      "index": 85,
+      "reason": "too_far",
+      "distance_km": 5.231,
+      "name": "Sportunterkunft des Fördervereins für Nachwuchssport e.V."
+    },
+    {
+      "index": 86,
+      "reason": "too_far",
+      "distance_km": 2.442,
+      "name": "Gasthof \"Goldener Stern\""
+    },
+    {
+      "index": 88,
+      "reason": "too_far",
+      "distance_km": 12.927,
+      "name": "Am Stadtbad 1"
+    },
+    {
+      "index": 90,
+      "reason": "too_far",
+      "distance_km": 3.521,
+      "name": "Str. am Schoelerpark 35"
+    },
+    {
+      "index": 92,
+      "reason": "too_far",
+      "distance_km": 3.272,
+      "name": "Columbiadamm 88"
+    },
+    {
+      "index": 93,
+      "reason": "too_far",
+      "distance_km": 4.033,
+      "name": "Volkspark Hasenheide - Spielplatz III"
+    },
+    {
+      "index": 94,
+      "reason": "too_far",
+      "distance_km": 5.71,
+      "name": "im Görlitzer Park"
+    },
+    {
+      "index": 95,
+      "reason": "too_far",
+      "distance_km": 4.836,
+      "name": "Hertzberg Golf"
+    },
+    {
+      "index": 96,
+      "reason": "postcode_mismatch_and_not_very_close",
+      "distance_km": 0.411,
+      "name": "Am Stadtpark"
+    },
+    {
+      "index": 97,
+      "reason": "too_far",
+      "distance_km": 2.793,
+      "name": "Königsberger Straße"
+    },
+    {
+      "index": 101,
+      "reason": "too_far",
+      "distance_km": 4.492,
+      "name": "Buschkrugallee 170"
+    },
+    {
+      "index": 102,
+      "reason": "too_far",
+      "distance_km": 11.407,
+      "name": "Citygolf Berlin"
+    },
+    {
+      "index": 103,
+      "reason": "too_far",
+      "distance_km": 4.132,
+      "name": "Am Schäfersee"
+    },
+    {
+      "index": 104,
+      "reason": "postcode_mismatch_and_not_very_close",
+      "distance_km": 0.431,
+      "name": "Königshorster Str. 11-13"
+    },
+    {
+      "index": 105,
+      "reason": "too_far",
+      "distance_km": 4.926,
+      "name": "Seniorenfreizeitstätte"
+    },
+    {
+      "index": 106,
+      "reason": "too_far",
+      "distance_km": 4.325,
+      "name": "Stadion Borsigpark"
+    },
+    {
+      "index": 108,
+      "reason": "too_far",
+      "distance_km": 3.088,
+      "name": "Jump House Berlin"
+    },
+    {
+      "index": 109,
+      "reason": "too_far",
+      "distance_km": 1.945,
+      "name": "Magistratsweg 8A"
+    },
+    {
+      "index": 110,
+      "reason": "postcode_mismatch_and_not_very_close",
+      "distance_km": 0.6,
+      "name": "Weverstraße 42"
+    },
+    {
+      "index": 111,
+      "reason": "too_far",
+      "distance_km": 1.4,
+      "name": "Georg-Hermann-Allee"
+    },
+    {
+      "index": 113,
+      "reason": "too_far",
+      "distance_km": 37.714,
+      "name": "Pension Tivoli"
+    },
+    {
+      "index": 114,
+      "reason": "too_far",
+      "distance_km": 29.974,
+      "name": "Margaretenhof 1"
+    },
+    {
+      "index": 116,
+      "reason": "too_far",
+      "distance_km": 15.166,
+      "name": "August- Bebel- Str. 54"
+    },
+    {
+      "index": 117,
+      "reason": "too_far",
+      "distance_km": 11.539,
+      "name": "Schneeberger Weg 1"
+    },
+    {
+      "index": 119,
+      "reason": "too_far",
+      "distance_km": 26.842,
+      "name": "Am Backofensteig"
+    },
+    {
+      "index": 121,
+      "reason": "too_far",
+      "distance_km": 14.152,
+      "name": "Pneumant-Sporthalle"
+    },
+    {
+      "index": 123,
+      "reason": "too_far",
+      "distance_km": 13.853,
+      "name": "Hochlandstraße 11A"
+    },
+    {
+      "index": 124,
+      "reason": "too_far",
+      "distance_km": 10.502,
+      "name": "Brückenstraße"
+    },
+    {
+      "index": 125,
+      "reason": "too_far",
+      "distance_km": 6.76,
+      "name": "Querweg"
+    },
+    {
+      "index": 126,
+      "reason": "too_far",
+      "distance_km": 11.228,
+      "name": "Erlebnisbahnhof Mellensee"
+    },
+    {
+      "index": 127,
+      "reason": "too_far",
+      "distance_km": 4.639,
+      "name": "Hauptstraße"
+    },
+    {
+      "index": 130,
+      "reason": "too_far",
+      "distance_km": 14.823,
+      "name": "Tropical-Islands-Allee 1"
+    },
+    {
+      "index": 131,
+      "reason": "too_far",
+      "distance_km": 13.262,
+      "name": "Brunnenpl. 11"
+    },
+    {
+      "index": 132,
+      "reason": "too_far",
+      "distance_km": 7.393,
+      "name": "Hotel Haus Chorin"
+    },
+    {
+      "index": 133,
+      "reason": "too_far",
+      "distance_km": 10.307,
+      "name": "Gartenweg 10"
+    },
+    {
+      "index": 134,
+      "reason": "postcode_mismatch_and_not_very_close",
+      "distance_km": 0.369,
+      "name": "Feriendorf Grimnitzsee"
+    },
+    {
+      "index": 135,
+      "reason": "too_far",
+      "distance_km": 5.445,
+      "name": "Haus Berlin"
+    },
+    {
+      "index": 138,
+      "reason": "too_far",
+      "distance_km": 10.74,
+      "name": "Golfclub Prenden"
+    },
+    {
+      "index": 140,
+      "reason": "too_far",
+      "distance_km": 15.755,
+      "name": "Bischofswerder Weg 12"
+    },
+    {
+      "index": 141,
+      "reason": "too_far",
+      "distance_km": 0.954,
+      "name": "Lindenstraße"
+    },
+    {
+      "index": 143,
+      "reason": "too_far",
+      "distance_km": 6.668,
+      "name": "Van der Valk Naturresort Drewitz"
+    },
+    {
+      "index": 146,
+      "reason": "too_far",
+      "distance_km": 17.382,
+      "name": "Uckerpromenade 84"
+    },
+    {
+      "index": 147,
+      "reason": "too_far",
+      "distance_km": 8.302,
+      "name": "Stettiner Str. 46B"
+    },
+    {
+      "index": 152,
+      "reason": "too_far",
+      "distance_km": 3.35,
+      "name": "Waldcamp Freest"
+    },
+    {
+      "index": 153,
+      "reason": "too_far",
+      "distance_km": 4.979,
+      "name": "Strandpromenade"
+    },
+    {
+      "index": 154,
+      "reason": "too_far",
+      "distance_km": 8.912,
+      "name": "Kinderland"
+    },
+    {
+      "index": 155,
+      "reason": "too_far",
+      "distance_km": 10.66,
+      "name": "Bernsteintherme"
+    },
+    {
+      "index": 159,
+      "reason": "too_far",
+      "distance_km": 5.032,
+      "name": "Industriestraße 10"
+    },
+    {
+      "index": 160,
+      "reason": "too_far",
+      "distance_km": 5.802,
+      "name": "ehem. Freibeuter"
+    },
+    {
+      "index": 161,
+      "reason": "too_far",
+      "distance_km": 3.657,
+      "name": "Stolteraer Weg 47"
+    },
+    {
+      "index": 162,
+      "reason": "too_far",
+      "distance_km": 9.166,
+      "name": "Hermannstraße 19B"
+    },
+    {
+      "index": 163,
+      "reason": "too_far",
+      "distance_km": 11.088,
+      "name": "Restaurant im Gutshof Bastorf"
+    },
+    {
+      "index": 164,
+      "reason": "too_far",
+      "distance_km": 15.968,
+      "name": "Parkweg 7"
+    },
+    {
+      "index": 165,
+      "reason": "too_far",
+      "distance_km": 11.608,
+      "name": "Ahornweg 2"
+    },
+    {
+      "index": 166,
+      "reason": "too_far",
+      "distance_km": 33.391,
+      "name": "Nebelring"
+    },
+    {
+      "index": 168,
+      "reason": "too_far",
+      "distance_km": 1.338,
+      "name": "Haus hinter den Dünen"
+    },
+    {
+      "index": 169,
+      "reason": "too_far",
+      "distance_km": 3.788,
+      "name": "Krabbenort 1"
+    },
+    {
+      "index": 170,
+      "reason": "too_far",
+      "distance_km": 8.237,
+      "name": "Kletterwald Darß"
+    },
+    {
+      "index": 171,
+      "reason": "postcode_mismatch_and_not_very_close",
+      "distance_km": 0.509,
+      "name": "Neddesitz 4"
+    },
+    {
+      "index": 172,
+      "reason": "too_far",
+      "distance_km": 16.539,
+      "name": "Feriendorf Rugana/Reetland am Meer"
+    },
+    {
+      "index": 173,
+      "reason": "too_far",
+      "distance_km": 10.13,
+      "name": "SOIBELMANNS Hotel Rügen"
+    },
+    {
+      "index": 175,
+      "reason": "too_far",
+      "distance_km": 11.819,
+      "name": "Nordstrand 4"
+    },
+    {
+      "index": 176,
+      "reason": "too_far",
+      "distance_km": 1.283,
+      "name": "An d. Crivitzer Ch 1"
+    },
+    {
+      "index": 177,
+      "reason": "too_far",
+      "distance_km": 5.762,
+      "name": "Am Immensoll 35"
+    },
+    {
+      "index": 178,
+      "reason": "too_far",
+      "distance_km": 10.831,
+      "name": "Gehrenweg 83"
+    },
+    {
+      "index": 179,
+      "reason": "too_far",
+      "distance_km": 15.954,
+      "name": "Hotel an der Therme"
+    },
+    {
+      "index": 181,
+      "reason": "too_far",
+      "distance_km": 15.714,
+      "name": "Ziegeleiweg 8"
+    },
+    {
+      "index": 182,
+      "reason": "too_far",
+      "distance_km": 29.232,
+      "name": "Seestraße 7"
+    },
+    {
+      "index": 183,
+      "reason": "too_far",
+      "distance_km": 2.241,
+      "name": "Wohnmobilstellplatz Heiligengeistfeld"
+    },
+    {
+      "index": 184,
+      "reason": "too_far",
+      "distance_km": 4.614,
+      "name": "Caspar-Voght-Straße 35c"
+    },
+    {
+      "index": 185,
+      "reason": "too_far",
+      "distance_km": 1.965,
+      "name": "Schillerufer"
+    },
+    {
+      "index": 186,
+      "reason": "postcode_mismatch_and_not_very_close",
+      "distance_km": 0.384,
+      "name": "Leuschnerstraße 100"
+    },
+    {
+      "index": 187,
+      "reason": "postcode_mismatch_and_not_very_close",
+      "distance_km": 0.758,
+      "name": "Hasselwerder Straße"
+    },
+    {
+      "index": 189,
+      "reason": "too_far",
+      "distance_km": 1.481,
+      "name": "Sültenweg 20"
+    },
+    {
+      "index": 190,
+      "reason": "too_far",
+      "distance_km": 2.065,
+      "name": "Uelzener Straße"
+    },
+    {
+      "index": 192,
+      "reason": "too_far",
+      "distance_km": 15.616,
+      "name": "Elbkantinchen"
+    },
+    {
+      "index": 193,
+      "reason": "too_far",
+      "distance_km": 12.095,
+      "name": "Werftstraße"
+    },
+    {
+      "index": 194,
+      "reason": "too_far",
+      "distance_km": 20.281,
+      "name": "Moorweg"
+    },
+    {
+      "index": 196,
+      "reason": "too_far",
+      "distance_km": 11.165,
+      "name": "Am Freizeitpark 2"
+    },
+    {
+      "index": 198,
+      "reason": "too_far",
+      "distance_km": 11.863,
+      "name": "Osterwechtern"
+    },
+    {
+      "index": 199,
+      "reason": "too_far",
+      "distance_km": 2.467,
+      "name": "Spiel- und Spaßscheune - Seelandhallen"
+    },
+    {
+      "index": 200,
+      "reason": "too_far",
+      "distance_km": 5.868,
+      "name": "Am Yachthafen"
+    },
+    {
+      "index": 201,
+      "reason": "too_far",
+      "distance_km": 1.465,
+      "name": "Am Olymp"
+    },
+    {
+      "index": 202,
+      "reason": "too_far",
+      "distance_km": 3.524,
+      "name": "Verwaltung Hamburger Renn-Club e. V."
+    },
+    {
+      "index": 203,
+      "reason": "postcode_mismatch_and_not_very_close",
+      "distance_km": 0.424,
+      "name": "Driftredder"
+    },
+    {
+      "index": 204,
+      "reason": "too_far",
+      "distance_km": 7.201,
+      "name": "Swinemünder Str. 29"
+    },
+    {
+      "index": 205,
+      "reason": "postcode_mismatch_and_not_very_close",
+      "distance_km": 0.686,
+      "name": "Südring"
+    },
+    {
+      "index": 206,
+      "reason": "too_far",
+      "distance_km": 9.096,
+      "name": "Hamburger Schützengesellschaft von 1862 e. V."
+    },
+    {
+      "index": 207,
+      "reason": "too_far",
+      "distance_km": 5.336,
+      "name": "Niendorfer Miniaturgolf Club von 1963 e.V."
+    },
+    {
+      "index": 209,
+      "reason": "too_far",
+      "distance_km": 2.232,
+      "name": "Kieler Str. 571"
+    },
+    {
+      "index": 210,
+      "reason": "too_far",
+      "distance_km": 2.534,
+      "name": "Eckhoffplatz"
+    },
+    {
+      "index": 211,
+      "reason": "too_far",
+      "distance_km": 12.202,
+      "name": "Freizeitzentrum Lohe"
+    },
+    {
+      "index": 212,
+      "reason": "too_far",
+      "distance_km": 4.476,
+      "name": "Wallstraße"
+    },
+    {
+      "index": 214,
+      "reason": "too_far",
+      "distance_km": 7.411,
+      "name": "Dünenweg"
+    },
+    {
+      "index": 215,
+      "reason": "too_far",
+      "distance_km": 6.79,
+      "name": "Außenallee"
+    },
+    {
+      "index": 216,
+      "reason": "postcode_mismatch_and_not_very_close",
+      "distance_km": 0.62,
+      "name": "Seestraße"
+    },
+    {
+      "index": 217,
+      "reason": "too_far",
+      "distance_km": 3.142,
+      "name": "Am Kurpark"
+    },
+    {
+      "index": 218,
+      "reason": "too_far",
+      "distance_km": 5.986,
+      "name": "Daimlerstraße 2"
+    },
+    {
+      "index": 219,
+      "reason": "too_far",
+      "distance_km": 3.664,
+      "name": "Blüchereiche 99"
+    },
+    {
+      "index": 220,
+      "reason": "postcode_mismatch_and_not_very_close",
+      "distance_km": 0.555,
+      "name": "Strandallee"
+    },
+    {
+      "index": 221,
+      "reason": "too_far",
+      "distance_km": 0.963,
+      "name": "Kurparkstraße 2"
+    },
+    {
+      "index": 222,
+      "reason": "too_far",
+      "distance_km": 1.156,
+      "name": "Badeweg"
+    },
+    {
+      "index": 223,
+      "reason": "too_far",
+      "distance_km": 0.89,
+      "name": "Pönitzer Chaussee"
+    },
+    {
+      "index": 224,
+      "reason": "too_far",
+      "distance_km": 1.73,
+      "name": "Dorfstraße"
+    },
+    {
+      "index": 225,
+      "reason": "too_far",
+      "distance_km": 8.855,
+      "name": "Kleingolfplatz am Seeschaarwald"
+    },
+    {
+      "index": 226,
+      "reason": "too_far",
+      "distance_km": 5.356,
+      "name": "Marktstraße"
+    },
+    {
+      "index": 227,
+      "reason": "too_far",
+      "distance_km": 5.406,
+      "name": "Neversfelder Str. 4"
+    },
+    {
+      "index": 228,
+      "reason": "too_far",
+      "distance_km": 3.033,
+      "name": "Strandweg"
+    },
+    {
+      "index": 229,
+      "reason": "too_far",
+      "distance_km": 1.03,
+      "name": "Haffkamp"
+    },
+    {
+      "index": 230,
+      "reason": "too_far",
+      "distance_km": 3.12,
+      "name": "Mari Café & Restaurant"
+    },
+    {
+      "index": 232,
+      "reason": "postcode_mismatch_and_not_very_close",
+      "distance_km": 0.521,
+      "name": "Strandpromenade"
+    },
+    {
+      "index": 233,
+      "reason": "too_far",
+      "distance_km": 4.387,
+      "name": "An der Strandpromenade"
+    },
+    {
+      "index": 234,
+      "reason": "too_far",
+      "distance_km": 6.695,
+      "name": "Winter-WoMo-Hafen Rosenfelder Strand"
+    },
+    {
+      "index": 237,
+      "reason": "too_far",
+      "distance_km": 0.864,
+      "name": "Strandläufer"
+    },
+    {
+      "index": 238,
+      "reason": "too_far",
+      "distance_km": 4.257,
+      "name": "Südstrand"
+    },
+    {
+      "index": 239,
+      "reason": "postcode_mismatch_and_not_very_close",
+      "distance_km": 0.417,
+      "name": "Ostermader Kamp"
+    },
+    {
+      "index": 240,
+      "reason": "too_far",
+      "distance_km": 2.171,
+      "name": "Seekamp"
+    },
+    {
+      "index": 241,
+      "reason": "too_far",
+      "distance_km": 12.464,
+      "name": "Winklersgang"
+    },
+    {
+      "index": 243,
+      "reason": "too_far",
+      "distance_km": 18.871,
+      "name": "Ladestation Exer"
+    },
+    {
+      "index": 244,
+      "reason": "too_far",
+      "distance_km": 10.69,
+      "name": "WC-Anlage im Kurpark Mölln"
+    },
+    {
+      "index": 245,
+      "reason": "too_far",
+      "distance_km": 11.622,
+      "name": "Dr.-Alfred-Block-Allee"
+    },
+    {
+      "index": 246,
+      "reason": "too_far",
+      "distance_km": 12.783,
+      "name": "Waldesruher Weg"
+    },
+    {
+      "index": 247,
+      "reason": "too_far",
+      "distance_km": 16.597,
+      "name": "Seestraße 33"
+    },
+    {
+      "index": 251,
+      "reason": "too_far",
+      "distance_km": 0.911,
+      "name": "Rudolf-Breitscheid-Straße 53"
+    },
+    {
+      "index": 252,
+      "reason": "too_far",
+      "distance_km": 4.169,
+      "name": "Ostsee-Camping Ferienpark Zierow KG"
+    },
+    {
+      "index": 253,
+      "reason": "too_far",
+      "distance_km": 1.641,
+      "name": "Str. d. Jugend 10"
+    },
+    {
+      "index": 254,
+      "reason": "too_far",
+      "distance_km": 6.521,
+      "name": "Astrid-Lindgren-Weg"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "index": 13,
+    "query": "Golfcafé, 01979 Lauchhammer-Grünewalde, Germany",
+    "status": "EMPTY"
+  },
+  {
+    "index": 268,
+    "query": "Hörn 8, 24235 Wentorf, Germany",
+    "status": "EMPTY"
+  },
+  {
+    "index": 342,
+    "query": "Charlys Freizeitcenter, 26548 Norderney, Germany",
+    "status": "EMPTY"
+  },
+  {
+    "index": 621,
+    "query": "Strandweg, 39326 Jersleben, Germany",
+    "status": "EMPTY"
+  },
+  {
+    "index": 967,
+    "query": "Rezeption, 57489 Drolshagen, Germany",
+    "status": "EMPTY"
+  },
+  {
+    "index": 1041,
+    "query": "Lochmühle, 61273 Wehrheim, Germany",
+    "status": "EMPTY"
+  },
+  {
+    "index": 1168,
+    "query": "MGC Ladenburg Minigolf, 68526 Ladenburg/Neckar, Germany",
+    "status": "EMPTY"
+  },
+  {
+    "index": 1219,
+    "query": "Mettertal Stube, 71665 Vaihingen (an der Enz), Germany",
+    "status": "EMPTY"
+  },
+  {
+    "index": 1284,
+    "query": "Rehnenmühlenstraße, 73527 Tierhaupten, Germany",
+    "status": "EMPTY"
+  },
+  {
+    "index": 2243,
+    "query": "Minigolfanlage Neudorf, 09465 Sehmatal, Germany",
+    "status": "NO_RESULTS"
+  },
+  {
+    "index": 2389,
+    "query": "Sonne Poel Minigolf, 23999 Insel Poel, Germany",
+    "status": "NO_RESULTS"
+  },
+  {
+    "index": 2613,
+    "query": "Minigolfanlage, 27432 Bremervörde, Germany",
+    "status": "NO_RESULTS"
+  }
+]

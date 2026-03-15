@@ -1,0 +1,124 @@
+{
+  "strategy": "strict_candidates_distance_le_0_2km",
+  "selected_candidates_count": 16,
+  "updated_count": 10,
+  "skipped_already_invalid_count": 6,
+  "selected_indices": [
+    109,
+    345,
+    349,
+    473,
+    521,
+    549,
+    627,
+    636,
+    709,
+    805,
+    861,
+    866,
+    1061,
+    1419,
+    1542,
+    1820
+  ],
+  "skipped_already_invalid_indices": [
+    109,
+    636,
+    805,
+    866,
+    1061,
+    1542
+  ],
+  "updated": [
+    {
+      "index": 345,
+      "id": "mgd-00346",
+      "venue_name": "Hindenburgstraße",
+      "location_raw": "26757 Borkum",
+      "distance_km": 0.0,
+      "old_latitude": 53.5938644,
+      "old_longitude": 6.6760396
+    },
+    {
+      "index": 349,
+      "id": "mgd-00350",
+      "venue_name": "Waldstraße",
+      "location_raw": "26903 Surwold",
+      "distance_km": 0.0,
+      "old_latitude": 52.9674692,
+      "old_longitude": 7.5140187
+    },
+    {
+      "index": 473,
+      "id": "mgd-00474",
+      "venue_name": "Kollostraße",
+      "location_raw": "33647 Bielefeld",
+      "distance_km": 0.0,
+      "old_latitude": 51.9924764,
+      "old_longitude": 8.5187351
+    },
+    {
+      "index": 521,
+      "id": "mgd-00522",
+      "venue_name": "Europastraße",
+      "location_raw": "35614 Asslar",
+      "distance_km": 0.0,
+      "old_latitude": 50.5880169,
+      "old_longitude": 8.4770533
+    },
+    {
+      "index": 549,
+      "id": "mgd-00550",
+      "venue_name": "Grätzelstraße",
+      "location_raw": "37079 Göttingen",
+      "distance_km": 0.074,
+      "old_latitude": 51.5421387,
+      "old_longitude": 9.9056956
+    },
+    {
+      "index": 627,
+      "id": "mgd-00628",
+      "venue_name": "Jahnstraße",
+      "location_raw": "40764 Langenfeld",
+      "distance_km": 0.0,
+      "old_latitude": 51.1165458,
+      "old_longitude": 6.9486808
+    },
+    {
+      "index": 709,
+      "id": "mgd-00710",
+      "venue_name": "Florastraße",
+      "location_raw": "45888 Gelsenkirchen",
+      "distance_km": 0.0,
+      "old_latitude": 51.5180724,
+      "old_longitude": 7.116966
+    },
+    {
+      "index": 861,
+      "id": "mgd-00862",
+      "venue_name": "Sülztalstraße",
+      "location_raw": "53797 Lohmar",
+      "distance_km": 0.0,
+      "old_latitude": 50.8634513,
+      "old_longitude": 7.2123678
+    },
+    {
+      "index": 1419,
+      "id": "mgd-01420",
+      "venue_name": "Schwimmbadstraße",
+      "location_raw": "79268 Bötzingen",
+      "distance_km": 0.0,
+      "old_latitude": 48.0628997,
+      "old_longitude": 7.7148147
+    },
+    {
+      "index": 1820,
+      "id": "mgd-01821",
+      "venue_name": "Stettiner Straße",
+      "location_raw": "97072 Würzburg",
+      "distance_km": 0.104,
+      "old_latitude": 49.7734697,
+      "old_longitude": 9.9402404
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a3d2e" />
+    <link rel="manifest" href="/manifest.webmanifest?v=0.1.1+202603151733" />
+    <title>gGolf Atlas</title>
+    <script type="module" crossorigin src="/assets/index-CBed4L8o.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BHLhVYIj.css">
+  </head>
+  <body>
+    <div id="updateBanner" class="update-banner is-hidden" role="status" aria-live="polite">
+      <span id="updateBannerText">Neue Version verfuegbar.</span>
+      <div class="update-banner-actions">
+        <button id="updateReloadBtn" type="button">Jetzt neu laden</button>
+        <button id="updateDismissBtn" type="button" class="ghost-btn">Spaeter</button>
+      </div>
+    </div>
+    <header class="app-header">
+      <div>
+        <h1>gGolf Atlas</h1>
+        <p id="datasetMeta">Loading dataset...</p>
+        <p id="appVersionMeta" class="app-version">Version wird geladen...</p>
+      </div>
+      <button id="locateBtn" type="button">Use My Location</button>
+    </header>
+
+    <main class="app-grid">
+      <section class="map-panel">
+        <div class="map-controls">
+          <div class="map-controls-row">
+            <button id="pickPointBtn" type="button">Punkt setzen</button>
+            <button id="clearPointBtn" type="button" class="ghost-btn">Punkt loeschen</button>
+          </div>
+          <label class="toggle-line map-follow-line">
+            <input id="followMapToggle" type="checkbox" checked />
+            Karte folgen (Map-Center als Suchpunkt)
+          </label>
+          <p id="mapFocusMeta">Map-Explore aktiv. Bewege die Karte oder setze einen Punkt.</p>
+        </div>
+        <div id="map" aria-label="Minigolf map"></div>
+      </section>
+      <section class="list-panel">
+        <section class="around-panel">
+          <div class="around-header">
+            <h2>Around Me</h2>
+            <p id="aroundMeMeta">Enable location to see nearby picks.</p>
+          </div>
+          <ul id="aroundMeList" class="around-list"></ul>
+        </section>
+        <div class="toolbar">
+          <div class="view-toggle" role="tablist" aria-label="Venue view mode">
+            <button id="viewAllBtn" class="view-btn is-active" type="button" data-view="all">All</button>
+            <button id="viewSavedBtn" class="view-btn" type="button" data-view="saved">Saved</button>
+          </div>
+          <label class="toggle-line">
+            <input id="hideVisitedToggle" type="checkbox" />
+            Hide visited
+          </label>
+          <input id="searchInput" type="search" placeholder="Search city, postcode or name" />
+          <select id="typeFilter">
+            <option value="">All course types</option>
+            <option value="beton">Beton</option>
+            <option value="eternit">Eternit</option>
+            <option value="filz">Filz</option>
+            <option value="sonstige">Sonstige</option>
+            <option value="unknown">Unknown</option>
+          </select>
+        </div>
+        <ul id="venueList" class="venue-list"></ul>
+      </section>
+    </main>
+
+    <dialog id="detailDialog">
+      <article>
+        <header>
+          <h2 id="detailTitle">Venue</h2>
+        </header>
+        <div id="detailContent"></div>
+        <footer>
+          <button id="detailClose" type="button">Close</button>
+        </footer>
+      </article>
+    </dialog>
+
+  </body>
+</html>

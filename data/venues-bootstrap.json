@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at_unix": 1773595146,
+  "total_venues": 2853,
+  "stats": {
+    "with_coordinates": 2630,
+    "with_google_place": 1973,
+    "with_photo": 902,
+    "with_google_onsite_or_probable": 256,
+    "with_google_nearby_reference": 1717
+  },
+  "bounds": {
+    "lat_min": 47.4036275,
+    "lat_max": 54.975599,
+    "lng_min": 5.9336216,
+    "lng_max": 14.9551499
+  },
+  "counts": {
+    "by_course_type": {
+      "sonstige": 414,
+      "eternit": 880,
+      "unknown": 1349,
+      "filz": 37,
+      "beton": 214
+    }
+  }
+}

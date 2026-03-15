@@ -1,0 +1,190 @@
+{
+  "Wachstube, 01069 Dresden, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Emilienstraße 20, 01139 Dresden, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Moselbruchweg 11, 01609 Röderaue-Frauenhain, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Riesaer Straße 13 a-d, 01665 Nieschütz, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Gießener Str. (Burggarten), 01734 Rabenau-Londorf, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Talsperre Malter, 01744 Dippoldiswalde-Paulsdorf, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Ahorn Waldhotel Altenberg, 01773 Altenberg, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Hotel \"Neue Schänke\", 01824 Königstein / Sächsische Schweiz, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Forellenschänke, 01855 Sebnitz, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Bahnhofstr. 1, 01877 Demitz-Thumitz, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Arndorfer Str. 1, 01900 Großröhrsdorf, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Nordstraße, 01917 Kamenz, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Straße zur Südsee, 01968 Senftenberg-Großkoschen, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Golfcafé, 01979 Lauchhammer-Grünewalde, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Bahnengolfanlage, 01987 Schwarzheide, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Minigolfpark am Stausee Bautzen, 02625 Bautzen, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Lärchenbergweg 2, 02681 Schirgiswalde, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Schrammstr. 63, 02763 Zittau, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Jonsdorfer Straße, 02779 Großschönau, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Am Kulturhaus 6, 02829 Neißeaue, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Seeweg 2 c, 02953 Gablenz, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Lange Straße 2, 03051 Cottbus - OT Gallinchen, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Talsperre Spremberg, 03058 Klein Döbbern, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Ristorante Il Fienile, 03096 Burg, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Erlebnispark 1, 03185 Teichland, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Poststr. 10, 03222 Lübbenau, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "STARCAR, 04129 Leipzig, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Lilalicht 3D-Adventure Minigolf, 04229 Leipzig, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Lilalicht 3D-Adventure Minigolf, 04289 Leipzig, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Lene-Voigt-Straße 2, 04289 Leipzig, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Ernst-Grube-Straße, 04610 Meuselwitz, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Freibad Vollmershain, 04626 Vollmershain, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Linda 33, 04655 Kohren-Sahlis, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Nimbschener Landstraße 1, 04668 Grimma, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Zur Schiffsmühle 2, 04668 Höfgen, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Dorfstr. 17, 04668 Höfgen, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Fichtestraße 10, 04720 Döbeln, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Straße der Einheit 5 b, 04758 Bucha Gemeinde Cavertitz, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Eis Cafe Bar Bönisch, 04895 Falkenberg/Elster, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Am Kurpark, 04924 Bad Liebenwerda, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Böllberger Weg 185, 06110 Halle (Saale), Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Bergstraße, 06188 Landsberg, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Pizzeria \"Fantasia Romana\", 06242 Großkayna, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Hauptstraße, 06311 Helbra, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Arnstedter Str. 2, 06333 Quenstedt, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Minigolf-Anlage am Ratswall, 06366 Köthen, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  },
+  "Brumbyer Straße 5, 06429 Neugattersleben, Germany": {
+    "status": "REQUEST_DENIED",
+    "candidate": null
+  }
+}

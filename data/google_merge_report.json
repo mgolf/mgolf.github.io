@@ -1,0 +1,725 @@
+{
+  "generated_at_unix": 1773593152,
+  "dataset_total_after_merge": 2853,
+  "added_count": 89,
+  "skipped": {
+    "non_minigolf_type": 62,
+    "missing_coordinates": 0,
+    "already_has_google_place_id": 116,
+    "near_existing_within_200m": 290
+  },
+  "added_examples": [
+    {
+      "venue_name": "Minigolf Meersburg",
+      "postcode": "88709",
+      "place": "Meersburg",
+      "lat": 47.6913633,
+      "lng": 9.275963599999999,
+      "google_place_id": "ChIJW7KrDWT4mkcRQBoJdetApuU"
+    },
+    {
+      "venue_name": "GolfVenture Memmingen | 4D Schwarzlicht Minigolf | Laser Maze | Light Jumper | Arcade Games",
+      "postcode": "87700",
+      "place": "Memmingen",
+      "lat": 48.0028775,
+      "lng": 10.1689843,
+      "google_place_id": "ChIJbanGhKXzm0cRiC_mWpG_Grc"
+    },
+    {
+      "venue_name": "Minigolf & Freizeitareal",
+      "postcode": "83735",
+      "place": "Bayrischzell",
+      "lat": 47.670869,
+      "lng": 12.010018299999999,
+      "google_place_id": "ChIJOxNGbGwkdkcRDEc7QL8_6o4"
+    },
+    {
+      "venue_name": "Blacklightarena 3D Schwarzlicht Minigolf Göppingen",
+      "postcode": "73033",
+      "place": "Göppingen",
+      "lat": 48.7035122,
+      "lng": 9.6571883,
+      "google_place_id": "ChIJs7Djd5CjmUcRG4cVuu5DwQ0"
+    },
+    {
+      "venue_name": "Adventure & Indoor Golf Balingen",
+      "postcode": "72336",
+      "place": "Balingen",
+      "lat": 48.25397,
+      "lng": 8.85742,
+      "google_place_id": "ChIJqU8dw6sHmkcRE2U3rWW2HX0"
+    },
+    {
+      "venue_name": "3D Minigolf & Pit Pat Indoorpark Rottenburg",
+      "postcode": "72108",
+      "place": "Rottenburg am Neckar",
+      "lat": 48.480112,
+      "lng": 8.9527131,
+      "google_place_id": "ChIJtdElz2P9mUcRI4yQ8PLHKP0"
+    },
+    {
+      "venue_name": "Balls&Clubs - Indoor-Minigolf in München",
+      "postcode": "80331",
+      "place": "München",
+      "lat": 48.1333072,
+      "lng": 11.5829238,
+      "google_place_id": "ChIJY1j_8kvfnUcROSjDgo9mvKQ"
+    },
+    {
+      "venue_name": "Dream-Bowl Palace",
+      "postcode": "85774",
+      "place": "Unterföhring",
+      "lat": 48.1748263,
+      "lng": 11.6382055,
+      "google_place_id": "ChIJMys4luZ0nkcRVsHooVRtnlQ"
+    },
+    {
+      "venue_name": "Goolfy Blacklight Minigolf Eggenfelden",
+      "postcode": "84307",
+      "place": "Eggenfelden",
+      "lat": 48.400370099999996,
+      "lng": 12.7468819,
+      "google_place_id": "ChIJQYb5Ai25dUcR-mZAGRCPa-E"
+    },
+    {
+      "venue_name": "4D Arena St. Englmar | Bogenschießen & Minigolf",
+      "postcode": "94379",
+      "place": "St. Englmar",
+      "lat": 49.0033497,
+      "lng": 12.8369558,
+      "google_place_id": "ChIJ9faqebhBdUcRrmriFrYBW6I"
+    },
+    {
+      "venue_name": "Minigolf",
+      "postcode": "66625",
+      "place": "Nohfelden",
+      "lat": 49.5698467,
+      "lng": 7.0798714,
+      "google_place_id": "ChIJO7rDIneTlUcR8cXgvkF6AgE"
+    },
+    {
+      "venue_name": "The Mindgolf Mannheim",
+      "postcode": "68165",
+      "place": "Mannheim",
+      "lat": 49.47837,
+      "lng": 8.49968,
+      "google_place_id": "ChIJXcRGpCjPl0cRCEeI1moas9Q"
+    },
+    {
+      "venue_name": "3D Schwarzlicht Minigolf Bensheim",
+      "postcode": "64625",
+      "place": "Bensheim",
+      "lat": 49.676020099999995,
+      "lng": 8.5935281,
+      "google_place_id": "ChIJVVVFmrbXl0cRECHndg_zLGI"
+    },
+    {
+      "venue_name": "GATE99 Schwarzlicht Minigolf / Indoor Spielplatz Frankenthal",
+      "postcode": "67227",
+      "place": "Frankenthal (Pfalz)",
+      "lat": 49.517243,
+      "lng": 8.3522935,
+      "google_place_id": "ChIJC9G9KZUzlkcRT_oJ_CXd4d4"
+    },
+    {
+      "venue_name": "Petra's Minigolf Hütte Heßheim",
+      "postcode": "67258",
+      "place": "Heßheim",
+      "lat": 49.5453933,
+      "lng": 8.3121052,
+      "google_place_id": "ChIJ8563ohIylkcR-JdSBRU_y-4"
+    },
+    {
+      "venue_name": "Minigolf im Speyerer Domgarten",
+      "postcode": "67346",
+      "place": "Speyer",
+      "lat": 49.315963599999996,
+      "lng": 8.445680399999999,
+      "google_place_id": "ChIJYZlvTLm2l0cRf93hyJEG7sE"
+    },
+    {
+      "venue_name": "Gartengolf Eppelheim",
+      "postcode": "69214",
+      "place": "Eppelheim",
+      "lat": 49.3934241,
+      "lng": 8.6255195,
+      "google_place_id": "ChIJcyNHRhTHl0cRliaSoDRlQqc"
+    },
+    {
+      "venue_name": "Crazy Duck Schwarzlicht Minigolf",
+      "postcode": "76829",
+      "place": "Landau in der Pfalz",
+      "lat": 49.1880801,
+      "lng": 8.134088,
+      "google_place_id": "ChIJ7fN9qTtRlkcRDCt7ThdeMzY"
+    },
+    {
+      "venue_name": "GATE99 Lasertag / Schwarzlicht Minigolf Heidelberg",
+      "postcode": "69214",
+      "place": "Eppelheim",
+      "lat": 49.410408,
+      "lng": 8.625909799999999,
+      "google_place_id": "ChIJ87S4hx3Hl0cR0D5T9Ih1zAI"
+    },
+    {
+      "venue_name": "Minigolfpark Bad Wimpfen",
+      "postcode": "74206",
+      "place": "Bad Wimpfen",
+      "lat": 49.2260254,
+      "lng": 9.1598724,
+      "google_place_id": "ChIJy_QRWT0nmEcRpZr4xF7P7XE"
+    },
+    {
+      "venue_name": "AIMGAME",
+      "postcode": "74076",
+      "place": "Heilbronn",
+      "lat": 49.1543171,
+      "lng": 9.2163674,
+      "google_place_id": "ChIJg5AxDGUvmEcRjrS3d_zOsWo"
+    },
+    {
+      "venue_name": "Minigolfplatz Crailsheim",
+      "postcode": "74564",
+      "place": "Crailsheim",
+      "lat": 49.135438099999995,
+      "lng": 10.065685,
+      "google_place_id": "ChIJE6XHZBnxmEcRTnHfokdVGjI"
+    },
+    {
+      "venue_name": "Minigolf Ansbach (Minigolfverein)",
+      "postcode": "91522",
+      "place": "Ansbach",
+      "lat": 49.307308299999995,
+      "lng": 10.557542300000001,
+      "google_place_id": "ChIJiQ3SvLa7mEcRBS260pToyBc"
+    },
+    {
+      "venue_name": "Adventure MiniGolf Kitzingen",
+      "postcode": "97318",
+      "place": "Kitzingen",
+      "lat": 49.7325172,
+      "lng": 10.1474237,
+      "google_place_id": "ChIJC2PR6gF9okcRmwqEjfIbC_c"
+    },
+    {
+      "venue_name": "Minigolf Ansbach",
+      "postcode": "91522",
+      "place": "Ansbach",
+      "lat": 49.3103068,
+      "lng": 10.576903999999999,
+      "google_place_id": "ChIJX3kZaTW6mEcRNQcVIlDzPWE"
+    },
+    {
+      "venue_name": "Minigolfanlage Marienberg",
+      "postcode": "90411",
+      "place": "Nürnberg",
+      "lat": 49.47503,
+      "lng": 11.09611,
+      "google_place_id": "ChIJUW3I1cJXn0cRdZQRqgCYmGU"
+    },
+    {
+      "venue_name": "Minigolfanlage Bayerisch Eisenstein",
+      "postcode": "94252",
+      "place": "Bayerisch Eisenstein",
+      "lat": 49.118566699999995,
+      "lng": 13.192264699999999,
+      "google_place_id": "ChIJH6AUagQvdUcRuWVXdRSZb4E"
+    },
+    {
+      "venue_name": "GolfZone Hollywood Schwarzlicht 4D Minigolf Mönchengladbach (ehemals GlowZone)",
+      "postcode": "41065",
+      "place": "Mönchengladbach",
+      "lat": 51.1965174,
+      "lng": 6.459789300000001,
+      "google_place_id": "ChIJwa76fSqtuEcRrOhyvnpr2lE"
+    },
+    {
+      "venue_name": "Kurpark Minigolf",
+      "postcode": "52062",
+      "place": "Aachen",
+      "lat": 50.7814681,
+      "lng": 6.0955134,
+      "google_place_id": "ChIJ78Xx79eZwEcRJGvyJWOYqEM"
+    },
+    {
+      "venue_name": "Minigolf - Kohlscheid",
+      "postcode": "52134",
+      "place": "Herzogenrath",
+      "lat": 50.8369966,
+      "lng": 6.0926864,
+      "google_place_id": "ChIJof8iEoyYwEcRn02yw1ViNxI"
+    },
+    {
+      "venue_name": "Minigolf Paffendorf",
+      "postcode": "50126",
+      "place": "Bergheim",
+      "lat": 50.964258,
+      "lng": 6.6125159,
+      "google_place_id": "ChIJr1RGrkNGv0cRgcPsdIgJjPw"
+    },
+    {
+      "venue_name": "XXL Minigolf Duisburg GmbH",
+      "postcode": "47259",
+      "place": "Duisburg",
+      "lat": 51.3664627,
+      "lng": 6.7388734,
+      "google_place_id": "ChIJhXnWI_m4uEcR8qPk0N6Lo9U"
+    },
+    {
+      "venue_name": "3D Schwarzlicht Pit-Pat Minigolf - Golffieber Bonn-Mitte",
+      "postcode": "53113",
+      "place": "Bonn",
+      "lat": 50.734157599999996,
+      "lng": 7.1014214,
+      "google_place_id": "ChIJMWiHL4fhvkcRyODYCkzpaJU"
+    },
+    {
+      "venue_name": "The Evolution Schwarzlicht Minigolf 4D",
+      "postcode": "35440",
+      "place": "Linden",
+      "lat": 50.5265378,
+      "lng": 8.671123099999999,
+      "google_place_id": "ChIJM6l4mSFZvEcRXVGMgWiBECY"
+    },
+    {
+      "venue_name": "Adventure Golf Edersee",
+      "postcode": "34549",
+      "place": "Edertal",
+      "lat": 51.1766394,
+      "lng": 9.054297199999999,
+      "google_place_id": "ChIJ54eCLRZxu0cRlA3l-tSawb8"
+    },
+    {
+      "venue_name": "Spielplatz und Minigolf Grafschaft",
+      "postcode": "57392",
+      "place": "Schmallenberg",
+      "lat": 51.1469101,
+      "lng": 8.3226217,
+      "google_place_id": "ChIJ4_ULC0Xxu0cRbbeHC_Uf-Rk"
+    },
+    {
+      "venue_name": "MGC putter Künzell 1970 e.V.",
+      "postcode": "36093",
+      "place": "Künzell",
+      "lat": 50.54369500000001,
+      "lng": 9.711946,
+      "google_place_id": "ChIJBYhQTt02o0cR53iJgrsbY_E"
+    },
+    {
+      "venue_name": "Minigolf Burgwallbach Eigene Schläger mitbringen",
+      "postcode": "97659",
+      "place": "Schönau an der Brend",
+      "lat": 50.3553704,
+      "lng": 10.1000587,
+      "google_place_id": "ChIJEzhs-JMbo0cRw3Yahenjxng"
+    },
+    {
+      "venue_name": "Abenteuer Golf - Gut Hühnerhof",
+      "postcode": "63584",
+      "place": "Gründau",
+      "lat": 50.228887699999994,
+      "lng": 9.1321915,
+      "google_place_id": "ChIJu8pVfYYlvUcRkDUyuf3rEUA"
+    },
+    {
+      "venue_name": "Mini Golf",
+      "postcode": "36433",
+      "place": "Bad Salzungen",
+      "lat": 50.816162600000006,
+      "lng": 10.2390476,
+      "google_place_id": "ChIJBVfcbA9jo0cReqQvMojFdSU"
+    },
+    {
+      "venue_name": "Adventure Minigolf",
+      "postcode": "97647",
+      "place": "Hausen",
+      "lat": 50.4805546,
+      "lng": 10.1069813,
+      "google_place_id": "ChIJF0v6TQARo0cRV-t0H01oPn4"
+    },
+    {
+      "venue_name": "Timelessworld 3D Schwarzlicht Minigolf Zwickau",
+      "postcode": "08066",
+      "place": "Zwickau",
+      "lat": 50.7310485,
+      "lng": 12.512144,
+      "google_place_id": "ChIJHW038J0tp0cRdnJV0HrS5DQ"
+    },
+    {
+      "venue_name": "Glowing Rooms 3D Schwarzlicht Minigolf Dresden",
+      "postcode": "01067",
+      "place": "Dresden",
+      "lat": 51.0496842,
+      "lng": 13.730004699999999,
+      "google_place_id": "ChIJ6a41nGjPCUcRaIu8h09eczo"
+    },
+    {
+      "venue_name": "Neon Golf Bautzen",
+      "postcode": "02625",
+      "place": "Bautzen",
+      "lat": 51.168724499999996,
+      "lng": 14.420512500000001,
+      "google_place_id": "ChIJp8xZINNVCEcRZk6Ptw4Fpdw"
+    },
+    {
+      "venue_name": "Indoor-Minigolf Bautzen",
+      "postcode": "02625",
+      "place": "Bautzen",
+      "lat": 51.17973,
+      "lng": 14.4398099,
+      "google_place_id": "ChIJp-MB4wT_CEcRyrmWORZ_nMc"
+    },
+    {
+      "venue_name": "Olympia Freizeitzentrum Riesa -Minigolf",
+      "postcode": "01587",
+      "place": "Riesa",
+      "lat": 51.296824300000004,
+      "lng": 13.293859099999999,
+      "google_place_id": "ChIJH0TANACdp0cRJu1_VjsmcvE"
+    },
+    {
+      "venue_name": "GolfZone - 2.0 Hollywood & 4D Schwarzlicht Minigolf Duisburg (ehemals GlowZone)",
+      "postcode": "47059",
+      "place": "Duisburg",
+      "lat": 51.4429804,
+      "lng": 6.7491829,
+      "google_place_id": "ChIJ0_p9DDi_uEcRZyRIbFy9fUk"
+    },
+    {
+      "venue_name": "Schwarzlicht Semester Minigolf Marl",
+      "postcode": "45772",
+      "place": "Marl",
+      "lat": 51.6655684,
+      "lng": 7.132994,
+      "google_place_id": "ChIJ1zx_Qyn7uEcRQCgYzu5Y4cU"
+    },
+    {
+      "venue_name": "Schwarzlicht Minigolf Essen | GolfZone",
+      "postcode": "45355",
+      "place": "Essen",
+      "lat": 51.4732947,
+      "lng": 6.950499799999999,
+      "google_place_id": "ChIJLey9RCXDuEcRTViIrhBTFio"
+    },
+    {
+      "venue_name": "Minigolfanlage GOLF MÜHLE",
+      "postcode": "46244",
+      "place": "Bottrop",
+      "lat": 51.566904099999995,
+      "lng": 6.8745714,
+      "google_place_id": "ChIJa6LrAR_tuEcRl_cgcWclvFY"
+    },
+    {
+      "venue_name": "Adventure Golf Park",
+      "postcode": "44149",
+      "place": "Dortmund",
+      "lat": 51.521584999999995,
+      "lng": 7.4037229999999985,
+      "google_place_id": "ChIJZdxU8U8ZuUcRNGkGRdny4FA"
+    },
+    {
+      "venue_name": "Minigolf Nettetal GbR",
+      "postcode": "49134",
+      "place": "Wallenhorst",
+      "lat": 52.323997999999996,
+      "lng": 8.080558,
+      "google_place_id": "ChIJNxL0AWLkuUcRvZmlcyHqmko"
+    },
+    {
+      "venue_name": "Minigolf Bad Eilsen",
+      "postcode": "31707",
+      "place": "Bad Eilsen",
+      "lat": 52.242537999999996,
+      "lng": 9.104505,
+      "google_place_id": "ChIJW2_eWuB7ukcRw59sLlbaqas"
+    },
+    {
+      "venue_name": "Minigolfsportverein-Hildesheim e. V.",
+      "postcode": "31135",
+      "place": "Hildesheim",
+      "lat": 52.16989170000001,
+      "lng": 9.9778069,
+      "google_place_id": "ChIJLexBceauukcR3WqQi6QQK_w"
+    },
+    {
+      "venue_name": "Minigolf Am Kennelbad",
+      "postcode": "38122",
+      "place": "Braunschweig",
+      "lat": 52.2426452,
+      "lng": 10.5219993,
+      "google_place_id": "ChIJ66E6IP31r0cRJBsFH9ACVyw"
+    },
+    {
+      "venue_name": "Hexengolf - Adventure-Minigolf Harz",
+      "postcode": "06502",
+      "place": "Thale",
+      "lat": 51.7288164,
+      "lng": 11.0236031,
+      "google_place_id": "ChIJZzOSRiSkpUcRZAK4wtNrEm4"
+    },
+    {
+      "venue_name": "Minigolf Hildesheim",
+      "postcode": "31139",
+      "place": "Hildesheim",
+      "lat": 52.144653299999995,
+      "lng": 9.9398117,
+      "google_place_id": "ChIJzx9BR9KvukcRF-nf0ThtUfg"
+    },
+    {
+      "venue_name": "Neomingo GmbH",
+      "postcode": "39112",
+      "place": "Magdeburg",
+      "lat": 52.112823999999996,
+      "lng": 11.615444100000001,
+      "google_place_id": "ChIJ2Q8xUpv1pUcRz7Uddu7Ic9o"
+    },
+    {
+      "venue_name": "Farbrausch 3D Adventure Minigolf Magdeburg",
+      "postcode": "39104",
+      "place": "Magdeburg",
+      "lat": 52.1310405,
+      "lng": 11.628354300000002,
+      "google_place_id": "ChIJxTEaboNfr0cRgrtBE0Iqj8o"
+    },
+    {
+      "venue_name": "Hole in One - Schwarzlicht Minigolf",
+      "postcode": "15745",
+      "place": "Wildau",
+      "lat": 52.314346199999996,
+      "lng": 13.604282999999999,
+      "google_place_id": "ChIJx5RkJ4I_qEcRUhndKiLZquQ"
+    },
+    {
+      "venue_name": "Minigolfplatz Hasenheide",
+      "postcode": "10967",
+      "place": "Berlin",
+      "lat": 52.487901199999996,
+      "lng": 13.414391,
+      "google_place_id": "ChIJs5Hkq8hPqEcRBVTv3NnpmEk"
+    },
+    {
+      "venue_name": "Laserstar® Berlin Lasertag, Abenteuer Minigolf, Escape Rooms & Arcade Games",
+      "postcode": "12057",
+      "place": "Berlin",
+      "lat": 52.4661325,
+      "lng": 13.4426361,
+      "google_place_id": "ChIJE1SsOnZPqEcRzCUQGqktYH0"
+    },
+    {
+      "venue_name": "Minigolf",
+      "postcode": "15910",
+      "place": "Krausnick-Groß Wasserburg",
+      "lat": 52.039113099999994,
+      "lng": 13.7498802,
+      "google_place_id": "ChIJtypiF_sFqEcRSil0bJFKq18"
+    },
+    {
+      "venue_name": "BeachMitte Adventure Golf",
+      "postcode": "10115",
+      "place": "Berlin",
+      "lat": 52.5333146,
+      "lng": 13.3856723,
+      "google_place_id": "ChIJwQIoNhFRqEcRcmBmU43mduY"
+    },
+    {
+      "venue_name": "Adventure Minigolf Berlin \"Pirate´s Island\"",
+      "postcode": "16348",
+      "place": "Wandlitz",
+      "lat": 52.790357199999995,
+      "lng": 13.5686722,
+      "google_place_id": "ChIJmTRwk167qUcREMgFuz_cGM4"
+    },
+    {
+      "venue_name": "Seenland Adventure Park",
+      "postcode": "02977",
+      "place": "Hoyerswerda",
+      "lat": 51.4550615,
+      "lng": 14.2660425,
+      "google_place_id": "ChIJRdRuxcY0cEERTDPBoNnjtbI"
+    },
+    {
+      "venue_name": "Freizeitcenter Emden",
+      "postcode": "26723",
+      "place": "Emden",
+      "lat": 53.369240999999995,
+      "lng": 7.1879732,
+      "google_place_id": "ChIJM8o3Tos5tkcR2nnIQkaRgRM"
+    },
+    {
+      "venue_name": "Erlebnisminigolf Esens",
+      "postcode": "26427",
+      "place": "Esens",
+      "lat": 53.653053799999995,
+      "lng": 7.632416900000001,
+      "google_place_id": "ChIJz9OrkRZltkcRVmOQNKg4XSk"
+    },
+    {
+      "venue_name": "Fahrradverleih & Minigolf van Raden",
+      "postcode": "26757",
+      "place": "Borkum",
+      "lat": 53.5916674,
+      "lng": 6.6629589,
+      "google_place_id": "ChIJZ8oOAH_oyUcR5qvkdRAKUTA"
+    },
+    {
+      "venue_name": "Laserstar® Oldenburg Zone Lasertag, Adventure Minigolf & Arcade Games",
+      "postcode": "26125",
+      "place": "Oldenburg (Oldb)",
+      "lat": 53.1792108,
+      "lng": 8.2283434,
+      "google_place_id": "ChIJf6bUlpfftkcRlHM8JKTPl0o"
+    },
+    {
+      "venue_name": "HavenGlow Bremerhaven",
+      "postcode": "27572",
+      "place": "Bremerhaven",
+      "lat": 53.523424299999995,
+      "lng": 8.582985599999999,
+      "google_place_id": "ChIJ41D2U06xtkcRLyu-mpb8NCc"
+    },
+    {
+      "venue_name": "Adventure Golf Dangast",
+      "postcode": "26316",
+      "place": "Varel",
+      "lat": 53.4504293,
+      "lng": 8.1217802,
+      "google_place_id": "ChIJ7U8NTgDttkcR4BLDQyYmwgQ"
+    },
+    {
+      "venue_name": "Adventure Golf Bremen",
+      "postcode": "28307",
+      "place": "Bremen",
+      "lat": 53.0542334,
+      "lng": 8.9598934,
+      "google_place_id": "ChIJh9b2fZchsUcRrImQ_OhsPXo"
+    },
+    {
+      "venue_name": "Adventure District Bispingen",
+      "postcode": "29646",
+      "place": "Bispingen",
+      "lat": 53.099128699999994,
+      "lng": 9.9822931,
+      "google_place_id": "ChIJlfhAIh-3sUcRCyWObyXwNOQ"
+    },
+    {
+      "venue_name": "Minigolf by Café Blomen",
+      "postcode": "20359",
+      "place": "Hamburg",
+      "lat": 53.552713999999995,
+      "lng": 9.972565399999999,
+      "google_place_id": "ChIJQ7m43zKPsUcRLTW9671aJYg"
+    },
+    {
+      "venue_name": "Minigolf Hotel zur Heidschnucke",
+      "postcode": "21271",
+      "place": "Asendorf",
+      "lat": 53.303716699999995,
+      "lng": 9.986733899999999,
+      "google_place_id": "ChIJc3o8na2_sUcRve9aqtd8PDo"
+    },
+    {
+      "venue_name": "Nova Freizeitwelten",
+      "postcode": "21339",
+      "place": "Lüneburg",
+      "lat": 53.2727498,
+      "lng": 10.410096099999999,
+      "google_place_id": "ChIJA43bp7rdsUcR2T0H_tCCfqg"
+    },
+    {
+      "venue_name": "Minigolf - Salem",
+      "postcode": "23911",
+      "place": "Salem",
+      "lat": 53.649358799999995,
+      "lng": 10.8356054,
+      "google_place_id": "ChIJd1Or_yT8rUcRiQWGmAV7ZWA"
+    },
+    {
+      "venue_name": "Minigolfplatz Gartow",
+      "postcode": "29471",
+      "place": "Gartow",
+      "lat": 53.027326699999996,
+      "lng": 11.4425457,
+      "google_place_id": "ChIJySo06-X3rkcR05Zk1Vnimzo"
+    },
+    {
+      "venue_name": "Minigolfanlage Zierow - 2Beach",
+      "postcode": "23968",
+      "place": "Zierow",
+      "lat": 53.934262999999994,
+      "lng": 11.371011,
+      "google_place_id": "ChIJF3YzBay_rUcRoEEak5x-izg"
+    },
+    {
+      "venue_name": "Baltic Adventures - Lasertag, Neonminigolf und Escaperooms",
+      "postcode": "17033",
+      "place": "Neubrandenburg",
+      "lat": 53.5391662,
+      "lng": 13.2592955,
+      "google_place_id": "ChIJn_dujkPDq0cRGClZiUa983o"
+    },
+    {
+      "venue_name": "7th Space Köln - Virtual Reality & more!",
+      "postcode": "50672",
+      "place": "Köln",
+      "lat": 50.9369818,
+      "lng": 6.9429924,
+      "google_place_id": "ChIJf5uD0IUlv0cRdc4DM_jxd-Y"
+    },
+    {
+      "venue_name": "Minigolf am Kurpark",
+      "postcode": "27498",
+      "place": "Helgoland",
+      "lat": 54.1847259,
+      "lng": 7.887420799999999,
+      "google_place_id": "ChIJWWDeivq1tUcRmnXC5q_BgZc"
+    },
+    {
+      "venue_name": "Unschlagbar Husum",
+      "postcode": "25813",
+      "place": "Husum",
+      "lat": 54.4696526,
+      "lng": 9.0882513,
+      "google_place_id": "ChIJTcQxPrx_s0cRQOMwWjg2770"
+    },
+    {
+      "venue_name": "4D Schwarzlicht Minigolf Kiel",
+      "postcode": "24109",
+      "place": "Kiel",
+      "lat": 54.3261101,
+      "lng": 10.061506,
+      "google_place_id": "ChIJkzrolC1VskcRUxPqLfwTRfY"
+    },
+    {
+      "venue_name": "Minigolf Königswiesen",
+      "postcode": "24837",
+      "place": "Schleswig",
+      "lat": 54.5129145,
+      "lng": 9.561829099999999,
+      "google_place_id": "ChIJR-uioi4Ls0cReWOt2K4XxjE"
+    },
+    {
+      "venue_name": "Golfcity Rügen",
+      "postcode": "18581",
+      "place": "Putbus",
+      "lat": 54.3486747,
+      "lng": 13.4903993,
+      "google_place_id": "ChIJs6518FpCq0cRqk5gsCWE_bU"
+    },
+    {
+      "venue_name": "Abenteuergolf Göhren",
+      "postcode": "18586",
+      "place": "Ostseebad Göhren",
+      "lat": 54.347151999999994,
+      "lng": 13.73926,
+      "google_place_id": "ChIJ09YcBi8Wq0cRfTPgE-1AKUE"
+    },
+    {
+      "venue_name": "Minigolf bei Planenlange",
+      "postcode": "18574",
+      "place": "Poseritz",
+      "lat": 54.3000391,
+      "lng": 13.2689962,
+      "google_place_id": "ChIJz2ZnKABlq0cRzMqOO6rxErg"
+    }
+  ]
+}

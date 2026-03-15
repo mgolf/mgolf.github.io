@@ -1,0 +1,289 @@
+{
+  "generated_at_unix": 1773593950,
+  "scan": {
+    "grid_step": 2.0,
+    "cells_scanned_per_query": 20,
+    "api_calls_total": 180,
+    "max_results_per_cell": 20,
+    "failures": 0
+  },
+  "categories": {
+    "pizzeria": {
+      "queries": [
+        "pizzeria",
+        "pizza restaurant"
+      ],
+      "unique_places": 336,
+      "top_raw_name_counts": [
+        {
+          "name": "Pizzeria Italia",
+          "count": 4
+        },
+        {
+          "name": "Pizzeria Bella Italia",
+          "count": 3
+        },
+        {
+          "name": "Pizzeria da Luigi",
+          "count": 2
+        },
+        {
+          "name": "Pizzeria La Casa",
+          "count": 2
+        },
+        {
+          "name": "Pizzeria da Franco",
+          "count": 2
+        },
+        {
+          "name": "Pizzeria Portofino",
+          "count": 2
+        },
+        {
+          "name": "Pizzeria Bella Napoli",
+          "count": 2
+        },
+        {
+          "name": "Pizzeria Amore",
+          "count": 2
+        },
+        {
+          "name": "Pizzeria Sicilia",
+          "count": 2
+        },
+        {
+          "name": "Pizzeria Dolce Vita",
+          "count": 2
+        }
+      ],
+      "top_canonical_name_counts": [
+        {
+          "name": "pizzeria italia",
+          "count": 4
+        },
+        {
+          "name": "pizzeria bella italia",
+          "count": 4
+        },
+        {
+          "name": "pizzeria da luigi",
+          "count": 3
+        },
+        {
+          "name": "ristorante",
+          "count": 2
+        },
+        {
+          "name": "litaliano",
+          "count": 2
+        },
+        {
+          "name": "pizzeria la casa",
+          "count": 2
+        },
+        {
+          "name": "pizzeria da franco",
+          "count": 2
+        },
+        {
+          "name": "pizzeria portofino",
+          "count": 2
+        },
+        {
+          "name": "pizzeria bella napoli",
+          "count": 2
+        },
+        {
+          "name": "pizzeria amore",
+          "count": 2
+        }
+      ]
+    },
+    "eisdiele": {
+      "queries": [
+        "eisdiele",
+        "eiscafe",
+        "gelateria"
+      ],
+      "unique_places": 615,
+      "top_raw_name_counts": [
+        {
+          "name": "Eiscafé Venezia",
+          "count": 18
+        },
+        {
+          "name": "Eiscafé Dolomiti",
+          "count": 9
+        },
+        {
+          "name": "Eiscafé Cortina",
+          "count": 8
+        },
+        {
+          "name": "Eiscafé Veneto",
+          "count": 5
+        },
+        {
+          "name": "Eiscafe Venezia",
+          "count": 5
+        },
+        {
+          "name": "Eiscafé San Remo",
+          "count": 4
+        },
+        {
+          "name": "Eiscafé Dolce Vita",
+          "count": 3
+        },
+        {
+          "name": "Il Gelato",
+          "count": 3
+        },
+        {
+          "name": "Eiscafé Italia",
+          "count": 3
+        },
+        {
+          "name": "Eiscafé Rialto",
+          "count": 3
+        }
+      ],
+      "top_canonical_name_counts": [
+        {
+          "name": "eiscafe venezia",
+          "count": 26
+        },
+        {
+          "name": "eiscafe dolomiti",
+          "count": 10
+        },
+        {
+          "name": "eiscafe cortina",
+          "count": 8
+        },
+        {
+          "name": "eiscafe dolce vita",
+          "count": 6
+        },
+        {
+          "name": "eiscafe italia",
+          "count": 6
+        },
+        {
+          "name": "eiscafe san remo",
+          "count": 5
+        },
+        {
+          "name": "eiscafe veneto",
+          "count": 5
+        },
+        {
+          "name": "casa del gelato",
+          "count": 4
+        },
+        {
+          "name": "eiscafe la dolce vita",
+          "count": 4
+        },
+        {
+          "name": "gelatone",
+          "count": 4
+        }
+      ]
+    },
+    "friseur": {
+      "queries": [
+        "friseur",
+        "haarsalon",
+        "haarstudio",
+        "barbershop"
+      ],
+      "unique_places": 930,
+      "top_raw_name_counts": [
+        {
+          "name": "Das Haarstudio",
+          "count": 4
+        },
+        {
+          "name": "Barbershop",
+          "count": 4
+        },
+        {
+          "name": "Haarstudio Mariastyle",
+          "count": 2
+        },
+        {
+          "name": "Haarstudio Elena",
+          "count": 2
+        },
+        {
+          "name": "Haarstudio",
+          "count": 2
+        },
+        {
+          "name": "Haarstudio Richter",
+          "count": 2
+        },
+        {
+          "name": "Barber Shop",
+          "count": 2
+        },
+        {
+          "name": "Hadi Barbershop",
+          "count": 2
+        },
+        {
+          "name": "Brothers Barbershop",
+          "count": 2
+        },
+        {
+          "name": "Gentlemen's Barbershop",
+          "count": 2
+        }
+      ],
+      "top_canonical_name_counts": [
+        {
+          "name": "das haarstudio",
+          "count": 5
+        },
+        {
+          "name": "barbershop",
+          "count": 5
+        },
+        {
+          "name": "haarstudio",
+          "count": 3
+        },
+        {
+          "name": "barber shop",
+          "count": 3
+        },
+        {
+          "name": "brothers barbershop",
+          "count": 3
+        },
+        {
+          "name": "friseur und kosmetik gmbh",
+          "count": 2
+        },
+        {
+          "name": "schnittstelle",
+          "count": 2
+        },
+        {
+          "name": "hair und beauty",
+          "count": 2
+        },
+        {
+          "name": "haarsalon",
+          "count": 2
+        },
+        {
+          "name": "haarstudio mariastyle",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "failures": []
+}

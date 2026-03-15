@@ -1,0 +1,62 @@
+{
+  "total_records": 2764,
+  "records_with_detail_page": 44,
+  "records_accepting_minigolf_card": 55,
+  "records_with_club": 218,
+  "records_with_coordinates": 2585,
+  "records_with_structured_street": 1806,
+  "records_with_house_number": 1360,
+  "records_with_named_place_address": 190,
+  "records_with_venue_name": 2782,
+  "records_with_website": 319,
+  "records_with_detail_contact_data": 43,
+  "plz_group_counts": {
+    "0": 91,
+    "1": 97,
+    "2": 221,
+    "3": 219,
+    "4": 187,
+    "5": 219,
+    "6": 158,
+    "7": 274,
+    "8": 221,
+    "9": 194
+  },
+  "course_type_counts": {
+    "beton": 217,
+    "eternit": 883,
+    "filz": 37,
+    "sonstige": 420,
+    "unknown": 365
+  },
+  "approved_course_type_counts": {
+    "beton": 86,
+    "eternit": 150,
+    "filz": 11,
+    "sonstige": 70,
+    "unknown": 0
+  },
+  "course_type_labels": {
+    "beton": "System Beton",
+    "eternit": "System Eternit",
+    "filz": "System Filz",
+    "sonstige": "Sonstige Anlage",
+    "unknown": "Unbekannter Anlagentyp"
+  },
+  "osm_overpass_candidates": 2335,
+  "osm_records_added": 903,
+  "osm_last_import_unix": 1773590786,
+  "venue_google_enriched_records": 2768,
+  "venue_with_photo_url": 1725,
+  "venue_with_google_rating": 791,
+  "venue_enrichment_provider": "google_places",
+  "venue_enrichment_unresolved": 12,
+  "venue_enrichment_generated_at_unix": 1773571102,
+  "validation_last_run_unix": 1773571238,
+  "validation_checked_records": 2780,
+  "validation_corrected_records": 34,
+  "validation_flagged_records": 998,
+  "validation_distance_threshold_km": 2.0,
+  "osm_records_enriched": 979,
+  "deduplication_last_run_unix": 1773591073
+}

@@ -1,0 +1,1607 @@
+{
+  "strategy": "clear_mass_reused_google_place_id_for_osm_with_generic_country_address",
+  "threshold_min_reuse_count": 100,
+  "updated_count": 781,
+  "updated": [
+    {
+      "index": 1866,
+      "id": "mgd-01867",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1867,
+      "id": "mgd-01868",
+      "venue_name": "Minigolfplatz Traben-Trarbach",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1868,
+      "id": "mgd-01869",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1869,
+      "id": "mgd-01870",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1870,
+      "id": "mgd-01871",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1871,
+      "id": "mgd-01872",
+      "venue_name": "Minigolf Da Vinci",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1872,
+      "id": "mgd-01873",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1873,
+      "id": "mgd-01874",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1874,
+      "id": "mgd-01875",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1875,
+      "id": "mgd-01876",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1876,
+      "id": "mgd-01877",
+      "venue_name": "Mini-Golf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1877,
+      "id": "mgd-01878",
+      "venue_name": "Minigolfplatz, außer Betrieb",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1878,
+      "id": "mgd-01879",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1879,
+      "id": "mgd-01880",
+      "venue_name": "Adventure Golf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1880,
+      "id": "mgd-01881",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1881,
+      "id": "mgd-01882",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1882,
+      "id": "mgd-01883",
+      "venue_name": "Minigolfanlage im Steinbruch",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1883,
+      "id": "mgd-01884",
+      "venue_name": "Hirsch Erlebniswald",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1884,
+      "id": "mgd-01885",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1885,
+      "id": "mgd-01886",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1886,
+      "id": "mgd-01887",
+      "venue_name": "1. Minigolfclub Süßen",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1887,
+      "id": "mgd-01888",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1888,
+      "id": "mgd-01889",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1889,
+      "id": "mgd-01890",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1890,
+      "id": "mgd-01891",
+      "venue_name": "Minigolf Haidweiher",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1891,
+      "id": "mgd-01892",
+      "venue_name": "Pit-Pat Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1892,
+      "id": "mgd-01893",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1893,
+      "id": "mgd-01894",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1894,
+      "id": "mgd-01895",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1895,
+      "id": "mgd-01896",
+      "venue_name": "Mingolf-Arena",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1896,
+      "id": "mgd-01897",
+      "venue_name": "Spielgolfplatz",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1897,
+      "id": "mgd-01898",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1898,
+      "id": "mgd-01899",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1899,
+      "id": "mgd-01900",
+      "venue_name": "Minigolf Eibenstock",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1900,
+      "id": "mgd-01901",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1901,
+      "id": "mgd-01902",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1902,
+      "id": "mgd-01903",
+      "venue_name": "Strandgolfer",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1903,
+      "id": "mgd-01904",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1904,
+      "id": "mgd-01905",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1905,
+      "id": "mgd-01906",
+      "venue_name": "Miniaturgolf im Luitpoldpark",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1906,
+      "id": "mgd-01907",
+      "venue_name": "Minigolf Helden",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1907,
+      "id": "mgd-01908",
+      "venue_name": "Minigolfanlage Seebad Wendorf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1908,
+      "id": "mgd-01909",
+      "venue_name": "Roompot",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1909,
+      "id": "mgd-01910",
+      "venue_name": "Abenteuer Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1910,
+      "id": "mgd-01911",
+      "venue_name": "Minigolf Rutesheim",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1912,
+      "id": "mgd-01913",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1913,
+      "id": "mgd-01914",
+      "venue_name": "Minigolf Freibad Tirschenreuth",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1916,
+      "id": "mgd-01917",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1917,
+      "id": "mgd-01918",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1918,
+      "id": "mgd-01919",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1919,
+      "id": "mgd-01920",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1920,
+      "id": "mgd-01921",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1921,
+      "id": "mgd-01922",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1923,
+      "id": "mgd-01924",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1924,
+      "id": "mgd-01925",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1925,
+      "id": "mgd-01926",
+      "venue_name": "Minigolfanlage im Kurpark",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1927,
+      "id": "mgd-01928",
+      "venue_name": "ACR Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1928,
+      "id": "mgd-01929",
+      "venue_name": "Naturminigolf Dangast",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1929,
+      "id": "mgd-01930",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1930,
+      "id": "mgd-01931",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1931,
+      "id": "mgd-01932",
+      "venue_name": "Geli's Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1932,
+      "id": "mgd-01933",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1933,
+      "id": "mgd-01934",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1934,
+      "id": "mgd-01935",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1935,
+      "id": "mgd-01936",
+      "venue_name": "Minigolfanlage",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1936,
+      "id": "mgd-01937",
+      "venue_name": "Abenteuergolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1937,
+      "id": "mgd-01938",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1940,
+      "id": "mgd-01941",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1941,
+      "id": "mgd-01942",
+      "venue_name": "TV Trappenkamp",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1943,
+      "id": "mgd-01944",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1944,
+      "id": "mgd-01945",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1945,
+      "id": "mgd-01946",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1947,
+      "id": "mgd-01948",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1948,
+      "id": "mgd-01949",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1949,
+      "id": "mgd-01950",
+      "venue_name": "Adventure-Minigolfanlage",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1950,
+      "id": "mgd-01951",
+      "venue_name": "Center Parcs Minigolf (Indoor)",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1951,
+      "id": "mgd-01952",
+      "venue_name": "Minigolf Campingplatz und Kahler Seenbäder",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1952,
+      "id": "mgd-01953",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1953,
+      "id": "mgd-01954",
+      "venue_name": "Schwarzlicht Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1954,
+      "id": "mgd-01955",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1956,
+      "id": "mgd-01957",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1957,
+      "id": "mgd-01958",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1958,
+      "id": "mgd-01959",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1959,
+      "id": "mgd-01960",
+      "venue_name": "Neon",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1961,
+      "id": "mgd-01962",
+      "venue_name": "Minigolfanlage",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1963,
+      "id": "mgd-01964",
+      "venue_name": "Minigolf Kurpark Krün",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1964,
+      "id": "mgd-01965",
+      "venue_name": "Blacklight Arena (Indoor-Minigolf und Escape-Room)",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1965,
+      "id": "mgd-01966",
+      "venue_name": "Schwarzlichthelden",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1966,
+      "id": "mgd-01967",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1967,
+      "id": "mgd-01968",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1968,
+      "id": "mgd-01969",
+      "venue_name": "Leeraner Miniaturland",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1969,
+      "id": "mgd-01970",
+      "venue_name": "World of Gleamgolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1970,
+      "id": "mgd-01971",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1971,
+      "id": "mgd-01972",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1972,
+      "id": "mgd-01973",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1975,
+      "id": "mgd-01976",
+      "venue_name": "Pit-Pat-Anlage",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1976,
+      "id": "mgd-01977",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1978,
+      "id": "mgd-01979",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1979,
+      "id": "mgd-01980",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1981,
+      "id": "mgd-01982",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1982,
+      "id": "mgd-01983",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1983,
+      "id": "mgd-01984",
+      "venue_name": "Minigolf Campingplatz Bad Stuer",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1984,
+      "id": "mgd-01985",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1985,
+      "id": "mgd-01986",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1987,
+      "id": "mgd-01988",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1989,
+      "id": "mgd-01990",
+      "venue_name": "Adventure-Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1990,
+      "id": "mgd-01991",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1991,
+      "id": "mgd-01992",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1992,
+      "id": "mgd-01993",
+      "venue_name": "Glowing Rooms",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1993,
+      "id": "mgd-01994",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1994,
+      "id": "mgd-01995",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1995,
+      "id": "mgd-01996",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1996,
+      "id": "mgd-01997",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1997,
+      "id": "mgd-01998",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1998,
+      "id": "mgd-01999",
+      "venue_name": "Blacklight Arena",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 1999,
+      "id": "mgd-02000",
+      "venue_name": "Minigolfanlage Ölschnitzsee",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2000,
+      "id": "mgd-02001",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2001,
+      "id": "mgd-02002",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2003,
+      "id": "mgd-02004",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2004,
+      "id": "mgd-02005",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2005,
+      "id": "mgd-02006",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2006,
+      "id": "mgd-02007",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2007,
+      "id": "mgd-02008",
+      "venue_name": "Sommergarten Gehrden",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2008,
+      "id": "mgd-02009",
+      "venue_name": "Peter Pans Indoor Abenteuer",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2009,
+      "id": "mgd-02010",
+      "venue_name": "Pit-Pat",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2010,
+      "id": "mgd-02011",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2011,
+      "id": "mgd-02012",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2012,
+      "id": "mgd-02013",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2014,
+      "id": "mgd-02015",
+      "venue_name": "Minigolf Glowe",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2015,
+      "id": "mgd-02016",
+      "venue_name": "3D-Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2016,
+      "id": "mgd-02017",
+      "venue_name": "Dschungel-Golf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2017,
+      "id": "mgd-02018",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2018,
+      "id": "mgd-02019",
+      "venue_name": "Minigolf Hotel Sonnenhügel",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2019,
+      "id": "mgd-02020",
+      "venue_name": "Glowzone Schwarzlicht Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2020,
+      "id": "mgd-02021",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2021,
+      "id": "mgd-02022",
+      "venue_name": "Bernsteinreiter",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2022,
+      "id": "mgd-02023",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2023,
+      "id": "mgd-02024",
+      "venue_name": "Pit Pat",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2024,
+      "id": "mgd-02025",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2025,
+      "id": "mgd-02026",
+      "venue_name": "Neonlöwen",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2026,
+      "id": "mgd-02027",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2028,
+      "id": "mgd-02029",
+      "venue_name": "Schwarzlichtminigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2030,
+      "id": "mgd-02031",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2032,
+      "id": "mgd-02033",
+      "venue_name": "3D Neongolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2033,
+      "id": "mgd-02034",
+      "venue_name": "Spielwerk",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2036,
+      "id": "mgd-02037",
+      "venue_name": "Putt Club",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2039,
+      "id": "mgd-02040",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2040,
+      "id": "mgd-02041",
+      "venue_name": "Abenteuerspielgolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2041,
+      "id": "mgd-02042",
+      "venue_name": "Beach Minigolf am Forggensee",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2042,
+      "id": "mgd-02043",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2043,
+      "id": "mgd-02044",
+      "venue_name": "Kiddypark Monte Clamotte",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2044,
+      "id": "mgd-02045",
+      "venue_name": "Minigolf Killesberg",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2045,
+      "id": "mgd-02046",
+      "venue_name": "Kurpark",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2046,
+      "id": "mgd-02047",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2047,
+      "id": "mgd-02048",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2048,
+      "id": "mgd-02049",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2049,
+      "id": "mgd-02050",
+      "venue_name": "Minigolfplatz am Ikasee",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2050,
+      "id": "mgd-02051",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2051,
+      "id": "mgd-02052",
+      "venue_name": "Minigolf Fürstenfeldbruck",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2052,
+      "id": "mgd-02053",
+      "venue_name": "Mini Golf in Schieder",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2053,
+      "id": "mgd-02054",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2054,
+      "id": "mgd-02055",
+      "venue_name": "Minigolfanlage Bad Nauheim",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2055,
+      "id": "mgd-02056",
+      "venue_name": "Minigolf Wedel",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2056,
+      "id": "mgd-02057",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2058,
+      "id": "mgd-02059",
+      "venue_name": "Miniatur-Golf Hohensyburg Zur Burgruine",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2059,
+      "id": "mgd-02060",
+      "venue_name": "Minigolf Maichingen",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2060,
+      "id": "mgd-02061",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2061,
+      "id": "mgd-02062",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2062,
+      "id": "mgd-02063",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2063,
+      "id": "mgd-02064",
+      "venue_name": "1. MGC Bamberg",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2064,
+      "id": "mgd-02065",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2065,
+      "id": "mgd-02066",
+      "venue_name": "Minigolfplatz",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2066,
+      "id": "mgd-02067",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2067,
+      "id": "mgd-02068",
+      "venue_name": "Park Plätzchen Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2068,
+      "id": "mgd-02069",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2069,
+      "id": "mgd-02070",
+      "venue_name": "Minigolfanlage Weiskirchen",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2070,
+      "id": "mgd-02071",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2072,
+      "id": "mgd-02073",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2073,
+      "id": "mgd-02074",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2074,
+      "id": "mgd-02075",
+      "venue_name": "Minigolfanlage",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2075,
+      "id": "mgd-02076",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2076,
+      "id": "mgd-02077",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2077,
+      "id": "mgd-02078",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2078,
+      "id": "mgd-02079",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2079,
+      "id": "mgd-02080",
+      "venue_name": "Minigolf am Kueser Hafen",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2080,
+      "id": "mgd-02081",
+      "venue_name": "Elspe",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2081,
+      "id": "mgd-02082",
+      "venue_name": "Minigolfplatz",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2082,
+      "id": "mgd-02083",
+      "venue_name": "Dünengolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2084,
+      "id": "mgd-02085",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2085,
+      "id": "mgd-02086",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2086,
+      "id": "mgd-02087",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2087,
+      "id": "mgd-02088",
+      "venue_name": "Minigolf im Volkspark",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2088,
+      "id": "mgd-02089",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2089,
+      "id": "mgd-02090",
+      "venue_name": "Mini-Golf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2092,
+      "id": "mgd-02093",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2093,
+      "id": "mgd-02094",
+      "venue_name": "Miniaturgolf-Club Sindelfingen-Eichholz e.V.",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2094,
+      "id": "mgd-02095",
+      "venue_name": "Minigolf Seelbach",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2095,
+      "id": "mgd-02096",
+      "venue_name": "Minigolf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2096,
+      "id": "mgd-02097",
+      "venue_name": "Minigolfanlage Erlebnisgarten",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    },
+    {
+      "index": 2097,
+      "id": "mgd-02098",
+      "venue_name": "Adventure Golf",
+      "old_place_id": "ChIJa76xwh5ymkcRW-WRjmtd6HU",
+      "old_address_google": "Deutschland",
+      "old_rating": null
+    }
+  ]
+}

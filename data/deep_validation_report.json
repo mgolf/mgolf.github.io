@@ -1,0 +1,689 @@
+{
+  "generated_at": "2026-03-15",
+  "summary": {
+    "atlas_total": 2853,
+    "atlas_with_coords": 2630,
+    "web_total": 2853,
+    "web_with_coords": 2630,
+    "markers_total": 2630
+  },
+  "checks": {
+    "duplicate_web_ids_count": 0,
+    "duplicate_marker_ids_count": 0,
+    "web_coord_ids_missing_in_markers_count": 0,
+    "extra_marker_ids_without_web_coord_count": 0,
+    "suspicious_non_osm_category_with_coords_count": 645,
+    "duplicate_google_place_ids_count": 6,
+    "max_google_place_id_reuse": 2
+  },
+  "samples": {
+    "suspicious_non_osm_category_with_coords_top80": [
+      {
+        "index": 1,
+        "id": "mgd-00002",
+        "venue_name": "Emilienstraße 20",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "01139 Dresden"
+      },
+      {
+        "index": 2,
+        "id": "mgd-00003",
+        "venue_name": "Moselbruchweg 11",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "01609 Röderaue-Frauenhain"
+      },
+      {
+        "index": 4,
+        "id": "mgd-00005",
+        "venue_name": "Gießener Straße",
+        "venue_category": "secondary",
+        "geocode_source": "nominatim",
+        "location_raw": "01734 Rabenau-Londorf"
+      },
+      {
+        "index": 9,
+        "id": "mgd-00010",
+        "venue_name": "Bahnhofstraße 1",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "01877 Demitz-Thumitz"
+      },
+      {
+        "index": 11,
+        "id": "mgd-00012",
+        "venue_name": "Nordstraße",
+        "venue_category": "route",
+        "geocode_source": "nominatim",
+        "location_raw": "01917 Kamenz"
+      },
+      {
+        "index": 12,
+        "id": "mgd-00013",
+        "venue_name": "Straße zur Südsee",
+        "venue_category": "route",
+        "geocode_source": "nominatim",
+        "location_raw": "01968 Senftenberg-Großkoschen"
+      },
+      {
+        "index": 16,
+        "id": "mgd-00017",
+        "venue_name": "Lärchenbergweg 2",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "02681 Schirgiswalde"
+      },
+      {
+        "index": 17,
+        "id": "mgd-00018",
+        "venue_name": "Schrammstraße 63",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "02763 Zittau"
+      },
+      {
+        "index": 18,
+        "id": "mgd-00019",
+        "venue_name": "Jonsdorfer Straße",
+        "venue_category": "route",
+        "geocode_source": "nominatim",
+        "location_raw": "02779 Großschönau"
+      },
+      {
+        "index": 19,
+        "id": "mgd-00020",
+        "venue_name": "Am Kulturhaus 6",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "02829 Neißeaue"
+      },
+      {
+        "index": 24,
+        "id": "mgd-00025",
+        "venue_name": "Zum Erlebnispark 1",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "03185 Teichland"
+      },
+      {
+        "index": 25,
+        "id": "mgd-00026",
+        "venue_name": "Poststraße 10",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "03222 Lübbenau"
+      },
+      {
+        "index": 31,
+        "id": "mgd-00032",
+        "venue_name": "Ernst-Grube-Straße",
+        "venue_category": "residential",
+        "geocode_source": "nominatim",
+        "location_raw": "04610 Meuselwitz"
+      },
+      {
+        "index": 33,
+        "id": "mgd-00034",
+        "venue_name": "Linda 33",
+        "venue_category": "premise,street_address",
+        "geocode_source": "atlas_position_verified_with_google_and_osm",
+        "location_raw": "04655 Kohren-Sahlis"
+      },
+      {
+        "index": 34,
+        "id": "mgd-00035",
+        "venue_name": "Nimbschener Landstraße 1",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "04668 Grimma"
+      },
+      {
+        "index": 35,
+        "id": "mgd-00036",
+        "venue_name": "Zur Schiffsmühle 2",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "04668 Höfgen"
+      },
+      {
+        "index": 37,
+        "id": "mgd-00038",
+        "venue_name": "Fichtestraße 10",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "04720 Döbeln"
+      },
+      {
+        "index": 41,
+        "id": "mgd-00042",
+        "venue_name": "Böllberger Weg 185",
+        "venue_category": "street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "06110 Halle (Saale)"
+      },
+      {
+        "index": 42,
+        "id": "mgd-00043",
+        "venue_name": "Bergstraße",
+        "venue_category": "route",
+        "geocode_source": "nominatim",
+        "location_raw": "06188 Landsberg"
+      },
+      {
+        "index": 44,
+        "id": "mgd-00045",
+        "venue_name": "Hauptstraße",
+        "venue_category": "route",
+        "geocode_source": "nominatim",
+        "location_raw": "06311 Helbra"
+      },
+      {
+        "index": 45,
+        "id": "mgd-00046",
+        "venue_name": "Arnstedter Str. 2",
+        "venue_category": "street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "06333 Quenstedt"
+      },
+      {
+        "index": 47,
+        "id": "mgd-00048",
+        "venue_name": "Brumbyer Str. 5",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "06429 Neugattersleben"
+      },
+      {
+        "index": 51,
+        "id": "mgd-00052",
+        "venue_name": "Teichstraße 28",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "06502 Allrode"
+      },
+      {
+        "index": 52,
+        "id": "mgd-00053",
+        "venue_name": "Hexentanzpl. 4",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "06502 Thale"
+      },
+      {
+        "index": 53,
+        "id": "mgd-00054",
+        "venue_name": "Am Festpl. 9",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "06528 Riestedt"
+      },
+      {
+        "index": 54,
+        "id": "mgd-00055",
+        "venue_name": "Am Quellgrund 14",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "06567 Bad Frankenhausen"
+      },
+      {
+        "index": 55,
+        "id": "mgd-00056",
+        "venue_name": "Str. d. Einheit 29",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "06638 Karsdorf"
+      },
+      {
+        "index": 57,
+        "id": "mgd-00058",
+        "venue_name": "Güldene Hufe 10",
+        "venue_category": "street_address",
+        "geocode_source": "atlas_position_verified_with_google_and_osm",
+        "location_raw": "06667 Weissenfels"
+      },
+      {
+        "index": 58,
+        "id": "mgd-00059",
+        "venue_name": "Kreuzbergstraße 179",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "06849 Dessau"
+      },
+      {
+        "index": 59,
+        "id": "mgd-00060",
+        "venue_name": "Wiesenstraße",
+        "venue_category": "route",
+        "geocode_source": "nominatim",
+        "location_raw": "06895 Zahna"
+      },
+      {
+        "index": 62,
+        "id": "mgd-00063",
+        "venue_name": "Ortsstraße",
+        "venue_category": "route",
+        "geocode_source": "nominatim",
+        "location_raw": "07338 Hohenwarte"
+      },
+      {
+        "index": 66,
+        "id": "mgd-00067",
+        "venue_name": "Faulenzerweg",
+        "venue_category": "route",
+        "geocode_source": "nominatim",
+        "location_raw": "07548 Gera"
+      },
+      {
+        "index": 68,
+        "id": "mgd-00069",
+        "venue_name": "Liebsdorfer Str. 6",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "07570 Weida"
+      },
+      {
+        "index": 70,
+        "id": "mgd-00071",
+        "venue_name": "Tierparkstraße 5",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "08144 Hirschfeld"
+      },
+      {
+        "index": 72,
+        "id": "mgd-00073",
+        "venue_name": "Kleinbernsdorfer Str. 10",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "08412 Werdau"
+      },
+      {
+        "index": 76,
+        "id": "mgd-00077",
+        "venue_name": "Dittmannsdorfer Str. 48",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "09322 Penig"
+      },
+      {
+        "index": 81,
+        "id": "mgd-00082",
+        "venue_name": "Oberwiesenthaler Str. 14",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "09491 Bärenstein"
+      },
+      {
+        "index": 88,
+        "id": "mgd-00089",
+        "venue_name": "Am Stadtbad 1",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "09648 Mittweida"
+      },
+      {
+        "index": 90,
+        "id": "mgd-00091",
+        "venue_name": "Str. am Schoelerpark 35",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "10715 Berlin - Wilmersdorf"
+      },
+      {
+        "index": 92,
+        "id": "mgd-00093",
+        "venue_name": "Columbiadamm 88",
+        "venue_category": "street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "10965 Berlin"
+      },
+      {
+        "index": 94,
+        "id": "mgd-00095",
+        "venue_name": "im Görlitzer Park",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "10997 Berlin"
+      },
+      {
+        "index": 96,
+        "id": "mgd-00097",
+        "venue_name": "Am Stadtpark",
+        "venue_category": "route",
+        "geocode_source": "nominatim",
+        "location_raw": "12167 Berlin - Steglitz"
+      },
+      {
+        "index": 97,
+        "id": "mgd-00098",
+        "venue_name": "Königsberger Straße",
+        "venue_category": "secondary",
+        "geocode_source": "nominatim",
+        "location_raw": "12207 Berlin - Lichterfelde"
+      },
+      {
+        "index": 101,
+        "id": "mgd-00102",
+        "venue_name": "Buschkrugallee 170",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "12359 Berlin-Britz"
+      },
+      {
+        "index": 103,
+        "id": "mgd-00104",
+        "venue_name": "Am Schäfersee",
+        "venue_category": "route",
+        "geocode_source": "nominatim",
+        "location_raw": "13407 Berlin - Reinickendorf"
+      },
+      {
+        "index": 104,
+        "id": "mgd-00105",
+        "venue_name": "Königshorster Str. 11-13",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "13439 Berlin (Märkisches Viertel)"
+      },
+      {
+        "index": 110,
+        "id": "mgd-00111",
+        "venue_name": "Weverstraße 42",
+        "venue_category": "premise,street_address",
+        "geocode_source": "atlas_position_verified_with_google_and_osm",
+        "location_raw": "13595 Berlin - Spandau"
+      },
+      {
+        "index": 111,
+        "id": "mgd-00112",
+        "venue_name": "Georg-Hermann-Allee",
+        "venue_category": "route",
+        "geocode_source": "nominatim",
+        "location_raw": "14469 Potsdam"
+      },
+      {
+        "index": 114,
+        "id": "mgd-00115",
+        "venue_name": "Margaretenhof 1",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "14774 Brandenburg (an der Havel)"
+      },
+      {
+        "index": 116,
+        "id": "mgd-00117",
+        "venue_name": "August- Bebel- Str. 54",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "15234 Frankfurt (Oder)"
+      },
+      {
+        "index": 119,
+        "id": "mgd-00120",
+        "venue_name": "Am Backofensteig",
+        "venue_category": "route",
+        "geocode_source": "nominatim",
+        "location_raw": "15320 Neutrebbin"
+      },
+      {
+        "index": 123,
+        "id": "mgd-00124",
+        "venue_name": "Hochlandstraße 11A",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "15569 Woltersdorf"
+      },
+      {
+        "index": 124,
+        "id": "mgd-00125",
+        "venue_name": "Brückenstraße",
+        "venue_category": "route",
+        "geocode_source": "nominatim",
+        "location_raw": "15711 Königs Wusterhausen"
+      },
+      {
+        "index": 125,
+        "id": "mgd-00126",
+        "venue_name": "Querweg",
+        "venue_category": "unclassified",
+        "geocode_source": "nominatim",
+        "location_raw": "15831 Großziethen"
+      },
+      {
+        "index": 127,
+        "id": "mgd-00128",
+        "venue_name": "Hauptstraße",
+        "venue_category": "route",
+        "geocode_source": "google_geocoding_validated",
+        "location_raw": "15864 Wendisch Rietz"
+      },
+      {
+        "index": 130,
+        "id": "mgd-00131",
+        "venue_name": "Tropical-Islands-Allee 1",
+        "venue_category": "street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "15910 Krausnick"
+      },
+      {
+        "index": 131,
+        "id": "mgd-00132",
+        "venue_name": "Brunnenpl. 11",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "15913 Neu Zauche"
+      },
+      {
+        "index": 133,
+        "id": "mgd-00134",
+        "venue_name": "Gartenweg 10",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "16244 Schorfheide"
+      },
+      {
+        "index": 140,
+        "id": "mgd-00141",
+        "venue_name": "Bischofswerder Weg 12",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "16559 Liebenwalde"
+      },
+      {
+        "index": 141,
+        "id": "mgd-00142",
+        "venue_name": "Lindenstraße",
+        "venue_category": "residential",
+        "geocode_source": "nominatim",
+        "location_raw": "17033 Neubrandenburg"
+      },
+      {
+        "index": 146,
+        "id": "mgd-00147",
+        "venue_name": "Uckerpromenade 84",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "17291 Prenzlau"
+      },
+      {
+        "index": 147,
+        "id": "mgd-00148",
+        "venue_name": "Stettiner Str. 46B",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "17367 Eggesin"
+      },
+      {
+        "index": 153,
+        "id": "mgd-00154",
+        "venue_name": "Strandpromenade",
+        "venue_category": "route",
+        "geocode_source": "nominatim",
+        "location_raw": "17449 Karlshagen"
+      },
+      {
+        "index": 159,
+        "id": "mgd-00160",
+        "venue_name": "Industriestraße 10",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "18069 Rostock"
+      },
+      {
+        "index": 161,
+        "id": "mgd-00162",
+        "venue_name": "Stolteraer Weg 47",
+        "venue_category": "street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "18119 Rostock-Warnemünde"
+      },
+      {
+        "index": 162,
+        "id": "mgd-00163",
+        "venue_name": "Hermannstraße 19B",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "18225 Kühlungsborn"
+      },
+      {
+        "index": 164,
+        "id": "mgd-00165",
+        "venue_name": "Parkweg 7",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "18230 Rerik"
+      },
+      {
+        "index": 165,
+        "id": "mgd-00166",
+        "venue_name": "Ahornweg 2",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "18230 Bastorf"
+      },
+      {
+        "index": 166,
+        "id": "mgd-00167",
+        "venue_name": "Nebelring",
+        "venue_category": "residential",
+        "geocode_source": "nominatim",
+        "location_raw": "18246 Bützow"
+      },
+      {
+        "index": 169,
+        "id": "mgd-00170",
+        "venue_name": "Krabbenort 1",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "18375 Prerow"
+      },
+      {
+        "index": 171,
+        "id": "mgd-00172",
+        "venue_name": "Neddesitz 4",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "18551 Sagard / Rügen"
+      },
+      {
+        "index": 175,
+        "id": "mgd-00176",
+        "venue_name": "Nordstrand 4",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "18586 Göhren (Rügen)"
+      },
+      {
+        "index": 176,
+        "id": "mgd-00177",
+        "venue_name": "An d. Crivitzer Ch 1",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "19055 Schwerin"
+      },
+      {
+        "index": 177,
+        "id": "mgd-00178",
+        "venue_name": "Am Immensoll 35",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "19057 Schwerin"
+      },
+      {
+        "index": 181,
+        "id": "mgd-00182",
+        "venue_name": "Ziegeleiweg 8",
+        "venue_category": "street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "19386 Benzin"
+      },
+      {
+        "index": 182,
+        "id": "mgd-00183",
+        "venue_name": "Seestraße 7",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "19406 Hohen Pritz-Kukuk"
+      },
+      {
+        "index": 185,
+        "id": "mgd-00186",
+        "venue_name": "Schillerufer",
+        "venue_category": "route",
+        "geocode_source": "nominatim",
+        "location_raw": "21029 Hamburg"
+      },
+      {
+        "index": 186,
+        "id": "mgd-00187",
+        "venue_name": "Leuschnerstraße 100",
+        "venue_category": "street_address",
+        "geocode_source": "atlas_position_verified_with_google_and_osm",
+        "location_raw": "21031 Hamburg"
+      },
+      {
+        "index": 187,
+        "id": "mgd-00188",
+        "venue_name": "Hasselwerder Straße",
+        "venue_category": "route",
+        "geocode_source": "nominatim",
+        "location_raw": "21129 Hamburg"
+      },
+      {
+        "index": 189,
+        "id": "mgd-00190",
+        "venue_name": "Sültenweg 20",
+        "venue_category": "premise,street_address",
+        "geocode_source": "nominatim",
+        "location_raw": "21339 Lüneburg"
+      }
+    ],
+    "duplicate_google_place_ids_top20": [
+      {
+        "venue_google_place_id": "ChIJI4JtiXQEtEcRvgElLuBJpQk",
+        "count": 2
+      },
+      {
+        "venue_google_place_id": "ChIJGX2cb0g7uEcRgarOJ_L6DBE",
+        "count": 2
+      },
+      {
+        "venue_google_place_id": "ChIJW43u7DmunUcRBcAE9eX802Q",
+        "count": 2
+      },
+      {
+        "venue_google_place_id": "ChIJ97tmoPP2oUcR7DbtQekaGAA",
+        "count": 2
+      },
+      {
+        "venue_google_place_id": "ChIJt5orj8uRokcRhDW1wN683D4",
+        "count": 2
+      },
+      {
+        "venue_google_place_id": "ChIJ5zQCi_D3qkcRitFAxnHeiKE",
+        "count": 2
+      }
+    ]
+  }
+}

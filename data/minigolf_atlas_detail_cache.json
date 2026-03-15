@@ -1,0 +1,385 @@
+{
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=cottbus": {
+    "detail_address": "03051 Cottbus, Lange Str. 2",
+    "detail_phone": "0355 / 5249 74",
+    "detail_fax": "0355 / 4837 990",
+    "detail_website": "http://www.sportpark-cottbus.de",
+    "detail_email": "info@sportpark-cottbus.de",
+    "detail_opening_hours": "tÃ€glich von 9.00 - 22.00 Uhr",
+    "detail_facility_type": "Minigolf Open Standard",
+    "detail_additional_offers": "Getränke, Eis, Snacks, warme Speisen., Tischtennes, Busanbindung, Parkplätze und Toiletten vorhanden., Kinderspielplatz in der Nähe., Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=leipzig": {
+    "detail_address": "04289 Leipzig, Connewitzer Str.21",
+    "detail_phone": "0341/8611744",
+    "detail_fax": "0341/8611744",
+    "detail_website": "http://www.bgcleipzig.de",
+    "detail_email": "info@bgcleipzig.de",
+    "detail_opening_hours": "Montag - Freitag: 16.00 - 20.00 Uhr, Samstag u. Sonntag: 13.00 - 20.00 Uhr, Letzter Einlass üblicherweise gegen 19.00 Uhr,, besondere Einlasszeiten für Schulklassen und Gruppen nach tel. Vereinbarung",
+    "detail_facility_type": "System Eternit",
+    "detail_additional_offers": "Getränke, Eis und Snacks., Straßenbahnanbindung Linie 2, 15, 16, Busanbindung Linie 79, Parkplätze und Toiletten vorhanden., Eine turniergerechte Wettkampfanlage neben dem Bruno-Plache-Stadion,, die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=halle": {
+    "detail_address": "06110 Halle, Böllberger Weg 185",
+    "detail_phone": "0345 / 9773097",
+    "detail_website": "http://www.sportparadies-halle.de",
+    "detail_email": "info@sportparadies-halle.de",
+    "detail_opening_hours": "Mai-Oktober: Mo - Fr: 15.00 - 21.00 Uhr, Sa.- So:11.00 - 21.00 Uhr, In den Schulferien täglich 11.00 - 21.00 Uhr",
+    "detail_facility_type": "System Eternit",
+    "detail_additional_offers": "Getränke, Eis, Snacks, warme Speisen., Tennis, Beachvolleyball und Kinderspielplatz, Busanbindung, Parkplätze und Toiletten vorhanden., Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=burgstaedt": {
+    "detail_address": "09217 Burgstädt, Hainstraße",
+    "detail_phone": "0162 / 6847101",
+    "detail_website": "http://www.taurasteinturm.de",
+    "detail_email": "bburge@burgstaedt.de",
+    "detail_opening_hours": "täglich von 12 - 16 Uhr (November bis April), täglich von 12 - 18 Uhr (Mai bis Oktober)",
+    "detail_facility_type": "System Eternit",
+    "detail_additional_offers": "Getränke, Eis, Snacks, warme Speisen., Busanbindung, Parkplätze und Toiletten vorhanden., Schwimmbad in der Nähe., Die Anlage liegt mitten in einem Park mit Barfußweg, Aussichtsturm und Kinderspielplatz. Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=marienfelde": {
+    "detail_address": "12277 Berlin, Hanielweg 3-5",
+    "detail_phone": "030 7226400",
+    "detail_website": "http://www.minigolfpark-marienfelde.de",
+    "detail_email": "scrkullick@onlinehome.de",
+    "detail_opening_hours": "Montag - Freitag: ab 15.00 Uhr, Samstag + Sonntag: ab 11.30 Uhr",
+    "detail_facility_type": "System Eternit , System Beton",
+    "detail_additional_offers": "Getränke, Eis und Snacks, Parkplätze und Toiletten vorhanden., Busanbindung., Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=ueckermuende": {
+    "detail_address": "17373 Ueckermünde, Am Strand (direkt am Stetter Haff)",
+    "detail_phone": "0170 / 7548758",
+    "detail_email": "minigolf-ueckermuende@gmx.de",
+    "detail_opening_hours": "Vor- und Nachsaison, Dienstag bis Sonntag von 11:00 Uhr bis 18:00 Uhr, im Juni, Juli und August , Dienstag bis Sonntag ab 10.00 Uhr",
+    "detail_facility_type": "System Eternit",
+    "detail_additional_offers": "Getränke und Eis. , Parkplätze und Toiletten sowie Kinderspielplatz in der Nähe., Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=hamburg": {
+    "detail_address": "22547 Hamburg, Eckhoffplatz 16 b",
+    "detail_phone": "0151-217 122 11",
+    "detail_website": "http://www.svlurup-minigolf.de",
+    "detail_email": "m.dahrendorf@gmx.de",
+    "detail_opening_hours": "Dienstag bis Freitag: 14 - 18 Uhr, Samstag, Sonntag, Feiertag: 12 - 18 Uhr, Montag geschlossen",
+    "detail_facility_type": "System Eternit",
+    "detail_additional_offers": "Getränke, Eis, Snacks, Gartenwirtschaft, Parkplätze, Toiletten und Busanbindung vorhanden., Schnuppertraining jeden Mittwoch ab 15.00 Uhr, Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=kiel": {
+    "detail_address": "Pieckertstraße (Am Freibad Katzheide), 24143 Kiel",
+    "detail_phone": "0431 / 734140",
+    "detail_fax": "0431 / 2607922",
+    "detail_website": "http://www.olympia-kiel.de",
+    "detail_email": "vorsitzender@olympia-kiel.de",
+    "detail_opening_hours": "Montag - Freitag 15:00 - 19:00 Uhr (Einlass), Samstag - Sonntag 13:00 - 19:00 Uhr (Einlass)",
+    "detail_facility_type": "System Eternit",
+    "detail_additional_offers": "Getränke, Eis, Snacks und warme Speisen., Parkplätze, Busanbindung und Toiletten vorhanden. Nähe Schwimmbad., , Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=trappenkamp": {
+    "detail_address": "24610 Trappenkamp, Segeberger Str. 1",
+    "detail_phone": "04323 / 3084",
+    "detail_website": "http://www.tvtrappenkamp.de",
+    "detail_email": " vors-tra@minigolf-sh.de",
+    "detail_opening_hours": "Von 1. April bis 30. September:, Montag bis Freitag von 15.00 Uhr bis 19.00 Uhr, Samstag , Sonn- u. Feiertag von 13.00 Uhr - 19.00 Uhr ( letzter Einlass)",
+    "detail_facility_type": "System Beton , System Eternit",
+    "detail_additional_offers": "Getränke. , Außerdem gibt es ein Sportlerheim mit Gastronomie., Kinderspielplatz, Parkplätze und Toiletten vorhanden., Die Anlage befindet sich in Schwimmbadnähe., Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=elmslhorn": {
+    "detail_address": "25335 Elmshorn, Kaltenweide 101 / Eingang beim Pumpenhaus 103a",
+    "detail_phone": "0175 / 6846257",
+    "detail_website": "http://www.minigolf-elmshorn.de/",
+    "detail_email": "wilske@freenet.de",
+    "detail_opening_hours": "Montag - Freitag:",
+    "detail_facility_type": "System Eternit",
+    "detail_additional_offers": "Getränke, Eis, Snacks., Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=hannover": {
+    "detail_address": "30457 Hannover, Ossietzkyring 48 A",
+    "detail_phone": "0511 / 432582",
+    "detail_website": "http://www.bgc-hannover.de",
+    "detail_opening_hours": "Dienstag bis Freitag von 15 bis 21 Uhr, Sonn- und Feiertags von 12 bis 21 Uhr, Montags Ruhetag - iIn den Ferien und an Feiertagen ist Montags geöffnet.",
+    "detail_facility_type": "System Beton , System Eternit",
+    "detail_additional_offers": "Getränke, Eis, Cafe., Direkt nebenan die Calenberger Landterrassen (Sportgaststätte). , Busanbindung, Parkplätze und Toiletten vorhanden., Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=detmold": {
+    "detail_address": "32760 Detmold, Blombergstr. 65A",
+    "detail_phone": "0178 / 4551228",
+    "detail_opening_hours": "Nebensaison (März + Oktober):, Montag bis Freitag ab 14.00 Uhr, Samstag und Sonntag ab 13.00 Uhr, , Hauptsaison (April bis September):, Montag bis Freitag ab 14.00 Uhr, Samstag ab 13.00 Uhr, Sonntag ab 10.00 Uhr, , Sommerferien:, täglich ab 10.00 Uhr, , Achtung: , Feiertag ist gleich Sonntag!, Abends immer bis zum Dunkelwerden geöffnet.",
+    "detail_facility_type": "System Eternit , System Cobi",
+    "detail_additional_offers": "Getränke und Eis, Kinderspielplatz, Busanbindung, Parkplätze und Toiletten vorhanden. Schwimmbadnähe., Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=horn-bad-meinberg": {
+    "detail_address": "32805 Horn-Bad-Meinberg, Pyrmonter Str. / Ecke Parkstr. 35",
+    "detail_phone": "0162 / 7422475",
+    "detail_opening_hours": "Montag - Freitag ab 14 Uhr, Samstag ab 13 Uhr, Sonntag ab 11 Uhr, In den Sommerferien täglich ab 13 Uhr und Sonntag ab 11 Uhr, Abends immer bis zum Dunkelwerden geöffnet",
+    "detail_facility_type": "System Eternit",
+    "detail_additional_offers": "Tischtennis, Getränke, Eis., Kinderspielplatz (Schaukel), Parkplätze, Toiletten und Busanbindung vorhanden. Schwimmbad in der Nähe, , Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=kuenzell": {
+    "detail_address": "Minigolfpark Künzell, Georg-Stieler Str. 1a, 36093 Künzell",
+    "detail_phone": "0661 / 32579",
+    "detail_fax": "0661 / 32579",
+    "detail_website": "http://www.mgcputterkuenzell.de",
+    "detail_email": "vorstand@mgcputterkuenzell.de",
+    "detail_opening_hours": "März, April, September, Oktober:, 12:00-20:00 Uhr (Schulferien u. Wochenende ab 10:00 Uhr), Mai, Juni, Juli, August:, 12:00-22:00 Uhr (Schulferien u. Wochenende ab 10:00 Uhr)",
+    "detail_facility_type": "System Eternit, System Filz",
+    "detail_additional_offers": "Getränke, Eis, Toiletten, Parkplätze, Stadtbusanbindungen., , Mit Earnie-Card und Minigolfcard ermäßigtes Minigolfspielen möglich!"
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=goettingen37079": {
+    "detail_address": "37079 Göttingen, Grätzelstr. 11",
+    "detail_phone": "0551 / 61430",
+    "detail_opening_hours": "April-Oktober; Mo-Sa ab 14 Uhr, So ab 11 Uhr, (Ausnahme bei Turnieren oder Punktspielen)",
+    "detail_facility_type": "System Eternit",
+    "detail_additional_offers": "Getränke, Eis und Snacks., Busanbindung, Parkplätze und Toiletten vorhanden., Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=goettingen37085": {
+    "detail_address": "37085 Göttingen, Hainholzweg 41 (Schillerwiesen)",
+    "detail_phone": "0551 / 5084767",
+    "detail_opening_hours": "April-Oktober; Mo-Sa ab 14 Uhr, So ab 11 Uhr",
+    "detail_facility_type": "System Eternit",
+    "detail_additional_offers": "Getränke und Eis., Busanbindung, Toiletten und Kinderspielplatz vorhanden., Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=badlauterberg": {
+    "detail_address": "Sebastian-Kneipp Promenade 16, 37431 Bad Lauterberg",
+    "detail_phone": "05524 / 3702",
+    "detail_fax": "",
+    "detail_website": "http://www.oderminigolf.de",
+    "detail_email": "",
+    "detail_opening_hours": "täglich, Hauptsaison: 10:30 - 18:30 Uhr, Nebensaison: 12:30 - 18:30 Uhr",
+    "detail_facility_type": "System Filz",
+    "detail_additional_offers": "Getränke, Eis, Snacks, warme Speisen, Busanbindung, Parkplätze und Toiletten vorhanden., Kinderspielplatz, Schwimmbad in der Nähe., Fußball-Billard, Tischtennis/Headis, Shuffle-Board / Tennis, Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=einbeck": {
+    "detail_address": "37574 Einbeck, Hullerser Mauer",
+    "detail_phone": "05561 / 6510",
+    "detail_email": "mgc.einbeck@alice-dsl.net",
+    "detail_opening_hours": "Freitag, Samstag ,Sonn-und Feiertage: , 13.00 - 18.00 Uhr, , Termine für Gruppen außerhalb der Öffnungszeit:, Bitte unter 0175-4245279 (Marina) anrufen. , , Öffnungszeiten Ferien:, Dienstag bis Samstag: 14.00 - 18.00 Uhr , Sonn - und Feiertage: 14.00 - 18.00 Uhr, , Bei schlechter Witterung geschlossen.",
+    "detail_facility_type": "System Eternit",
+    "detail_additional_offers": "Getränke und Eis., Kinderspielplatz, Parkplätze und Toiletten vorhanden., Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=arendsee": {
+    "detail_address": "39619 Arendsee, Wendfeld",
+    "detail_phone": "0175 / 5327122",
+    "detail_opening_hours": "Witterungsbedingt von Ostern bis zum 03. Oktober, täglich ab 14:00 Uhr",
+    "detail_facility_type": "System Eternit",
+    "detail_additional_offers": "Getränke, Eis und Snacks., Mit Gartenwirtschaft und Kinderspielplatz., Parkplätze und Toiletten vorhanden., Schwimmbad in der Nähe., Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=castrop": {
+    "detail_address": "44581 Castrop-Rauxel , Recklinghauser Str. 240",
+    "detail_phone": "---",
+    "detail_fax": "---",
+    "detail_website": "http://www.bgsvcastrop.jimdo.com",
+    "detail_opening_hours": "Montags bis Freitags",
+    "detail_facility_type": "System Eternit",
+    "detail_additional_offers": "Getränke, Eis und Snacks, Parkplätze, Toiletten, in ca. 200m Entfernung ein Kinderspielplatz sind vorhanden., Schwimmbadnähe, mit Busanbindung, Einmal im Jahr findet ein Jedermannturnier statt, Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=herne": {
+    "detail_address": "44652 Herne, Heisterkamp 44",
+    "detail_phone": "02325 / 45310",
+    "detail_fax": "---",
+    "detail_website": "http://www.mgc-wanne.de/",
+    "detail_opening_hours": "Montags bis Freitags",
+    "detail_facility_type": "System Beton, System Eternit, Filzgolf",
+    "detail_additional_offers": "Neben der im Jahr 2023 renovierten Minigolfanlage (Beton) gibt es auf dem Gelände des FunParks Eickel mit Miniaturgolf und Filzgolf noch zwei weitere Anlagen, auf denen 2022 die Seniorenweltmeisterschaften ausgetragen wurden. Ein Fußballfeld und eine Bouleanlage runden das Angebot ab - Boulekugeln können kostenlos entliehen werden., Ein Kinderspielplatz ist nur ca. 100 Meter entfernt. Parkplätze (inkl. E-Ladesäule) und Toiletten (auch behindertengerecht) sind ebenfalls vorhanden. , Zur Stärkung und Erfrischung werden Getränke, Eis und kleine Snacks angeboten (ausreichend Sitzgelegenheiten)., , Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=osnabrueck": {
+    "detail_address": "49090 Osnabrück, Barenteich 2a",
+    "detail_phone": "0541 / 9116633",
+    "detail_fax": "0541 / 1217420",
+    "detail_website": "http://www.minigolf-osnabrueck.de",
+    "detail_email": "minigolf-osnabueck@arcor.de",
+    "detail_opening_hours": "Mo.-Sa. ab 14.00 Uhr (bis Einbruch der Dunkelheit), Samstag ab 10.00 Uhr (bis Einbruch der Dunkelheit), In den Schulferien auch morgens von 10.00 - 12.00 Uhr",
+    "detail_facility_type": "System Beton",
+    "detail_additional_offers": "Getränke, Eis und Snacks., Parkplätze, Toiletten und Busanbindung vorhanden., Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=wallenhorst": {
+    "detail_address": "49134 Wallenhorst, Nettetal",
+    "detail_website": "http://www.minigolf-nettetal.de",
+    "detail_email": "info@minigolf-nettetal.de",
+    "detail_phone": "05407 / 340892",
+    "detail_opening_hours": "Montag-Freitag ab 13.30 Uhr, Sa., So., Feiertage und während der Ferien bereits ab 10:00 Uhr, Letzter Einlass: 1 Stunde vor Sonnenuntergang",
+    "detail_facility_type": "System Beton",
+    "detail_additional_offers": "Getränke, Eis., Parkplätze und Toiletten sind vorhanden., Außerdem befinden sich ein Kletterwald und ein Biergarten in unmittelbarer Nähe., Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=wittlich": {
+    "detail_address": "54516 Wittlich, Am Sportzentrum, Vitellinsbad",
+    "detail_phone": "0151 / 57962864",
+    "detail_email": "minigolf@online.de",
+    "detail_website": "http://www.minigolf-platz-wittlich.eu",
+    "detail_opening_hours": "Montags bis Freitags von 14 - 20 Uhr Samstag und Sonntag von 12 - 20 Uhr , , Im Sommer je nach Betrieb.",
+    "detail_facility_type": "System Beton",
+    "detail_additional_offers": "Getränke, Eis, Snacks., Busanbindung und Parkplätze vorhanden., Schwimmbad in der Nähe., , Für Rückfragen bitte unter 0151 / 57962864 melden."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=mainz": {
+    "detail_address": "55122 Mainz, Am Lungenberg 16, Hartenbergpark",
+    "detail_phone": "06131/387073",
+    "detail_fax": "06131/387073",
+    "detail_website": "http://www.mgc-mainz.de",
+    "detail_email": "kontakt@mgc-mainz.de",
+    "detail_opening_hours": "an Wochentagen ab 11.00 Uhr,, an Wochenenden und Feiertagen ab 10.00 Uhr,, letzter Einlass üblicherweise gegen 18.30 Uhr,, besondere Einlasszeiten für Schulklassen und Gruppen nach tel. Vereinbarung",
+    "detail_facility_type": "System Eternit , System Beton",
+    "detail_additional_offers": "Getränke, Eis und Snacks., Busanbindung, Parkplätze Kinderspielplatz und Toiletten vorhanden., Zwei turniergerechte Wettkampfanlagen inmitten des Mainzer Hartenbergparks, der vielfältige Spiel- und Sportmöglichkeiten sowie öffentliche Grillplätze bietet. Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=lahnstein": {
+    "detail_address": "56112 Lahnstein, Stolzenfelsstraße/Rheinufer",
+    "detail_phone": "0171 / 7403496",
+    "detail_website": "http://www.minigolf-lahnstein.de",
+    "detail_email": "minigolf-lahnstein@email.de",
+    "detail_opening_hours": "Montag bis Samstag von 13.00 bis 19.00 Uhr, Sonn- und Feiertage von 11.00 bis 19.00 Uhr, in den Sommerferien: täglich ab 11.00 Uhr",
+    "detail_facility_type": "System Eternit",
+    "detail_additional_offers": "Getränke, Eis, Snacks und warme Speisen., Biergarten mit ca. 50 Sitzplätzen. , Busanbindung, Parkplätze und Toiletten vorhanden., Kinderspielplatz anliegend und Schwimmbad in der Nähe., Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=brilon": {
+    "detail_address": "59929 Brilon, Heinrich-Jansen-Weg",
+    "detail_phone": "0151 62752451",
+    "detail_website": "http://www.minigolfsport-brilon.de",
+    "detail_email": "Martin.Klaholz@t-online.de",
+    "detail_opening_hours": "Mo.-Fr. von 14.00 bis 19.00 Uhr, Sa.-So. von 11.00 bis 20.00 Uhr, Ferien von 11.00 bis 20.00 Uhr",
+    "detail_facility_type": "System Eternit",
+    "detail_additional_offers": "Getränke und Eis., Parkplätze, Toiletten vorhanden., Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=winterberg": {
+    "detail_address": "59955 Winterberg, Am Sportplatz 4",
+    "detail_phone": "0157 / 57813533",
+    "detail_website": "https://www.adventuregolf-winterberg.de/",
+    "detail_email": "info@adventuregolf-winterberg.de",
+    "detail_opening_hours": "außerhalb der Ferien:, Di -So. von 10.00 - 19.00 Uhr, in den Ferien oder an Feiertagen:, täglich von 10.00 - 19.00 Uhr",
+    "detail_facility_type": "Adventure Golf",
+    "detail_additional_offers": "Getränke, Eis, Snacks, warme Speisen., Kuchen und Shuffleboard., Busanbindung, Parkplätze und Toiletten vorhanden., Kinderspielplatz in der Nähe., Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=wiesbaden": {
+    "detail_address": "65199 Wiesbaden-Dotzheim, Straßenmühlweg 3b",
+    "detail_phone": "0611-9410774",
+    "detail_fax": "0611-4501939",
+    "detail_website": "http://www.minigolf-wiesbaden.de",
+    "detail_email": "info@minigolf-wiesbaden.de",
+    "detail_opening_hours": "Montag bis Freitag ab 14:00 Uhr,, Samstag, Sonn- und Feiertage ab 10:00 Uhr, Sommerferien täglich ab 10:00 Uhr",
+    "detail_facility_type": "System Eternit",
+    "detail_additional_offers": "Getränke, Eis, Busanbindung, Parkplätze kostenlos vor der Anlage ., Die MinigolfCard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=schriesheim": {
+    "detail_address": "69198 Schriesheim, Wiesenweg / Sportzentrum",
+    "detail_phone": "06203 / 63909",
+    "detail_website": "http://www.mcschriesheim.de",
+    "detail_email": "info@mcschriesheim.de",
+    "detail_opening_hours": "März:",
+    "detail_facility_type": "System Eternit , System Filz",
+    "detail_additional_offers": "Getränke, Eis und Snacks., Mit Gartenwirtschaft, Grillhütte und Kinderspielplatz., Parkplätze und Toiletten vorhanden., Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=stuttgart": {
+    "detail_address": "70372 Stuttgart, KÃ¶nigsplatz 1",
+    "detail_phone": "0711/55019211",
+    "detail_fax": "0711/55019190",
+    "detail_website": "http://www.sbr-ggmbh.de",
+    "detail_email": "info@sbr-ggmbh.de",
+    "detail_opening_hours": "Montag - Freitag von 12-20 Uhr, , Samstag, Sonntag, Feiertage von 11-20 Uhr",
+    "detail_facility_type": "System Beton",
+    "detail_additional_offers": "Getränke, Eis und Snacks., Bus-(U-Bahn-)Anbindung und Toiletten vorhanden., Parkhaus und Kinderspielplatz in der Nähe., Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=remseck2": {
+    "detail_address": "71686 Remseck, Am Neckarstrand 9",
+    "detail_phone": "0172 / 280 1363",
+    "detail_email": "melbes@web.de",
+    "detail_opening_hours": "Dienstag - Samstag, von 14.30 Uhr - 20.00 Uhr (Einlassende: 19 Uhr), Sonn- und Feiertage , von 11.00 Uhr - 20.00 Uhr (Einlassende: 19 Uhr)",
+    "detail_facility_type": "System Eternit",
+    "detail_additional_offers": "Getränke, Eis, Snacks, warme Speisen., Parkplätze und Toiletten vorhanden., Kinderspielplatz, Sandkasten, Trampolin. Nichtraucherbereich. , Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=grossbottwar": {
+    "detail_address": "CAMPO del SOL, 71723 Großbottwar, In den Frauengärten 12 / Neben der Wunnensteinhalle",
+    "detail_phone": "07148 / 9290723",
+    "detail_website": "https://www.minigolfsport.de/www.campo-del-sol.de",
+    "detail_email": "info@campo-del-sol.de",
+    "detail_opening_hours": "Montag und Dienstag: Ruhetag, (Ausnahme: an Schulferientagen BW oder Feiertagen kein Ruhetag!), Mittwoch bis Freitag: ab 15.00 Uhr , (Ausnahme: Schulferientage BW oder Feiertage) , Samstage und Schulferientage BW: ab 12.30 Uhr, Sonntage und Feiertage: ab 11.00 Uhr, Ab 10.09.2012 eingeschränkte Öffnungszeiten in der Nachsaison.",
+    "detail_facility_type": "System Beton",
+    "detail_additional_offers": "Biergarten mit Gastronomie: Getränke, warme Speisen, Eis, Kaffeespezialitäten, Sport und Spiel: Trampolin, Bungee-Trampolin, Barfußpfad, Tischfussball, Sky Sportsbar: EM- und Bundesligaübertragung, Veranstalten von Kindergeburtstagen, Festen und Feiern , Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=hilzingen": {
+    "detail_address": "78247 Hilzingen, Riedheimer Str. 13",
+    "detail_phone": "07731 / 60020",
+    "detail_fax": "07731 / 13015",
+    "detail_website": "http://www.minigolf-hilzingen.de",
+    "detail_email": "info@mgf-hilzingen.de",
+    "detail_opening_hours": "Mo.-Sa. von 14.00 Uhr bis 22.00 Uhr, Sonn-und Feiertage von 10.00 Uhr bis 22.00 Uhr",
+    "detail_facility_type": "System Beton, System Eternit",
+    "detail_additional_offers": "Getränke, Eis, Snacks und warme Speisen., Parkplätze und Toiletten vorhanden. In der Nähe befinden sich Schwimmbad und Busanbindung., Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=www.fun-strand.de": {},
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=inzlingen": {
+    "detail_address": "79594 Inzlingen, Schlossstraße 30 (beim Wasserschloss)",
+    "detail_phone": "07621 / 18844",
+    "detail_website": "http://minigolf-inzlingen.npage.de",
+    "detail_email": "bsvinzlingen1979@gmail.com",
+    "detail_opening_hours": "Mittwoch und Freitag ab 17.00 Uhr, Samstag, Sonntag und Feiertag ab 13.00 Uhr",
+    "detail_facility_type": "System Eternit",
+    "detail_additional_offers": "Getränke, Eis und Snacks., Parkplätze und Toiletten vorhanden. In der Nähe befindet sich eine Busanbindung., Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=waldshut": {
+    "detail_address": "79761 Waldshut-Tiengen, Jahnweg 1 (beim Schwimmbad)",
+    "detail_phone": "07751 / 6950",
+    "detail_website": "http://www.minigolf-waldshut.de",
+    "detail_email": "karl-heinz@gerwert.de",
+    "detail_opening_hours": "15. März bis 15. Oktober:, 10.00 bis 22.00 Uhr",
+    "detail_facility_type": "System Beton, System Eternit",
+    "detail_additional_offers": "Getränke, Eis, Snacks und warme Speisen. Tischtennis, Gartenwirtschaft und Grillplatz vorhanden. Auf Anfrage werden gerne Kindergeburtstagsfeiern ausgerichtet., Parkplätze, Toiletten und Kinderspielplatz (ab 2006) stehen zur Verfügung. In der Nähe befindet sich ein Schwimmbad und eine Busanbindung., Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=olching": {
+    "detail_address": "Feursstrasse 91, 82140 Olching",
+    "detail_phone": "08142 / 445980",
+    "detail_fax": "08142 / 446047",
+    "detail_website": "http://www.minigolf-olching.de",
+    "detail_email": "msk@minigolf-olching.de",
+    "detail_opening_hours": "Montag bis Freitag ab 15 Uhr - in den Ferien ab 13 Uhr, Samstag ab 13 Uhr, Sonn- und Feiertag ab 10 Uhr, Letzter Einlass ca. 1 Stunde vor Sonnenuntergang.",
+    "detail_facility_type": "System Eternit , System Beton, System Filz",
+    "detail_additional_offers": "Getränke, Eis, Snacks-., Busanbindung, Parkplätze und Toiletten vorhanden., Kinderspielplatz in der Nähe., Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=murnau": {
+    "detail_address": "82418 Murnau am Staffelsee, Seestr. 8",
+    "detail_phone": "08841 / 99393",
+    "detail_fax": "08841 / 625222",
+    "detail_website": "http://www.minigolf-murnau.de",
+    "detail_email": "info@minigolf-murnau.de",
+    "detail_opening_hours": "Hauptsaison (Juni - September):, täglich von 10.00 Uhr bis 21.00 Uhr, Nebensaison:, Montag bis Freitag von 13.00 Uhr bis 20.00 Uhr, Samstag, Sonntag, Feiertag von 10.00 Uhr bis 20.00 Uhr",
+    "detail_facility_type": "System Eternit , System Beton",
+    "detail_additional_offers": "Getränke, Eis und Snacks., Große Sonnenterrasse mit Seeblick. Organisations von Vereins-, Betriebsturnieren, Kindergeburtstagen mit Vermietung von Grill und Terrassenflächen., Parkplätze (ca. 300m entfernt) und Toiletten vorhanden., Kinderspielplatz in der Nähe., Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=landshut": {
+    "detail_address": "84028 Landshut, Breslauer Str. 121",
+    "detail_phone": "0871/52238",
+    "detail_website": "http://www.bgc-landshut.de",
+    "detail_email": "info@bgc-landshut.de",
+    "detail_opening_hours": "Mo.-Sa. ab 14.30 Uhr (in den Schulferien ab 10.00 Uhr), Sonntag /Feiertage ab 10.00 Uhr",
+    "detail_facility_type": "System Eternit , System Beton",
+    "detail_additional_offers": "Getränke, Eis, Snacks, warme Speisen., Busanbindung, Parkplätze und Toiletten vorhanden., Kinderspielplatz in der Nähe., Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=ingolstadtmgc": {
+    "detail_address": "85049 Ingolstadt, Am Baggersee",
+    "detail_phone": "0841 34466",
+    "detail_email": "MGCIngolstadt@gmx.de",
+    "detail_website": "http://www.mgc-ingolstadt.de",
+    "detail_opening_hours": "März - April, Oktober:, täglich 13.00 - 19.00 Uhr, Mai - September:, Montag - Samstag 13.00 - 20.00 Uhr, , Sonntag, Feiertag 10.00 - 20.00 Uhr",
+    "detail_facility_type": "System Eternit",
+    "detail_additional_offers": "Getränke, Eis., Sonstige Angebote: Boule, Busanbindung, Parkplätze und Toiletten vorhanden., Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=ingolstadtomgc": {
+    "detail_address": "85053 Ingolstadt, Am Auwaldsee",
+    "detail_phone": "0176 / 70055404",
+    "detail_opening_hours": "Öffnungszeiten für Publikum (außerhalb der Ferien): , 17. - 31. März:, Dienstag bis Freitag: 14 - 18 Uhr, Samstag bis Sonntag und Feiertage: 13 - 18 Uhr, 01. - 30. April:, Dienstag bis Freitag: 14 - 19 Uhr, Samstag bis Sonntag und Feiertage: 13 - 19 Uhr, 01. Mai - 09. September:, Dienstag bis Freitag: 14 - 20 Uhr, Samstag: 13 - 20 Uhr, Sonntag und Feiertage: 10 - 20 Uhr, 10. - 30. September:, Dienstag bis Freitag: 14 - 19 Uhr, Samstag bis Sonntag und Feiertage: 13 - 19 Uhr, 01.-13. Oktober:, Dienstag bis Freitag: 14 - 18 Uhr, Samstag bis Sonntag und Feiertage: 13 - 18 Uhr, 19. Oktober bis 03. November:, Samstag bis Sonntag: 13 - 17 Uhr , , Öffnungszeiten für Publikum (in der Ferien): , 17. - 31. März:, Montag bis Freitag: 13 - 18 Uhr, Samstag bis Sonntag und Feiertage: 13 - 18 Uhr, 01. - 30. April:, Montag bis Freitag: 13 - 19 Uhr, Samstag bis Sonntag und Feiertage: 13 - 19 Uhr, 01. Mai - 09. September:, Montag bis Samstag: 13 - 20 Uhr, Sonntag und Feiertage: 10 - 20 Uhr, 10. - 30. September:, Montag bis Sonntag und Feiertage: 13 - 19 Uhr, 01.-13. Oktober:, Montag bis Sonntag und Feiertage : 13 - 18 Uhr, 19. Oktober bis 03. November:, Samstag bis Sonntag: 13 - 17 Uhr , Bei schlechtem Wetter ist nur geöffnet, wenn ein Spielbetrieb möglich ist.",
+    "detail_facility_type": "System Eternit , System Beton",
+    "detail_additional_offers": "Getränke, Eis., Busanbindung, Parkplätze und Toiletten vorhanden., Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=badberneck": {
+    "detail_address": "An der Ölschnitz, 95460 Bad Berneck, PÃ€chterin: Anette Schreiber-Schelhorn",
+    "detail_phone": "0178 / 329 49 55",
+    "detail_email": "badberneck@ballkiste.de",
+    "detail_opening_hours": "Fr. - So. ab 13.00 Uhr, Mo.- Do. ab 14.00 Uhr",
+    "detail_facility_type": "System Beton",
+    "detail_additional_offers": "Getränke, Eis, Snacks, warme Speisen., Toiletten vorhanden. , Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  },
+  "https://www.minigolfsport.de/minigolfatlas-detail.php?url=strullendorf": {
+    "detail_address": "96129 Strullendorf, An der Hauptsmoorhalle",
+    "detail_phone": "09543 / 851175",
+    "detail_fax": "09543 / 851175",
+    "detail_email": "funsports@t-online.de",
+    "detail_opening_hours": "MÃ€rz + Oktober:, Sa/So + Feiertage ab 13:00 Uhr, April - September: , FR ab 13:00 Uhr , SA / SO + Feiertage ab 13:00 Uhr, In Ferien, MO - FR ab 13:00 Uhr",
+    "detail_facility_type": "System Filzgolf",
+    "detail_additional_offers": "Getränke, Eis, Billard. Gastronomie in der Hauptsmoorhalle. Basketball-Spielfeld., Parkplätze, Kinderspielplatz und Toiletten vorhanden.Die Minigolfcard zum preisreduzierten Spielen wird akzeptiert."
+  }
+}

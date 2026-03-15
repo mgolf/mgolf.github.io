@@ -1,0 +1,106 @@
+{
+  "generated_at_unix": 1773591073,
+  "records_before": 2784,
+  "records_after": 2764,
+  "osm_id_duplicates_removed": 15,
+  "name_postcode_duplicates_removed": 1,
+  "near_pair_merges": 4,
+  "near_pair_merge_log": [
+    {
+      "kept": "Lönsweg 3",
+      "removed": "Minigolf",
+      "distance_m": 36.5,
+      "direction": "A←B",
+      "fields_updated": 2
+    },
+    {
+      "kept": "Durlacher Str. 5",
+      "removed": "Cobi-Golf-Club Blau-Gelb Grötzingen",
+      "distance_m": 30.8,
+      "direction": "A←B",
+      "fields_updated": 5
+    },
+    {
+      "kept": "Seestraße 4",
+      "removed": "Minigolf",
+      "distance_m": 4.8,
+      "direction": "A←B",
+      "fields_updated": 3
+    },
+    {
+      "kept": "Haldenweg 1",
+      "removed": "Minigolfclub",
+      "distance_m": 5.2,
+      "direction": "A←B",
+      "fields_updated": 3
+    }
+  ],
+  "osm_id_dup_examples": [
+    {
+      "venue_name": "Lilalicht 3D-Adventure Minigolf",
+      "postcode": "04229"
+    },
+    {
+      "venue_name": "Lilalicht 3D-Adventure Minigolf",
+      "postcode": "04229"
+    },
+    {
+      "venue_name": "Minigolf",
+      "postcode": "12169"
+    },
+    {
+      "venue_name": "Minigolf",
+      "postcode": "13507"
+    },
+    {
+      "venue_name": "Minigolf",
+      "postcode": "13597"
+    },
+    {
+      "venue_name": "Am Waldhof 3",
+      "postcode": "24629"
+    },
+    {
+      "venue_name": "Abenteuergolf Norddeich",
+      "postcode": "26506"
+    },
+    {
+      "venue_name": "Minigolf Auf der Lieth",
+      "postcode": "33102"
+    },
+    {
+      "venue_name": "Minigolf im Schmölderpark",
+      "postcode": "41238"
+    },
+    {
+      "venue_name": "Minigolf Binder",
+      "postcode": "42555"
+    },
+    {
+      "venue_name": "Minigolf",
+      "postcode": "54441"
+    },
+    {
+      "venue_name": "Minigolf",
+      "postcode": "59557"
+    },
+    {
+      "venue_name": "Minigolf Scheerwald",
+      "postcode": "60599"
+    },
+    {
+      "venue_name": "Minigolf Römerstadt",
+      "postcode": "65929"
+    },
+    {
+      "venue_name": "Kiosk am Itzelberger See",
+      "postcode": "89551"
+    }
+  ],
+  "name_pc_dup_examples": [
+    {
+      "venue_name": "Sterngolf Gevelsberg",
+      "postcode": "58285"
+    }
+  ]
+}

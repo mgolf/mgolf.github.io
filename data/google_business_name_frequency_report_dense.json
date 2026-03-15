@@ -1,0 +1,289 @@
+{
+  "generated_at_unix": 1773594196,
+  "scan": {
+    "grid_step": 1.5,
+    "cells_scanned_per_query": 42,
+    "api_calls_total": 378,
+    "max_results_per_cell": 20,
+    "failures": 0
+  },
+  "categories": {
+    "pizzeria": {
+      "queries": [
+        "pizzeria",
+        "pizza restaurant"
+      ],
+      "unique_places": 696,
+      "top_raw_name_counts": [
+        {
+          "name": "Pizzeria Milano",
+          "count": 5
+        },
+        {
+          "name": "Pizzeria Italia",
+          "count": 4
+        },
+        {
+          "name": "Pizzeria San Remo",
+          "count": 2
+        },
+        {
+          "name": "Ristorante Pizzeria Mamma Mia",
+          "count": 2
+        },
+        {
+          "name": "Bella Sicilia",
+          "count": 2
+        },
+        {
+          "name": "Pizzeria Bella Napoli",
+          "count": 2
+        },
+        {
+          "name": "Pizzeria La Taverna",
+          "count": 2
+        },
+        {
+          "name": "Ristorante-Pizzeria Mamma Mia",
+          "count": 2
+        },
+        {
+          "name": "Pizzeria Mamma Mia",
+          "count": 2
+        },
+        {
+          "name": "Pizzeria Dolce Vita",
+          "count": 2
+        }
+      ],
+      "top_canonical_name_counts": [
+        {
+          "name": "ristorante",
+          "count": 6
+        },
+        {
+          "name": "pizzeria italia",
+          "count": 5
+        },
+        {
+          "name": "pizzeria milano",
+          "count": 5
+        },
+        {
+          "name": "ristorante pizzeria mamma mia",
+          "count": 4
+        },
+        {
+          "name": "pizzeria roma",
+          "count": 3
+        },
+        {
+          "name": "pizzeria mamma mia",
+          "count": 3
+        },
+        {
+          "name": "pizzeria san remo",
+          "count": 2
+        },
+        {
+          "name": "pizzeria da michele",
+          "count": 2
+        },
+        {
+          "name": "pizzeria la famiglia",
+          "count": 2
+        },
+        {
+          "name": "bella sicilia",
+          "count": 2
+        }
+      ]
+    },
+    "eisdiele": {
+      "queries": [
+        "eisdiele",
+        "eiscafe",
+        "gelateria"
+      ],
+      "unique_places": 1146,
+      "top_raw_name_counts": [
+        {
+          "name": "Eiscafé Venezia",
+          "count": 23
+        },
+        {
+          "name": "Eiscafé Dolomiti",
+          "count": 10
+        },
+        {
+          "name": "Eiscafé Cortina",
+          "count": 9
+        },
+        {
+          "name": "Eiscafe Venezia",
+          "count": 9
+        },
+        {
+          "name": "Gelateria La Luna",
+          "count": 8
+        },
+        {
+          "name": "Eiscafé Dolce Vita",
+          "count": 7
+        },
+        {
+          "name": "La Gelateria",
+          "count": 6
+        },
+        {
+          "name": "Eiscafé Veneto",
+          "count": 6
+        },
+        {
+          "name": "Eiscafé San Marco",
+          "count": 6
+        },
+        {
+          "name": "Eiscafé Cellino",
+          "count": 5
+        }
+      ],
+      "top_canonical_name_counts": [
+        {
+          "name": "eiscafe venezia",
+          "count": 34
+        },
+        {
+          "name": "eiscafe dolomiti",
+          "count": 12
+        },
+        {
+          "name": "eiscafe san marco",
+          "count": 11
+        },
+        {
+          "name": "eiscafe cortina",
+          "count": 10
+        },
+        {
+          "name": "eiscafe dolce vita",
+          "count": 9
+        },
+        {
+          "name": "gelateria la luna",
+          "count": 8
+        },
+        {
+          "name": "la gelateria",
+          "count": 6
+        },
+        {
+          "name": "eis cafe venezia",
+          "count": 6
+        },
+        {
+          "name": "eiscafe veneto",
+          "count": 6
+        },
+        {
+          "name": "il gelato italiano",
+          "count": 5
+        }
+      ]
+    },
+    "friseur": {
+      "queries": [
+        "friseur",
+        "haarsalon",
+        "haarstudio",
+        "barbershop"
+      ],
+      "unique_places": 1900,
+      "top_raw_name_counts": [
+        {
+          "name": "Haarstudio",
+          "count": 7
+        },
+        {
+          "name": "Haarstudio M",
+          "count": 4
+        },
+        {
+          "name": "City Barber Shop",
+          "count": 3
+        },
+        {
+          "name": "Hairstudio GmbH",
+          "count": 3
+        },
+        {
+          "name": "Das Haarstudio",
+          "count": 3
+        },
+        {
+          "name": "Barber Shop",
+          "count": 3
+        },
+        {
+          "name": "Barbershop",
+          "count": 3
+        },
+        {
+          "name": "Haarstudio Nicole",
+          "count": 2
+        },
+        {
+          "name": "Salon Haarmonie",
+          "count": 2
+        },
+        {
+          "name": "City Friseur",
+          "count": 2
+        }
+      ],
+      "top_canonical_name_counts": [
+        {
+          "name": "barber shop",
+          "count": 10
+        },
+        {
+          "name": "haarstudio",
+          "count": 9
+        },
+        {
+          "name": "friseur",
+          "count": 4
+        },
+        {
+          "name": "haarstudio m",
+          "count": 4
+        },
+        {
+          "name": "das haarstudio",
+          "count": 4
+        },
+        {
+          "name": "barbershop",
+          "count": 4
+        },
+        {
+          "name": "city barber shop",
+          "count": 3
+        },
+        {
+          "name": "haarsnieder hinrichsen",
+          "count": 3
+        },
+        {
+          "name": "beauty hair",
+          "count": 3
+        },
+        {
+          "name": "der salon",
+          "count": 3
+        }
+      ]
+    }
+  },
+  "failures": []
+}
