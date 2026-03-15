@@ -1,0 +1,413 @@
+{
+  "generated_at_unix": 1773596196,
+  "sources": {
+    "osm": {
+      "used": true,
+      "url": "https://overpass-api.de/api/interpreter",
+      "license": "ODbL (Open Database License) – openstreetmap.org/copyright"
+    },
+    "google_places": {
+      "used": true,
+      "url": "https://places.googleapis.com/v1/places:searchText"
+    }
+  },
+  "scan_params": {
+    "google_grid_step": 1.2,
+    "top_n": 15
+  },
+  "categories": {
+    "pizzeria": {
+      "total_records": 1043,
+      "osm_records": 0,
+      "google_records": 1043,
+      "unique_raw_names": 977,
+      "unique_canonical_names": 949,
+      "top_raw_names": [
+        {
+          "name": "Pizzeria Roma",
+          "count": 7
+        },
+        {
+          "name": "Pizzeria Mamma Mia",
+          "count": 6
+        },
+        {
+          "name": "Pizzeria Bella Italia",
+          "count": 6
+        },
+        {
+          "name": "Pizzeria Italia",
+          "count": 5
+        },
+        {
+          "name": "Pizzeria La Taverna",
+          "count": 5
+        },
+        {
+          "name": "Pizzeria Milano",
+          "count": 4
+        },
+        {
+          "name": "Pizzeria Salento",
+          "count": 3
+        },
+        {
+          "name": "La Dolce Vita",
+          "count": 3
+        },
+        {
+          "name": "Pizzeria Capri",
+          "count": 3
+        },
+        {
+          "name": "Pizzeria Adria",
+          "count": 3
+        },
+        {
+          "name": "Ristorante Pizzeria Milano",
+          "count": 3
+        },
+        {
+          "name": "Ristorante-Pizzeria Mamma Mia",
+          "count": 3
+        },
+        {
+          "name": "Pizzeria Da Michele",
+          "count": 2
+        },
+        {
+          "name": "Little Italy",
+          "count": 2
+        },
+        {
+          "name": "Pizzeria Michelangelo",
+          "count": 2
+        }
+      ],
+      "top_canonical_names": [
+        {
+          "name": "pizzeria roma",
+          "count": 8
+        },
+        {
+          "name": "pizzeria mamma mia",
+          "count": 7
+        },
+        {
+          "name": "ristorante",
+          "count": 7
+        },
+        {
+          "name": "pizzeria bella italia",
+          "count": 7
+        },
+        {
+          "name": "pizzeria italia",
+          "count": 5
+        },
+        {
+          "name": "pizzeria la taverna",
+          "count": 5
+        },
+        {
+          "name": "pizzeria",
+          "count": 5
+        },
+        {
+          "name": "pizzeria milano",
+          "count": 4
+        },
+        {
+          "name": "ristorante pizzeria milano",
+          "count": 4
+        },
+        {
+          "name": "ristorante pizzeria mamma mia",
+          "count": 4
+        },
+        {
+          "name": "pizzeria salento",
+          "count": 3
+        },
+        {
+          "name": "pizzeria da toni",
+          "count": 3
+        },
+        {
+          "name": "la dolce vita",
+          "count": 3
+        },
+        {
+          "name": "pizzeria capri",
+          "count": 3
+        },
+        {
+          "name": "due fratelli",
+          "count": 3
+        }
+      ]
+    },
+    "eisdiele": {
+      "total_records": 11060,
+      "osm_records": 9589,
+      "google_records": 1471,
+      "unique_raw_names": 7719,
+      "unique_canonical_names": 7051,
+      "top_raw_names": [
+        {
+          "name": "Eiscafé Venezia",
+          "count": 176
+        },
+        {
+          "name": "Eiscafe Venezia",
+          "count": 155
+        },
+        {
+          "name": "Venezia",
+          "count": 70
+        },
+        {
+          "name": "Eiscafé Dolomiti",
+          "count": 59
+        },
+        {
+          "name": "Janny's Eis",
+          "count": 56
+        },
+        {
+          "name": "Eiscafe Dolomiti",
+          "count": 51
+        },
+        {
+          "name": "Eiscafé Cortina",
+          "count": 41
+        },
+        {
+          "name": "Eiscafe Cortina",
+          "count": 41
+        },
+        {
+          "name": "Dolce Vita",
+          "count": 40
+        },
+        {
+          "name": "San Marco",
+          "count": 34
+        },
+        {
+          "name": "San Remo",
+          "count": 32
+        },
+        {
+          "name": "Eiscafé Rialto",
+          "count": 30
+        },
+        {
+          "name": "Eisdiele",
+          "count": 28
+        },
+        {
+          "name": "Eiscafé San Remo",
+          "count": 27
+        },
+        {
+          "name": "Giovanni L.",
+          "count": 27
+        }
+      ],
+      "top_canonical_names": [
+        {
+          "name": "eiscafe venezia",
+          "count": 342
+        },
+        {
+          "name": "eiscafe dolomiti",
+          "count": 114
+        },
+        {
+          "name": "eiscafe cortina",
+          "count": 87
+        },
+        {
+          "name": "venezia",
+          "count": 70
+        },
+        {
+          "name": "janny s eis",
+          "count": 59
+        },
+        {
+          "name": "eis cafe venezia",
+          "count": 57
+        },
+        {
+          "name": "eiscafe san marco",
+          "count": 53
+        },
+        {
+          "name": "eiscafe san remo",
+          "count": 50
+        },
+        {
+          "name": "eiscafe italia",
+          "count": 49
+        },
+        {
+          "name": "eiscafe dolce vita",
+          "count": 46
+        },
+        {
+          "name": "eiscafe",
+          "count": 45
+        },
+        {
+          "name": "eiscafe rialto",
+          "count": 45
+        },
+        {
+          "name": "dolce vita",
+          "count": 41
+        },
+        {
+          "name": "eiscafe roma",
+          "count": 37
+        },
+        {
+          "name": "san marco",
+          "count": 35
+        }
+      ]
+    },
+    "friseur": {
+      "total_records": 40293,
+      "osm_records": 37688,
+      "google_records": 2605,
+      "unique_raw_names": 32163,
+      "unique_canonical_names": 30720,
+      "top_raw_names": [
+        {
+          "name": "Klier",
+          "count": 269
+        },
+        {
+          "name": "Top Hair",
+          "count": 110
+        },
+        {
+          "name": "Haarmonie",
+          "count": 108
+        },
+        {
+          "name": "Hair Express",
+          "count": 100
+        },
+        {
+          "name": "Barber Shop",
+          "count": 82
+        },
+        {
+          "name": "Haarscharf",
+          "count": 76
+        },
+        {
+          "name": "Haargenau",
+          "count": 74
+        },
+        {
+          "name": "Haarwerk",
+          "count": 68
+        },
+        {
+          "name": "Friseur",
+          "count": 64
+        },
+        {
+          "name": "Figaro",
+          "count": 62
+        },
+        {
+          "name": "Barbershop",
+          "count": 59
+        },
+        {
+          "name": "Schnittpunkt",
+          "count": 57
+        },
+        {
+          "name": "essanelle",
+          "count": 53
+        },
+        {
+          "name": "Goldene Schere",
+          "count": 50
+        },
+        {
+          "name": "Ihr Friseur",
+          "count": 49
+        }
+      ],
+      "top_canonical_names": [
+        {
+          "name": "klier",
+          "count": 270
+        },
+        {
+          "name": "haarmonie",
+          "count": 124
+        },
+        {
+          "name": "top hair",
+          "count": 113
+        },
+        {
+          "name": "haargenau",
+          "count": 101
+        },
+        {
+          "name": "hair express",
+          "count": 100
+        },
+        {
+          "name": "barber shop",
+          "count": 95
+        },
+        {
+          "name": "haarscharf",
+          "count": 87
+        },
+        {
+          "name": "haarwerk",
+          "count": 78
+        },
+        {
+          "name": "friseur",
+          "count": 76
+        },
+        {
+          "name": "figaro",
+          "count": 72
+        },
+        {
+          "name": "barbershop",
+          "count": 63
+        },
+        {
+          "name": "schnittpunkt",
+          "count": 63
+        },
+        {
+          "name": "essanelle",
+          "count": 60
+        },
+        {
+          "name": "haarstudio",
+          "count": 54
+        },
+        {
+          "name": "art of hair",
+          "count": 53
+        }
+      ]
+    }
+  }
+}

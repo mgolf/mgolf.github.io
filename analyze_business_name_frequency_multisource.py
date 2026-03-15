@@ -43,10 +43,11 @@ OSM_QUERIES: dict[str, str] = {
 [out:json][timeout:300];
 area["ISO3166-1"="DE"][admin_level=2]->.de;
 (
-  nwr(area.de)["amenity"="restaurant"]["cuisine"~"pizza|italian",i];
-  nwr(area.de)["amenity"="fast_food"]["cuisine"~"pizza",i];
-  nwr(area.de)["amenity"="restaurant"]["name"~"pizzeria|pizza",i];
+  nwr(area.de)["amenity"="restaurant"]["cuisine"~"^pizza$|^Pizza$"];
+  nwr(area.de)["amenity"="fast_food"]["cuisine"~"^pizza$|^Pizza$"];
   nwr(area.de)["cuisine"="pizza"];
+  nwr(area.de)["amenity"="restaurant"]["name"~"[Pp]izzeria"];
+  nwr(area.de)["amenity"="fast_food"]["name"~"[Pp]izzeria"];
 );
 out center tags;
 """,
