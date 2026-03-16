@@ -2362,6 +2362,19 @@ function renderList() {
 function setActiveView(view) {
   currentView = view;
   setSetting("currentView", view).catch(() => {});
+
+  // Nearby mode should primarily use the current user location when available.
+  if (view === "nearby") {
+    if (userLatLng && referenceMode !== "point") {
+      referenceMode = "location";
+      setSetting("referenceMode", referenceMode).catch(() => {});
+      updateReferenceModeButtons();
+      updateMapMetaText();
+    } else if (!userLatLng && geolocationPermissionState !== "denied") {
+      requestLocation({ shouldFly: false, showSuccessBanner: false, showErrorBanner: false });
+    }
+  }
+
   listModeNearbyBtn?.classList.toggle("is-active", view === "nearby");
   listModeAllBtn?.classList.toggle("is-active", view === "all");
   listModeSavedBtn?.classList.toggle("is-active", view === "saved");
@@ -2492,6 +2505,8 @@ function hookEvents() {
       showSmartBannerMessage(geolocationPermissionHelpText(), "offline", 5200, 3);
       return;
     }
+    setActiveView("nearby");
+    setActiveTab("list");
     requestLocation({ shouldFly: true });
   });
 
