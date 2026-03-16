@@ -1914,7 +1914,7 @@ function wireScoreEvents() {
 }
 
 function initMap(bounds, savedMapView = null) {
-  map = L.map("map", { zoomControl: true, minZoom: 4 }).setView([51.1634, 10.4477], 6);
+  map = L.map("map", { zoomControl: true, minZoom: 4, closePopupOnClick: false }).setView([51.1634, 10.4477], 6);
 
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,
@@ -2322,7 +2322,7 @@ function renderList() {
         }${
           poiHint ? `<br/><span class="poi-note">${poiHint}</span>` : ""
         }<br/><a href="${buildRouteUrl(item)}" target="_blank" rel="noreferrer">Route starten</a>`,
-        { autoClose: false, closeOnClick: false, keepInView: true },
+        { autoClose: false, closeOnClick: false, keepInView: true, autoPan: false },
       );
       pin.addTo(markerLayer);
     }
@@ -2370,7 +2370,7 @@ function renderList() {
       }${
         poiHint ? `<br/><span class="poi-note">${poiHint}</span>` : ""
       }<br/><a href="${buildRouteUrl(item)}" target="_blank" rel="noreferrer">Route starten</a>`,
-      { autoClose: false, closeOnClick: false, keepInView: true },
+      { autoClose: false, closeOnClick: false, keepInView: true, autoPan: false },
     );
     pin.addTo(markerLayer);
   }
