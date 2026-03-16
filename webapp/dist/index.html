@@ -2,12 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#0a3d2e" />
-    <link rel="manifest" href="/manifest.webmanifest?v=0.1.1+202603151733" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="manifest" href="/manifest.webmanifest?v=0.1.1+202603160715" />
     <title>gGolf Atlas</title>
-    <script type="module" crossorigin src="/assets/index-CBed4L8o.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BHLhVYIj.css">
+    <script type="module" crossorigin src="/assets/index-vnHmqsA5.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CFDhgNRZ.css">
   </head>
   <body>
     <div id="updateBanner" class="update-banner is-hidden" role="status" aria-live="polite">
@@ -23,54 +28,221 @@
         <p id="datasetMeta">Loading dataset...</p>
         <p id="appVersionMeta" class="app-version">Version wird geladen...</p>
       </div>
-      <button id="locateBtn" type="button">Use My Location</button>
+      <div class="header-actions">
+        <button id="locateBtn" type="button" class="ghost-btn locate-control" title="Standort verwenden" aria-label="Standort verwenden">
+          <i class="fa-solid fa-location-crosshairs" aria-hidden="true"></i>
+          <span class="label">Standort</span>
+        </button>
+      </div>
     </header>
 
-    <main class="app-grid">
-      <section class="map-panel">
+    <main class="app-main">
+      <section id="panelMap" class="panel-view is-active" data-panel="map" role="tabpanel" aria-labelledby="tabMap">
+        <div id="map" aria-label="Minigolf map"></div>
         <div class="map-controls">
-          <div class="map-controls-row">
-            <button id="pickPointBtn" type="button">Punkt setzen</button>
-            <button id="clearPointBtn" type="button" class="ghost-btn">Punkt loeschen</button>
+          <div class="map-controls-row map-quick-actions">
+            <button id="quickToAroundBtn" type="button" class="ghost-btn tiny-btn" title="In der Naehe" aria-label="In der Naehe"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></button>
+            <button id="quickToListBtn" type="button" class="ghost-btn tiny-btn" title="Alle Anlagen" aria-label="Alle Anlagen"><i class="fa-solid fa-list" aria-hidden="true"></i></button>
+            <button id="quickResetViewBtn" type="button" class="ghost-btn tiny-btn" title="Kartenansicht resetten"><i class="fa-solid fa-rotate-left" aria-hidden="true"></i></button>
           </div>
-          <label class="toggle-line map-follow-line">
-            <input id="followMapToggle" type="checkbox" checked />
-            Karte folgen (Map-Center als Suchpunkt)
-          </label>
+          <div class="toggle-card">
+            <label class="toggle-line map-follow-line">
+              <input id="followMapToggle" type="checkbox" checked />
+              Map-Center folgen
+            </label>
+          </div>
           <p id="mapFocusMeta">Map-Explore aktiv. Bewege die Karte oder setze einen Punkt.</p>
         </div>
-        <div id="map" aria-label="Minigolf map"></div>
+        <aside id="onboardingCard" class="onboarding-card is-hidden" aria-live="polite">
+          <div class="onboarding-title">Willkommen bei gGolf</div>
+          <p>Starte mit <strong>Karte</strong>, nutze <strong>In der Naehe</strong> fuer nahe Plaetze, und erfasse Runden im <strong>Punktezettel</strong>.</p>
+          <button id="onboardingDismissBtn" type="button" class="ghost-btn">Verstanden</button>
+        </aside>
       </section>
-      <section class="list-panel">
-        <section class="around-panel">
-          <div class="around-header">
-            <h2>Around Me</h2>
-            <p id="aroundMeMeta">Enable location to see nearby picks.</p>
+
+      <section id="panelList" class="panel-view" data-panel="list" data-list-mode="nearby" role="tabpanel" aria-labelledby="tabList">
+        <section class="list-panel surface-panel">
+          <div class="list-header">
+            <div class="list-mode-toggle view-toggle" role="tablist" aria-label="Listenmodus">
+              <button id="listModeNearbyBtn" class="view-btn is-active" type="button" data-mode="nearby" role="tab" aria-selected="true">In der N&auml;he</button>
+              <button id="listModeAllBtn" class="view-btn" type="button" data-mode="all" role="tab" aria-selected="false">Alle</button>
+              <button id="listModeSavedBtn" class="view-btn" type="button" data-mode="saved" role="tab" aria-selected="false">Gespeichert</button>
+            </div>
+            <div class="list-nearby-controls">
+              <label class="radius-control" for="nearbyRadius">
+                Radius
+                <input id="nearbyRadius" type="range" min="5" max="200" step="5" value="30" />
+                <span id="nearbyRadiusValue">30 km</span>
+              </label>
+              <div class="reference-switch" role="group" aria-label="Aktive Referenzquelle">
+                <button id="refAutoBtn" class="ref-btn is-active" type="button" data-ref-mode="auto">Auto</button>
+                <button id="refLocationBtn" class="ref-btn" type="button" data-ref-mode="location">Standort</button>
+                <button id="refMapBtn" class="ref-btn" type="button" data-ref-mode="map">Map</button>
+              </div>
+              <p id="aroundMeMeta" class="list-meta-text">Aktiviere Standort oder nutze Map-Center fuer Nearby-Liste.</p>
+            </div>
+            <div class="list-filter-controls">
+              <label class="toggle-line">
+                <input id="hideVisitedToggle" type="checkbox" />
+                Hide visited
+              </label>
+              <input id="searchInput" type="search" placeholder="Search city, postcode or name" />
+              <select id="typeFilter">
+                <option value="">All course types</option>
+                <option value="beton">Beton</option>
+                <option value="eternit">Eternit</option>
+                <option value="filz">Filz</option>
+                <option value="sonstige">Sonstige</option>
+                <option value="unknown">Unknown</option>
+              </select>
+            </div>
           </div>
-          <ul id="aroundMeList" class="around-list"></ul>
+          <ul id="venueList" class="venue-list"></ul>
         </section>
-        <div class="toolbar">
-          <div class="view-toggle" role="tablist" aria-label="Venue view mode">
-            <button id="viewAllBtn" class="view-btn is-active" type="button" data-view="all">All</button>
-            <button id="viewSavedBtn" class="view-btn" type="button" data-view="saved">Saved</button>
+      </section>
+
+      <section id="panelRules" class="panel-view" data-panel="rules" role="tabpanel" aria-labelledby="tabRules">
+        <section class="rules-panel surface-panel" aria-labelledby="rulesHeading">
+          <div class="rules-header">
+            <h2 id="rulesHeading">Minigolf-Regeln & Dokumente</h2>
+            <p>Kurzübersicht nach DMV/WMF. Für Turniere gilt immer das offizielle Regelwerk.</p>
           </div>
-          <label class="toggle-line">
-            <input id="hideVisitedToggle" type="checkbox" />
-            Hide visited
-          </label>
-          <input id="searchInput" type="search" placeholder="Search city, postcode or name" />
-          <select id="typeFilter">
-            <option value="">All course types</option>
-            <option value="beton">Beton</option>
-            <option value="eternit">Eternit</option>
-            <option value="filz">Filz</option>
-            <option value="sonstige">Sonstige</option>
-            <option value="unknown">Unknown</option>
-          </select>
-        </div>
-        <ul id="venueList" class="venue-list"></ul>
+          <ol class="rules-list">
+            <li>Ziel: Ball mit möglichst wenigen Schlägen ins Loch spielen.</li>
+            <li>Pro Bahn nur ein Ball; Wechsel nur in Sonderfällen gemäß Regelwerk.</li>
+            <li>Ball wird geschlagen, nicht geschoben; ein Schlag zählt als Punkt.</li>
+            <li>Hindernisse müssen auf dem vorgeschriebenen Weg überwunden werden.</li>
+            <li>Nach korrekter Überwindung wird vom Ruhepunkt gespielt; Ablegen nur regelkonform.</li>
+            <li>Maximal 6 Schläge plus Zusatzpunkt, also i.d.R. höchstens 7 Punkte pro Bahn.</li>
+            <li>Gespielt wird je Runde in Bahnreihenfolge 1 bis 18.</li>
+            <li>Der Lauf des Balls darf nicht absichtlich beeinflusst werden.</li>
+          </ol>
+          <div class="doc-links">
+            <a href="https://www.minigolfsport.de/verband.php?subpage=12&s=13&t=Spielregeln" target="_blank" rel="noreferrer">Spielregeln (Kurzform, DMV)</a>
+            <a href="https://www.minigolfsport.de/pdf/Download/Regelwerk/s1_internationale_spielregeln-2025-01.pdf" target="_blank" rel="noreferrer">Internationale Spielregeln (PDF)</a>
+            <a href="https://www.minigolfsport.de/download.php?subpage=11&title=DMV-Regelwerk" target="_blank" rel="noreferrer">DMV-Regelwerk (Downloads)</a>
+            <a href="https://www.minigolfsport.de/verband.php?subpage=12&title=Der%20Minigolfsport" target="_blank" rel="noreferrer">Der Minigolfsport (Überblick)</a>
+          </div>
+        </section>
+      </section>
+
+      <section id="panelScore" class="panel-view" data-panel="score" role="tabpanel" aria-labelledby="tabScore">
+        <section class="score-panel surface-panel">
+          <div class="score-header">
+            <h2>Punktezettel</h2>
+            <p>Schritt 1: Spieler hinzufuegen. Schritt 2: PAR bestaetigen. Dann reihum Schlaege eintragen.</p>
+          </div>
+
+          <section id="scoreResumeBanner" class="score-resume-banner is-hidden" aria-live="polite">
+            <p id="scoreResumeText"></p>
+            <div class="score-resume-actions">
+              <button id="scoreResumeContinueBtn" type="button" class="ghost-btn">Fortsetzen</button>
+              <button id="scoreResumeRestartBtn" type="button" class="ghost-btn">Neue Runde</button>
+            </div>
+          </section>
+          <div class="score-controls">
+            <input id="scorePlayerName" type="text" placeholder="Name eingeben…" />
+            <button id="addScorePlayerBtn" type="button">+ Hinzufuegen</button>
+          </div>
+          <input id="scoreVenueName" class="score-venue-input" type="text" placeholder="Spielort / Bahnname (optional)" />
+          <div class="score-templates" id="scoreTemplatesRow">
+            <span class="score-templates-label">Schnellstart:</span>
+            <button id="template2Btn" type="button" class="ghost-btn tiny-btn">2 Spieler</button>
+            <button id="template3Btn" type="button" class="ghost-btn tiny-btn">3 Spieler</button>
+            <button id="template4Btn" type="button" class="ghost-btn tiny-btn">4 Spieler</button>
+          </div>
+          <ul id="scorePlayersList" class="score-players-list"></ul>
+
+          <div class="score-setup-actions">
+            <button id="confirmParBtn" type="button" class="score-start-btn">&#9654;&nbsp; Spiel starten</button>
+            <button id="scoreResetRoundBtn" type="button" class="ghost-btn">Neue Runde</button>
+          </div>
+
+          <section id="scoreResetOptions" class="score-reset-options is-hidden" aria-live="polite">
+            <label><input id="scoreKeepPlayers" type="checkbox" checked /> Spieler behalten</label>
+            <label><input id="scoreKeepPar" type="checkbox" checked /> PAR behalten</label>
+            <div class="score-reset-actions">
+              <button id="scoreApplyResetBtn" type="button" class="ghost-btn">Zuruecksetzen</button>
+              <button id="scoreCancelResetBtn" type="button" class="ghost-btn">Abbrechen</button>
+            </div>
+          </section>
+
+          <section id="scoreTurnCard" class="score-turn-card is-hidden" aria-live="polite">
+            <div class="score-turn-hero">
+              <div class="score-turn-player-name" id="scoreCurrentPlayer">Spieler</div>
+              <div class="score-turn-badges">
+                <span class="score-badge-hole" id="scoreCurrentHole">Bahn 1</span>
+                <span class="score-badge-par" id="scoreCurrentPar">PAR 2</span>
+              </div>
+            </div>
+            <div class="score-quick-strokes" role="group" aria-label="Schlaege eintragen">
+              <button type="button" class="score-quick-btn score-btn-eagle" data-strokes-mode="delta" data-strokes="-1">&minus;1</button>
+              <button type="button" class="score-quick-btn score-btn-par" data-strokes-mode="par" data-strokes="0">PAR</button>
+              <button type="button" class="score-quick-btn score-btn-bogey" data-strokes-mode="delta" data-strokes="1">+1</button>
+              <button type="button" class="score-quick-btn score-btn-double" data-strokes-mode="delta" data-strokes="2">+2</button>
+              <button type="button" class="score-quick-btn score-btn-triple" data-strokes-mode="delta" data-strokes="3">+3</button>
+            </div>
+            <div class="score-turn-secondary">
+              <button id="scoreUndoTurnBtn" type="button" class="ghost-btn score-undo-btn">&#8617; Rueckgaengig</button>
+              <button id="scoreSkipHoleBtn" type="button" class="ghost-btn score-skip-btn">&#8856; Bahn &uuml;berspringen</button>
+              <div class="score-manual-entry">
+                <input id="scoreStrokeInput" type="number" min="1" max="7" step="1" value="2" aria-label="Schlaege" />
+                <button id="scoreNextTurnBtn" type="button" class="ghost-btn score-manual-confirm">OK</button>
+              </div>
+            </div>
+            <div id="scoreSkipReasonPanel" class="score-skip-reason is-hidden" role="group" aria-label="Bahn ueberspringen">
+              <span>Grund:</span>
+              <button type="button" class="score-skip-reason-btn" data-reason="besetzt">&#9940; Besetzt</button>
+              <button type="button" class="score-skip-reason-btn" data-reason="defekt">&#128295; Defekt</button>
+              <button type="button" class="score-skip-reason-btn" data-reason="sonstiges">Sonstiges</button>
+              <button id="scoreSkipCancelBtn" type="button" class="ghost-btn tiny-btn" aria-label="Abbrechen">&times;</button>
+            </div>
+          </section>
+
+          <section id="scoreFinishedCard" class="score-finished-card is-hidden" aria-live="polite">
+            <div class="score-finished-title">&#127942; Rundenabschluss</div>
+            <ol id="scoreFinishedRanking" class="score-finished-ranking"></ol>
+            <div id="scoreTiebreakerWrap" class="score-tiebreaker is-hidden">
+              <h4 class="score-tiebreaker-title">&#9876;&#65039; Stechen &mdash; Zusatzbahn</h4>
+              <div id="scoreTiebreakerRows" class="score-tiebreaker-rows"></div>
+              <button id="scoreTiebreakerEvalBtn" type="button" class="ghost-btn">Stechen auswerten</button>
+              <p id="scoreTiebreakerResult" class="tb-result"></p>
+            </div>
+            <div class="score-finished-actions">
+              <button id="scoreShareBtn" type="button" class="score-share-btn">&#128228; Ergebnis teilen</button>
+              <button id="scoreNewRoundSamePlayersBtn" type="button" class="score-start-btn">&#8635; Neue Runde, gleiche Spieler</button>
+              <button id="scoreFullResetBtn" type="button" class="ghost-btn">Vollst&auml;ndig neu starten</button>
+            </div>
+          </section>
+
+          <section class="score-hole-status-wrap" aria-label="Bahnstatus">
+            <div id="scoreHoleStatus" class="score-hole-status"></div>
+          </section>
+
+          <p id="scoreGameStatus" class="score-game-status"></p>
+          <p class="score-legend">Legende: <strong>X</strong> = Maximalpunktzahl pro Bahn (7).</p>
+          <section class="score-history-wrap" aria-label="Letzte Aktionen">
+            <h3>Letzte Aktionen</h3>
+            <ul id="scoreHistoryList" class="score-history-list"></ul>
+          </section>
+          <div id="scoreTableWrap" class="score-table-wrap"></div>
+          <p id="scoreOfflineStatus" class="score-offline-status"></p>
+        </section>
       </section>
     </main>
+
+    <nav class="primary-tabs" role="tablist" aria-label="Hauptbereiche">
+      <button id="tabMap" class="tab-btn is-active" type="button" data-tab="map" role="tab" aria-selected="true"><i class="fa-solid fa-map" aria-hidden="true"></i><span class="tab-label">Karte</span></button>
+      <button id="tabList" class="tab-btn" type="button" data-tab="list" role="tab" aria-selected="false"><i class="fa-solid fa-list" aria-hidden="true"></i><span class="tab-label">Liste</span></button>
+      <button id="tabRules" class="tab-btn" type="button" data-tab="rules" role="tab" aria-selected="false"><i class="fa-solid fa-book" aria-hidden="true"></i><span class="tab-label">Regeln</span></button>
+      <button id="tabScore" class="tab-btn" type="button" data-tab="score" role="tab" aria-selected="false"><i class="fa-solid fa-table-cells" aria-hidden="true"></i><span class="tab-label">Score</span></button>
+    </nav>
+
+    <template id="scorePlayerRemoveBtnTemplate">
+      <button type="button" class="ghost-btn tiny-btn" data-action="remove-player" title="Spieler entfernen" aria-label="Spieler entfernen">
+        <i class="fa-regular fa-trash-can" aria-hidden="true"></i>
+      </button>
+    </template>
 
     <dialog id="detailDialog">
       <article>
