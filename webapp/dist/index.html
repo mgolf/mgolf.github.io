@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
@@ -9,10 +9,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
       referrerpolicy="no-referrer"
     />
-    <link rel="manifest" href="/manifest.webmanifest?v=0.1.1+202603160715" />
+    <link rel="manifest" href="/manifest.webmanifest?v=0.1.1+202603160806" />
     <title>gGolf Atlas</title>
-    <script type="module" crossorigin src="/assets/index-vnHmqsA5.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CFDhgNRZ.css">
+    <script type="module" crossorigin src="/assets/index-DkF-Q9WD.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CH_t3ftn.css">
   </head>
   <body>
     <div id="updateBanner" class="update-banner is-hidden" role="status" aria-live="polite">
@@ -22,36 +22,42 @@
         <button id="updateDismissBtn" type="button" class="ghost-btn">Spaeter</button>
       </div>
     </div>
+    <div id="installBanner" class="install-banner is-hidden" role="status" aria-live="polite">
+      <span id="installBannerText">Als App installieren fuer schnelleren Offline-Zugriff.</span>
+      <div class="install-banner-actions">
+        <button id="installBannerConfirmBtn" type="button">Als App installieren</button>
+        <button id="installBannerDismissBtn" type="button" class="ghost-btn">Spaeter</button>
+      </div>
+    </div>
+    <div id="connectivityBanner" class="connectivity-banner is-hidden" role="status" aria-live="polite">
+      <span id="connectivityBannerText">Offline-Hinweis</span>
+    </div>
     <header class="app-header">
       <div>
         <h1>gGolf Atlas</h1>
-        <p id="datasetMeta">Loading dataset...</p>
-        <p id="appVersionMeta" class="app-version">Version wird geladen...</p>
-      </div>
-      <div class="header-actions">
-        <button id="locateBtn" type="button" class="ghost-btn locate-control" title="Standort verwenden" aria-label="Standort verwenden">
-          <i class="fa-solid fa-location-crosshairs" aria-hidden="true"></i>
-          <span class="label">Standort</span>
-        </button>
       </div>
     </header>
 
     <main class="app-main">
       <section id="panelMap" class="panel-view is-active" data-panel="map" role="tabpanel" aria-labelledby="tabMap">
-        <div id="map" aria-label="Minigolf map"></div>
+        <div id="map" aria-label="Minigolf-Karte"></div>
         <div class="map-controls">
           <div class="map-controls-row map-quick-actions">
-            <button id="quickToAroundBtn" type="button" class="ghost-btn tiny-btn" title="In der Naehe" aria-label="In der Naehe"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></button>
-            <button id="quickToListBtn" type="button" class="ghost-btn tiny-btn" title="Alle Anlagen" aria-label="Alle Anlagen"><i class="fa-solid fa-list" aria-hidden="true"></i></button>
-            <button id="quickResetViewBtn" type="button" class="ghost-btn tiny-btn" title="Kartenansicht resetten"><i class="fa-solid fa-rotate-left" aria-hidden="true"></i></button>
+            <button id="locateBtn" type="button" class="ghost-btn locate-control map-locate-btn map-action-btn" title="Standort verwenden" aria-label="Standort verwenden">
+              <i class="fa-solid fa-location-crosshairs" aria-hidden="true"></i>
+              <span class="label">Standort</span>
+            </button>
+            <button id="quickToAroundBtn" type="button" class="ghost-btn tiny-btn map-action-btn" title="In der Naehe" aria-label="In der Naehe"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span class="label">Nahe</span></button>
+            <button id="quickToListBtn" type="button" class="ghost-btn tiny-btn map-action-btn" title="Alle Anlagen" aria-label="Alle Anlagen"><i class="fa-solid fa-list" aria-hidden="true"></i><span class="label">Liste</span></button>
+            <button id="quickResetViewBtn" type="button" class="ghost-btn tiny-btn map-action-btn" title="Kartenansicht resetten"><i class="fa-solid fa-rotate-left" aria-hidden="true"></i><span class="label">Reset</span></button>
           </div>
           <div class="toggle-card">
             <label class="toggle-line map-follow-line">
               <input id="followMapToggle" type="checkbox" checked />
-              Map-Center folgen
+              Kartenmitte folgen
             </label>
           </div>
-          <p id="mapFocusMeta">Map-Explore aktiv. Bewege die Karte oder setze einen Punkt.</p>
+          <p id="mapFocusMeta">Kartenansicht aktiv. Bewege die Karte oder setze einen Punkt.</p>
         </div>
         <aside id="onboardingCard" class="onboarding-card is-hidden" aria-live="polite">
           <div class="onboarding-title">Willkommen bei gGolf</div>
@@ -74,26 +80,34 @@
                 <input id="nearbyRadius" type="range" min="5" max="200" step="5" value="30" />
                 <span id="nearbyRadiusValue">30 km</span>
               </label>
+              <label class="toggle-line">
+                <input id="showOnlyNewNearbyToggle" type="checkbox" />
+                Nur neue Orte
+              </label>
+              <label class="toggle-line">
+                <input id="newNearbyWithinManualRadiusToggle" type="checkbox" checked />
+                Neu nur im Radius
+              </label>
               <div class="reference-switch" role="group" aria-label="Aktive Referenzquelle">
                 <button id="refAutoBtn" class="ref-btn is-active" type="button" data-ref-mode="auto">Auto</button>
                 <button id="refLocationBtn" class="ref-btn" type="button" data-ref-mode="location">Standort</button>
-                <button id="refMapBtn" class="ref-btn" type="button" data-ref-mode="map">Map</button>
+                <button id="refMapBtn" class="ref-btn" type="button" data-ref-mode="map">Karte</button>
               </div>
               <p id="aroundMeMeta" class="list-meta-text">Aktiviere Standort oder nutze Map-Center fuer Nearby-Liste.</p>
             </div>
             <div class="list-filter-controls">
               <label class="toggle-line">
                 <input id="hideVisitedToggle" type="checkbox" />
-                Hide visited
+                Besuchte ausblenden
               </label>
-              <input id="searchInput" type="search" placeholder="Search city, postcode or name" />
+              <input id="searchInput" type="search" placeholder="Suche nach Ort, PLZ oder Name" />
               <select id="typeFilter">
-                <option value="">All course types</option>
+                <option value="">Alle Bahnarten</option>
                 <option value="beton">Beton</option>
                 <option value="eternit">Eternit</option>
                 <option value="filz">Filz</option>
                 <option value="sonstige">Sonstige</option>
-                <option value="unknown">Unknown</option>
+                <option value="unknown">Unbekannt</option>
               </select>
             </div>
           </div>
@@ -144,6 +158,7 @@
             <input id="scorePlayerName" type="text" placeholder="Name eingeben…" />
             <button id="addScorePlayerBtn" type="button">+ Hinzufuegen</button>
           </div>
+           <button id="scoreQuickRoundBtn" type="button" class="score-quick-round-btn">⚡ Schnellrunde zu zweit</button>
           <input id="scoreVenueName" class="score-venue-input" type="text" placeholder="Spielort / Bahnname (optional)" />
           <div class="score-templates" id="scoreTemplatesRow">
             <span class="score-templates-label">Schnellstart:</span>
@@ -190,6 +205,7 @@
                 <button id="scoreNextTurnBtn" type="button" class="ghost-btn score-manual-confirm">OK</button>
               </div>
             </div>
+            <div id="scoreMomentFeedback" class="score-moment-feedback is-hidden" aria-live="polite"></div>
             <div id="scoreSkipReasonPanel" class="score-skip-reason is-hidden" role="group" aria-label="Bahn ueberspringen">
               <span>Grund:</span>
               <button type="button" class="score-skip-reason-btn" data-reason="besetzt">&#9940; Besetzt</button>
@@ -201,6 +217,11 @@
 
           <section id="scoreFinishedCard" class="score-finished-card is-hidden" aria-live="polite">
             <div class="score-finished-title">&#127942; Rundenabschluss</div>
+            <p id="scoreStreakMeta" class="score-streak-meta"></p>
+            <p id="scoreSessionProgress" class="score-session-progress"></p>
+            <p id="scorePersonalBestMeta" class="score-personal-best is-hidden"></p>
+            <p id="scoreNextChallenge" class="score-next-challenge"></p>
+            <ul id="scoreAchievementUnlocks" class="score-achievement-unlocks"></ul>
             <ol id="scoreFinishedRanking" class="score-finished-ranking"></ol>
             <div id="scoreTiebreakerWrap" class="score-tiebreaker is-hidden">
               <h4 class="score-tiebreaker-title">&#9876;&#65039; Stechen &mdash; Zusatzbahn</h4>
@@ -235,7 +256,7 @@
       <button id="tabMap" class="tab-btn is-active" type="button" data-tab="map" role="tab" aria-selected="true"><i class="fa-solid fa-map" aria-hidden="true"></i><span class="tab-label">Karte</span></button>
       <button id="tabList" class="tab-btn" type="button" data-tab="list" role="tab" aria-selected="false"><i class="fa-solid fa-list" aria-hidden="true"></i><span class="tab-label">Liste</span></button>
       <button id="tabRules" class="tab-btn" type="button" data-tab="rules" role="tab" aria-selected="false"><i class="fa-solid fa-book" aria-hidden="true"></i><span class="tab-label">Regeln</span></button>
-      <button id="tabScore" class="tab-btn" type="button" data-tab="score" role="tab" aria-selected="false"><i class="fa-solid fa-table-cells" aria-hidden="true"></i><span class="tab-label">Score</span></button>
+      <button id="tabScore" class="tab-btn" type="button" data-tab="score" role="tab" aria-selected="false"><i class="fa-solid fa-table-cells" aria-hidden="true"></i><span class="tab-label">Punkte</span></button>
     </nav>
 
     <template id="scorePlayerRemoveBtnTemplate">
@@ -247,11 +268,11 @@
     <dialog id="detailDialog">
       <article>
         <header>
-          <h2 id="detailTitle">Venue</h2>
+          <h2 id="detailTitle">Details</h2>
         </header>
         <div id="detailContent"></div>
         <footer>
-          <button id="detailClose" type="button">Close</button>
+          <button id="detailClose" type="button">Schliessen</button>
         </footer>
       </article>
     </dialog>
