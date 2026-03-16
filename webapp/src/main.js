@@ -202,6 +202,7 @@ let smartBannerQueue = [];
 let smartBannerTimer = null;
 let scoreStreakState = { streakCount: 0, bestStreak: 0, totalRounds: 0, lastRoundDay: "" };
 let seenNearbyIds = new Set();
+let geolocationWatchId = null;
 
 function normalizeStringList(value) {
   if (!Array.isArray(value)) return [];
@@ -544,7 +545,7 @@ async function updateLocateButtonState() {
   }
 
   const hasLiveLocation = Boolean(userLatLng?.lat && userLatLng?.lng);
-  locateBtn.classList.toggle("is-active", permissionGranted && hasLiveLocation);
+  locateBtn.classList.toggle("is-active", permissionGranted || hasLiveLocation);
   const label = locateBtn.querySelector(".label");
   if (label) {
     label.textContent = hasLiveLocation ? "Standort aktiv" : "Standort aktivieren";
@@ -2342,18 +2343,58 @@ function setUserLocation(lat, lng, shouldFly = true) {
   renderList();
 }
 
+function geolocationErrorMessage(error) {
+  const code = Number(error?.code);
+  if (code === 1) {
+    return "Standortzugriff verweigert. Bitte Berechtigung im Browser erlauben.";
+  }
+  if (code === 2) {
+    return "Standort aktuell nicht verfuegbar. Bitte GPS oder WLAN pruefen.";
+  }
+  if (code === 3) {
+    return "Standortabfrage dauerte zu lange. Bitte erneut versuchen.";
+  }
+  return "Standort konnte nicht ermittelt werden.";
+}
+
+function stopLocationWatch() {
+  if (geolocationWatchId == null || !navigator.geolocation?.clearWatch) return;
+  navigator.geolocation.clearWatch(geolocationWatchId);
+  geolocationWatchId = null;
+}
+
+function ensureLocationWatch() {
+  if (!navigator.geolocation?.watchPosition || geolocationWatchId != null) return;
+  geolocationWatchId = navigator.geolocation.watchPosition(
+    (pos) => {
+      setUserLocation(pos.coords.latitude, pos.coords.longitude, false);
+    },
+    () => {
+      // Silent fallback: explicit requestLocation handles user-facing feedback.
+    },
+    { enableHighAccuracy: true, timeout: 20000, maximumAge: 30000 },
+  );
+}
+
 function requestLocation({ shouldFly = true } = {}) {
-  if (!navigator.geolocation) return;
+  if (!navigator.geolocation) {
+    showSmartBannerMessage("Dieses Geraet unterstuetzt keine Standortabfrage.", "offline", 4200, 2);
+    return;
+  }
+
   navigator.geolocation.getCurrentPosition(
     (pos) => {
       setUserLocation(pos.coords.latitude, pos.coords.longitude, shouldFly);
+      ensureLocationWatch();
+      showSmartBannerMessage("Standort aktualisiert.", "online", 2200, 1);
     },
-    () => {
-      if (lastKnownLatLng) {
+    (error) => {
+      showSmartBannerMessage(geolocationErrorMessage(error), "offline", 4600, 2);
+      if (lastKnownLatLng && Number(error?.code) !== 1) {
         setUserLocation(lastKnownLatLng.lat, lastKnownLatLng.lng, shouldFly);
       }
     },
-    { enableHighAccuracy: true, timeout: 7000, maximumAge: 120000 },
+    { enableHighAccuracy: true, timeout: 15000, maximumAge: 0 },
   );
 }
 
@@ -2490,6 +2531,9 @@ function hookEvents() {
   });
   window.addEventListener("online", () => setConnectivityState(true));
   window.addEventListener("offline", () => setConnectivityState(false));
+  window.addEventListener("beforeunload", () => {
+    stopLocationWatch();
+  });
   document.addEventListener("visibilitychange", () => {
     updateWakeLockState().catch(() => {});
   });
@@ -2586,7 +2630,7 @@ async function boot() {
 
   handleShareTargetLaunch(window.location.search);
 
-  followMapCenter = Boolean(await getSetting("followMapCenter").catch(() => false));
+  followMapCenter = Boolean(await getSetting("followMapCenter").catch(() => true));
   followMapToggle.checked = followMapCenter;
 
   markers = markerPayload.markers || [];
