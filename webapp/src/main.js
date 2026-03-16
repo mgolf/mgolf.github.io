@@ -165,6 +165,7 @@ let followMapCenter = true;
 let pickPointMode = false;
 let customPointLayer = null;
 let mapCenterLayer = null;
+let userLocationLayer = null;
 let reloadScheduled = false;
 let pendingServiceWorker = null;
 const SCORE_HOLES = 18;
@@ -203,6 +204,7 @@ let smartBannerTimer = null;
 let scoreStreakState = { streakCount: 0, bestStreak: 0, totalRounds: 0, lastRoundDay: "" };
 let seenNearbyIds = new Set();
 let geolocationWatchId = null;
+let geolocationPermissionState = "unknown";
 
 function normalizeStringList(value) {
   if (!Array.isArray(value)) return [];
@@ -532,23 +534,31 @@ async function updateLocateButtonState() {
   if (!locateBtn) return;
 
   let permissionGranted = false;
+  geolocationPermissionState = "unknown";
   try {
     if (navigator.permissions?.query) {
       const result = await navigator.permissions.query({ name: "geolocation" });
       permissionGranted = result.state === "granted";
+      geolocationPermissionState = result.state;
       result.onchange = () => {
         updateLocateButtonState().catch(() => {});
       };
     }
   } catch {
     permissionGranted = false;
+    geolocationPermissionState = "unknown";
   }
 
   const hasLiveLocation = Boolean(userLatLng?.lat && userLatLng?.lng);
   locateBtn.classList.toggle("is-active", permissionGranted || hasLiveLocation);
+  locateBtn.classList.toggle("is-blocked", geolocationPermissionState === "denied");
   const label = locateBtn.querySelector(".label");
   if (label) {
-    label.textContent = hasLiveLocation ? "Standort aktiv" : "Standort aktivieren";
+    if (geolocationPermissionState === "denied") {
+      label.textContent = "Standort blockiert";
+    } else {
+      label.textContent = hasLiveLocation ? "Standort aktiv" : "Standort aktivieren";
+    }
   }
 }
 
@@ -727,6 +737,10 @@ function updateMapPointLayers() {
     map.removeLayer(customPointLayer);
     customPointLayer = null;
   }
+  if (userLocationLayer) {
+    map.removeLayer(userLocationLayer);
+    userLocationLayer = null;
+  }
 
   if (mapCenterLatLng) {
     mapCenterLayer = L.circleMarker([mapCenterLatLng.lat, mapCenterLatLng.lng], {
@@ -748,6 +762,18 @@ function updateMapPointLayers() {
       fillOpacity: 0.9,
     })
       .bindPopup("Custom-Suchpunkt")
+      .addTo(map);
+  }
+
+  if (userLatLng) {
+    userLocationLayer = L.circle([userLatLng.lat, userLatLng.lng], {
+      radius: 30,
+      color: "#1f4fff",
+      weight: 2,
+      fillColor: "#3f6cff",
+      fillOpacity: 0.25,
+    })
+      .bindPopup("Dein Standort")
       .addTo(map);
   }
 }
@@ -2340,6 +2366,7 @@ function setUserLocation(lat, lng, shouldFly = true) {
     }).getBounds();
     map.fitBounds(locationBounds, { padding: [24, 24], maxZoom: 13, animate: true });
   }
+  updateMapPointLayers();
   updateLocateButtonState().catch(() => {});
   updateReferenceModeButtons();
   updateMapMetaText();
@@ -2358,6 +2385,13 @@ function geolocationErrorMessage(error) {
     return "Standortabfrage dauerte zu lange. Bitte erneut versuchen.";
   }
   return "Standort konnte nicht ermittelt werden.";
+}
+
+function geolocationPermissionHelpText() {
+  if (isLikelyIOS()) {
+    return "Standort ist blockiert. In iOS Safari: aA -> Website-Einstellungen -> Standort -> Erlauben.";
+  }
+  return "Standort ist blockiert. Bitte im Browser bei dieser Seite Standort auf 'Zulassen' stellen und erneut tippen.";
 }
 
 function stopLocationWatch() {
@@ -2437,6 +2471,10 @@ function hookEvents() {
   });
 
   locateBtn.addEventListener("click", () => {
+    if (geolocationPermissionState === "denied") {
+      showSmartBannerMessage(geolocationPermissionHelpText(), "offline", 5200, 3);
+      return;
+    }
     requestLocation({ shouldFly: true });
   });
 
