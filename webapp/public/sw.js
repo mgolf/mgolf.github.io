@@ -8,6 +8,10 @@ const TILE_CACHE_MAX = 180;
 const APP_SHELL = [
   "/",
   "/manifest.webmanifest",
+  "/icons/icon-192.svg",
+  "/icons/icon-512.svg",
+  "/icons/icon-maskable-192.svg",
+  "/icons/icon-maskable-512.svg",
 ];
 
 self.addEventListener("install", (event) => {

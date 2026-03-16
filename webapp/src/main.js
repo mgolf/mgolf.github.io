@@ -2,6 +2,18 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import "./styles.css";
 import { getVenueDetailsById, loadInitialData, scheduleBackgroundWarmup } from "./data-loader.js";
+import {
+  buildNextChallenge,
+  buildSessionProgress,
+  computeDiscoveryProgress,
+  evaluatePersonalBest,
+  formatStreakLine,
+  getAchievementLabel,
+  getHoleFeedback,
+  getNewAchievementIds,
+  updateStreakState,
+} from "./gamification-utils.js";
+import { buildConnectivityMessage, parseLaunchState, shouldHoldWakeLock, shouldShowInstallBanner } from "./pwa-utils.js";
 import { getSetting, listFavorites, listVisited, setSetting, toggleFavorite, toggleVisited } from "./storage.js";
 
 const APP_VERSION = typeof __APP_VERSION__ !== "undefined" ? __APP_VERSION__ : "dev";
@@ -15,6 +27,12 @@ const updateBannerEl = document.getElementById("updateBanner");
 const updateBannerTextEl = document.getElementById("updateBannerText");
 const updateReloadBtn = document.getElementById("updateReloadBtn");
 const updateDismissBtn = document.getElementById("updateDismissBtn");
+const installBannerEl = document.getElementById("installBanner");
+const installBannerTextEl = document.getElementById("installBannerText");
+const installBannerConfirmBtn = document.getElementById("installBannerConfirmBtn");
+const installBannerDismissBtn = document.getElementById("installBannerDismissBtn");
+const connectivityBannerEl = document.getElementById("connectivityBanner");
+const connectivityBannerTextEl = document.getElementById("connectivityBannerText");
 const locateBtn = document.getElementById("locateBtn");
 const tabButtons = Array.from(document.querySelectorAll(".tab-btn"));
 const panelViews = Array.from(document.querySelectorAll(".panel-view"));
@@ -25,6 +43,8 @@ const detailClose = document.getElementById("detailClose");
 const aroundMeMetaEl = document.getElementById("aroundMeMeta");
 const nearbyRadiusEl = document.getElementById("nearbyRadius");
 const nearbyRadiusValueEl = document.getElementById("nearbyRadiusValue");
+const showOnlyNewNearbyToggle = document.getElementById("showOnlyNewNearbyToggle");
+const newNearbyWithinManualRadiusToggle = document.getElementById("newNearbyWithinManualRadiusToggle");
 const refAutoBtn = document.getElementById("refAutoBtn");
 const refPointBtn = document.getElementById("refPointBtn");
 const refLocationBtn = document.getElementById("refLocationBtn");
@@ -46,6 +66,7 @@ const onboardingDismissBtn = document.getElementById("onboardingDismissBtn");
 const scorePlayerNameEl = document.getElementById("scorePlayerName");
 const scoreVenueNameEl = document.getElementById("scoreVenueName");
 const addScorePlayerBtn = document.getElementById("addScorePlayerBtn");
+const scoreQuickRoundBtnEl = document.getElementById("scoreQuickRoundBtn");
 const scorePlayersListEl = document.getElementById("scorePlayersList");
 const confirmParBtn = document.getElementById("confirmParBtn");
 const scoreResetRoundBtn = document.getElementById("scoreResetRoundBtn");
@@ -85,7 +106,13 @@ const scoreFullResetBtnEl = document.getElementById("scoreFullResetBtn");
 const scoreSkipHoleBtnEl = document.getElementById("scoreSkipHoleBtn");
 const scoreSkipReasonPanelEl = document.getElementById("scoreSkipReasonPanel");
 const scoreSkipCancelBtnEl = document.getElementById("scoreSkipCancelBtn");
+const scoreMomentFeedbackEl = document.getElementById("scoreMomentFeedback");
 const scoreOfflineStatusEl = document.getElementById("scoreOfflineStatus");
+const scoreStreakMetaEl = document.getElementById("scoreStreakMeta");
+const scoreSessionProgressEl = document.getElementById("scoreSessionProgress");
+const scorePersonalBestMetaEl = document.getElementById("scorePersonalBestMeta");
+const scoreNextChallengeEl = document.getElementById("scoreNextChallenge");
+const scoreAchievementUnlocksEl = document.getElementById("scoreAchievementUnlocks");
 const template2BtnEl = document.getElementById("template2Btn");
 const template3BtnEl = document.getElementById("template3Btn");
 const template4BtnEl = document.getElementById("template4Btn");
@@ -103,6 +130,20 @@ const SCORE_DEFAULT_A11Y = {
   highContrast: true,
   dyslexiaFont: false,
 };
+const INSTALL_VISITS_KEY = "installBannerVisits";
+const INSTALL_DISMISSED_AT_KEY = "installBannerDismissedAt";
+const INSTALL_INSTALLED_KEY = "installBannerInstalled";
+const SCORE_ACHIEVEMENTS_KEY = "scoreAchievementsV1";
+const SCORE_PERSONAL_BESTS_KEY = "scorePersonalBestsV1";
+const SCORE_STREAK_STATE_KEY = "scoreStreakStateV1";
+const NEW_NEARBY_SEEN_IDS_KEY = "newNearbySeenIdsV1";
+const SHOW_ONLY_NEW_NEARBY_KEY = "showOnlyNewNearby";
+const NEW_NEARBY_WITHIN_MANUAL_RADIUS_KEY = "newNearbyWithinManualRadius";
+const SMART_BANNER_PRIORITY = {
+  streak: 1,
+  personalBest: 2,
+  achievement: 3,
+};
 
 let markers = [];
 let map = null;
@@ -116,6 +157,8 @@ let visited = new Set();
 let currentView = "nearby";
 let activeTab = "map";
 let hideVisited = false;
+let showOnlyNewNearby = false;
+let newNearbyWithinManualRadius = true;
 let mapCenterLatLng = null;
 let customPointLatLng = null;
 let followMapCenter = true;
@@ -139,6 +182,350 @@ let scoreTiebreaker = {};
 let scoreVenueName = "";
 let lastSelectedVenue = null;
 let scoreAccessibilityPrefs = { ...SCORE_DEFAULT_A11Y };
+let deferredInstallPrompt = null;
+let installVisitCount = 0;
+let installBannerDismissedAt = 0;
+let installBannerInstalled = false;
+let installBannerMode = "none";
+let isOnline = typeof navigator !== "undefined" ? navigator.onLine : true;
+let connectivityBannerMode = isOnline ? null : "offline";
+let connectivityBannerTimer = null;
+let wakeLockSentinel = null;
+let unlockedAchievementIds = [];
+let personalBestByVenue = {};
+let scoreMomentFeedback = null;
+let scoreMomentFeedbackTimer = null;
+let scoreFinishMeta = { personalBestLines: [], achievementIds: [], nextChallenge: "", streakLine: "", progressLine: "" };
+let updateBannerMessage = "";
+let activeSmartBanner = null;
+let smartBannerQueue = [];
+let smartBannerTimer = null;
+let scoreStreakState = { streakCount: 0, bestStreak: 0, totalRounds: 0, lastRoundDay: "" };
+let seenNearbyIds = new Set();
+
+function normalizeStringList(value) {
+  if (!Array.isArray(value)) return [];
+  return Array.from(new Set(value.map((entry) => String(entry || "").trim()).filter(Boolean)));
+}
+
+function isStandaloneMode() {
+  return Boolean(window.matchMedia?.("(display-mode: standalone)")?.matches || window.navigator.standalone === true);
+}
+
+function isLikelyIOS() {
+  const ua = String(navigator.userAgent || "");
+  return /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/i.test(ua) && "ontouchend" in document);
+}
+
+function isLikelySafari() {
+  const ua = String(navigator.userAgent || "");
+  return /Safari/i.test(ua) && !/Chrome|CriOS|FxiOS|EdgiOS/i.test(ua);
+}
+
+function shouldShowIosInstallHint() {
+  if (!isLikelyIOS() || !isLikelySafari()) return false;
+  if (isStandaloneMode() || installBannerInstalled) return false;
+  if (installVisitCount < 2) return false;
+  if (installBannerDismissedAt && Date.now() - installBannerDismissedAt < 7 * 24 * 60 * 60 * 1000) return false;
+  return true;
+}
+
+function decodeShareSearchValue(value) {
+  return String(value || "")
+    .trim()
+    .replace(/\s+/g, " ")
+    .slice(0, 220);
+}
+
+function extractShareTextCandidate(params) {
+  const candidates = [
+    params.get("share_url"),
+    params.get("share_text"),
+    params.get("share_title"),
+    params.get("url"),
+    params.get("text"),
+    params.get("title"),
+  ];
+  const first = candidates.map(decodeShareSearchValue).find(Boolean);
+  return first || "";
+}
+
+function handleShareTargetLaunch(search) {
+  const params = new URLSearchParams(search.startsWith("?") ? search : `?${search}`);
+  const hasShareMarker = params.get("share_target") === "1" || params.has("share_url") || params.has("share_text") || params.has("share_title");
+  if (!hasShareMarker) return;
+
+  const candidate = extractShareTextCandidate(params);
+  if (candidate && searchEl) {
+    searchEl.value = candidate;
+  }
+  setActiveView("all");
+  setActiveTab("list");
+  renderList();
+
+  const isMapLike = /maps\.|google\.com\/maps|openstreetmap|geo:/i.test(candidate);
+  showSmartBannerMessage(
+    isMapLike
+      ? "Geteilter Kartenlink uebernommen. Treffer in der Liste anzeigen."
+      : "Geteilter Ort uebernommen. Treffer in der Liste anzeigen.",
+    "online",
+    3600,
+    2,
+  );
+
+  ["share_target", "share_url", "share_text", "share_title", "url", "text", "title"].forEach((key) => params.delete(key));
+  const nextQuery = params.toString();
+  window.history.replaceState({}, "", `${window.location.pathname}${nextQuery ? `?${nextQuery}` : ""}`);
+}
+
+function buildOfflineDetailFallback(item) {
+  if (!item) {
+    return {
+      title: "Offline",
+      html: "<p>Offline und keine lokalen Details verfuegbar.</p>",
+    };
+  }
+  const types = Array.isArray(item.course_types) && item.course_types.length > 0 ? item.course_types.join(", ") : "-";
+  return {
+    title: item.name || "Ort",
+    html: `
+      <p><strong>Offline-Modus:</strong> Zeige lokale Basisdaten.</p>
+      <p><strong>ID:</strong> <span class="venue-id">${item.id || "-"}</span></p>
+      <p><strong>Lat/Lng:</strong> ${item.lat ?? "-"}, ${item.lng ?? "-"}</p>
+      <p><strong>Adresse:</strong> ${item.postcode || ""} ${item.place || ""}</p>
+      <p><strong>Bahnarten:</strong> ${types}</p>
+      <p><strong>Hinweis:</strong> Volle Details und Route starten wieder bei Verbindung.</p>
+    `,
+  };
+}
+
+function normalizeAchievementIds(value) {
+  if (!Array.isArray(value)) return [];
+  return Array.from(new Set(value.map((entry) => String(entry || "").trim()).filter(Boolean)));
+}
+
+function normalizePersonalBestMap(value) {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return {};
+  const out = {};
+  for (const [venueKey, venueMap] of Object.entries(value)) {
+    if (!venueMap || typeof venueMap !== "object" || Array.isArray(venueMap)) continue;
+    const normalizedVenueKey = String(venueKey || "").trim();
+    if (!normalizedVenueKey) continue;
+    out[normalizedVenueKey] = {};
+    for (const [playerKey, best] of Object.entries(venueMap)) {
+      const safeBest = Number(best);
+      if (!Number.isFinite(safeBest)) continue;
+      out[normalizedVenueKey][String(playerKey || "").trim().toLowerCase()] = safeBest;
+    }
+  }
+  return out;
+}
+
+function normalizeScoreFinishMeta(value) {
+  if (!value || typeof value !== "object") {
+    return { personalBestLines: [], achievementIds: [], nextChallenge: "", streakLine: "", progressLine: "" };
+  }
+  return {
+    personalBestLines: Array.isArray(value.personalBestLines)
+      ? value.personalBestLines.map((entry) => String(entry || "").trim()).filter(Boolean)
+      : [],
+    achievementIds: normalizeAchievementIds(value.achievementIds),
+    nextChallenge: String(value.nextChallenge || "").trim(),
+    streakLine: String(value.streakLine || "").trim(),
+    progressLine: String(value.progressLine || "").trim(),
+  };
+}
+
+function normalizeStreakState(value) {
+  if (!value || typeof value !== "object") {
+    return { streakCount: 0, bestStreak: 0, totalRounds: 0, lastRoundDay: "" };
+  }
+  return {
+    streakCount: Number.isFinite(Number(value.streakCount)) ? Number(value.streakCount) : 0,
+    bestStreak: Number.isFinite(Number(value.bestStreak)) ? Number(value.bestStreak) : 0,
+    totalRounds: Number.isFinite(Number(value.totalRounds)) ? Number(value.totalRounds) : 0,
+    lastRoundDay: String(value.lastRoundDay || "").trim(),
+  };
+}
+
+function buildVenueKey(value) {
+  return String(value || "Freie Runde")
+    .trim()
+    .toLowerCase();
+}
+
+function renderTopBanners() {
+  const installPromptVisible = shouldShowInstallBanner({
+    visits: installVisitCount,
+    isStandalone: isStandaloneMode(),
+    hasDeferredPrompt: Boolean(deferredInstallPrompt),
+    dismissedAt: installBannerDismissedAt,
+    isInstalled: installBannerInstalled,
+  });
+  const installIosVisible = shouldShowIosInstallHint();
+  installBannerMode = installPromptVisible ? "prompt" : installIosVisible ? "ios" : "none";
+  const connectivityMessage = connectivityBannerMode
+    ? buildConnectivityMessage({ isOnline: connectivityBannerMode === "online", activeTab })
+    : null;
+
+  updateBannerEl?.classList.add("is-hidden");
+  installBannerEl?.classList.add("is-hidden");
+  connectivityBannerEl?.classList.add("is-hidden");
+
+  if (updateBannerMessage) {
+    if (updateBannerTextEl) updateBannerTextEl.textContent = updateBannerMessage;
+    updateBannerEl?.classList.remove("is-hidden");
+    return;
+  }
+
+  if (activeSmartBanner) {
+    if (connectivityBannerTextEl) connectivityBannerTextEl.textContent = activeSmartBanner.text;
+    connectivityBannerEl?.classList.remove("is-hidden");
+    connectivityBannerEl?.classList.toggle("is-offline", activeSmartBanner.tone === "offline");
+    connectivityBannerEl?.classList.toggle("is-online", activeSmartBanner.tone !== "offline");
+    return;
+  }
+
+  if (installBannerMode !== "none") {
+    if (installBannerTextEl) {
+      installBannerTextEl.textContent =
+        installBannerMode === "ios"
+          ? "iPhone/iPad: In Safari auf Teilen tippen und 'Zum Home-Bildschirm' waehlen."
+          : "Als App installieren fuer schnelleren Start, bessere Offline-Nutzung und Homescreen-Zugriff.";
+    }
+    if (installBannerConfirmBtn) {
+      installBannerConfirmBtn.textContent = installBannerMode === "ios" ? "Anleitung" : "Als App installieren";
+    }
+    installBannerEl?.classList.remove("is-hidden");
+    return;
+  }
+
+  if (connectivityMessage) {
+    if (connectivityBannerTextEl) connectivityBannerTextEl.textContent = connectivityMessage.text;
+    connectivityBannerEl?.classList.remove("is-hidden");
+    connectivityBannerEl?.classList.toggle("is-offline", connectivityMessage.tone === "offline");
+    connectivityBannerEl?.classList.toggle("is-online", connectivityMessage.tone === "online");
+  }
+}
+
+function showSmartBannerMessage(text, tone = "online", duration = 3600, priority = 1) {
+  const safeText = String(text || "").trim();
+  if (!safeText) return;
+
+  const duplicateInQueue = smartBannerQueue.some((item) => item.text === safeText && item.tone === tone);
+  const duplicateActive = activeSmartBanner?.text === safeText && activeSmartBanner?.tone === tone;
+  if (duplicateInQueue || duplicateActive) return;
+
+  smartBannerQueue.push({
+    text: safeText,
+    tone,
+    duration: Math.max(1200, Number(duration) || 3600),
+    priority: Number(priority) || 1,
+    createdAt: Date.now(),
+  });
+
+  smartBannerQueue.sort((a, b) => {
+    if (a.priority !== b.priority) return b.priority - a.priority;
+    return a.createdAt - b.createdAt;
+  });
+
+  if (!activeSmartBanner) {
+    activeSmartBanner = smartBannerQueue.shift() || null;
+    renderTopBanners();
+    scheduleSmartBannerTimeout();
+  }
+}
+
+function scheduleSmartBannerTimeout() {
+  if (smartBannerTimer) {
+    window.clearTimeout(smartBannerTimer);
+    smartBannerTimer = null;
+  }
+  if (!activeSmartBanner) return;
+  smartBannerTimer = window.setTimeout(() => {
+    smartBannerTimer = null;
+    activeSmartBanner = smartBannerQueue.shift() || null;
+    renderTopBanners();
+    scheduleSmartBannerTimeout();
+  }, activeSmartBanner.duration);
+}
+
+function markNearbySeen(itemId) {
+  if (!itemId) return;
+  seenNearbyIds.add(itemId);
+  setSetting(NEW_NEARBY_SEEN_IDS_KEY, Array.from(seenNearbyIds)).catch(() => {});
+}
+
+function renderInstallBanner() {
+  renderTopBanners();
+}
+
+function renderConnectivityBanner() {
+  renderTopBanners();
+}
+
+function setConnectivityState(nextOnline) {
+  isOnline = nextOnline;
+  connectivityBannerMode = nextOnline ? "online" : "offline";
+  if (connectivityBannerTimer) {
+    window.clearTimeout(connectivityBannerTimer);
+    connectivityBannerTimer = null;
+  }
+  renderConnectivityBanner();
+  if (nextOnline) {
+    connectivityBannerTimer = window.setTimeout(() => {
+      connectivityBannerMode = null;
+      renderConnectivityBanner();
+    }, 4000);
+  }
+}
+
+async function updateWakeLockState() {
+  const shouldLock = shouldHoldWakeLock({
+    activeTab,
+    scorePhase,
+    visibilityState: document.visibilityState,
+    hasWakeLockApi: Boolean(navigator.wakeLock?.request),
+  });
+
+  if (!shouldLock) {
+    if (wakeLockSentinel) {
+      try {
+        await wakeLockSentinel.release();
+      } catch {
+        // Ignore release race conditions.
+      }
+      wakeLockSentinel = null;
+    }
+    return;
+  }
+
+  if (wakeLockSentinel) return;
+
+  try {
+    wakeLockSentinel = await navigator.wakeLock.request("screen");
+    wakeLockSentinel.addEventListener("release", () => {
+      wakeLockSentinel = null;
+    });
+  } catch {
+    wakeLockSentinel = null;
+  }
+}
+
+function wireInstallPromptHandling() {
+  window.addEventListener("beforeinstallprompt", (event) => {
+    event.preventDefault();
+    deferredInstallPrompt = event;
+    renderInstallBanner();
+  });
+
+  window.addEventListener("appinstalled", () => {
+    deferredInstallPrompt = null;
+    installBannerInstalled = true;
+    setSetting(INSTALL_INSTALLED_KEY, true).catch(() => {});
+    renderInstallBanner();
+  });
+}
 
 async function updateLocateButtonState() {
   if (!locateBtn) return;
@@ -176,14 +563,13 @@ function triggerClientRefresh(reason = "update") {
 }
 
 function showUpdateBanner(message) {
-  if (!updateBannerEl || !updateBannerTextEl) return;
-  updateBannerTextEl.textContent = message;
-  updateBannerEl.classList.remove("is-hidden");
+  updateBannerMessage = message;
+  renderTopBanners();
 }
 
 function hideUpdateBanner() {
-  if (!updateBannerEl) return;
-  updateBannerEl.classList.add("is-hidden");
+  updateBannerMessage = "";
+  renderTopBanners();
 }
 
 function activatePendingUpdate() {
@@ -314,17 +700,17 @@ function setReferenceMode(mode) {
 
 function describeReferenceSource(source) {
   if (source === "point") return "Punkt";
-  if (source === "map") return "Map-Center";
+  if (source === "map") return "Kartenmitte";
   return "Standort";
 }
 
 function updateMapMetaText() {
   const ref = getActiveReferencePoint();
   if (!ref) {
-    mapFocusMeta.textContent = "Keine aktive Referenz. Nutze Standort oder Map-Center.";
+    mapFocusMeta.textContent = "Keine aktive Referenz. Nutze Standort oder Kartenmitte.";
     return;
   }
-  mapFocusMeta.textContent = `Aktive Referenz: ${describeReferenceSource(ref.source)} (${ref.lat.toFixed(4)}, ${ref.lng.toFixed(4)}) • Radius ${nearbyRadiusKm} km`;
+  mapFocusMeta.textContent = `Aktive Referenz: ${describeReferenceSource(ref.source)} • Radius ${nearbyRadiusKm} km`;
 }
 
 function updateMapPointLayers() {
@@ -379,6 +765,8 @@ function setActiveTab(tabName) {
   if (tabName === "map" && map) {
     window.setTimeout(() => map.invalidateSize(), 60);
   }
+  renderConnectivityBanner();
+  updateWakeLockState().catch(() => {});
 }
 
 function wireTabs() {
@@ -467,6 +855,149 @@ function createScorePlayer(name, indexHint = 1) {
   };
 }
 
+function renderScoreMomentFeedback() {
+  if (!scoreMomentFeedbackEl) return;
+  const isVisible = scorePhase === "play" && scoreMomentFeedback;
+  scoreMomentFeedbackEl.classList.toggle("is-hidden", !isVisible);
+  if (!isVisible) {
+    scoreMomentFeedbackEl.textContent = "";
+    scoreMomentFeedbackEl.className = "score-moment-feedback is-hidden";
+    return;
+  }
+  scoreMomentFeedbackEl.textContent = scoreMomentFeedback.label;
+  scoreMomentFeedbackEl.className = `score-moment-feedback tone-${scoreMomentFeedback.tone || "neutral"}`;
+}
+
+function flashScoreMomentFeedback(feedback) {
+  scoreMomentFeedback = feedback;
+  renderScoreMomentFeedback();
+  if (scoreMomentFeedbackTimer) {
+    window.clearTimeout(scoreMomentFeedbackTimer);
+  }
+  scoreMomentFeedbackTimer = window.setTimeout(() => {
+    scoreMomentFeedback = null;
+    scoreMomentFeedbackTimer = null;
+    renderScoreMomentFeedback();
+  }, 2400);
+}
+
+function unlockAchievementProgress(progress, { announce = true } = {}) {
+  const gained = getNewAchievementIds({
+    unlockedIds: unlockedAchievementIds,
+    favoritesCount: favorites.size,
+    visitedCount: visited.size,
+    ...progress,
+  });
+
+  if (gained.length === 0) return [];
+
+  unlockedAchievementIds = normalizeAchievementIds([...unlockedAchievementIds, ...gained]);
+  setSetting(SCORE_ACHIEVEMENTS_KEY, unlockedAchievementIds).catch(() => {});
+
+  if (announce) {
+    const lead = getAchievementLabel(gained[0]);
+    const suffix = gained.length > 1 ? ` +${gained.length - 1} weitere` : "";
+    showSmartBannerMessage(`Freigeschaltet: ${lead}${suffix}`, "online", 3600, SMART_BANNER_PRIORITY.achievement);
+  }
+
+  return gained;
+}
+
+function summarizeRoundStats() {
+  const parSum = scoreTotal(scorePar);
+  let birdieCount = 0;
+  let bogeyFreeCount = 0;
+
+  for (let holeIndex = 0; holeIndex < SCORE_HOLES; holeIndex += 1) {
+    for (const player of scorePlayers) {
+      const stroke = player.scores[holeIndex];
+      if (stroke === null || stroke === undefined) continue;
+      const delta = Number(stroke) - Number(scorePar[holeIndex] || 2);
+      if (delta < 0 || Number(stroke) === 1) birdieCount += 1;
+      if (delta <= 0) bogeyFreeCount += 1;
+    }
+  }
+
+  return {
+    parSum,
+    skippedCount: Object.keys(scoreSkips).length,
+    birdieCount,
+    bogeyFreeCount,
+  };
+}
+
+function finalizeFinishedRound() {
+  const venueLabel = inferVenueFromContext() || "Freie Runde";
+  const venueKey = buildVenueKey(venueLabel);
+  const nextPersonalBestMap = {
+    ...personalBestByVenue,
+    [venueKey]: { ...(personalBestByVenue[venueKey] || {}) },
+  };
+  const personalBestLines = [];
+
+  for (const player of scorePlayers) {
+    const total = scoreTotal(player.scores);
+    const playerKey = String(player.name || "").trim().toLowerCase();
+    const previousBest = nextPersonalBestMap[venueKey][playerKey] ?? null;
+    const result = evaluatePersonalBest({ previousBest, total });
+    nextPersonalBestMap[venueKey][playerKey] = result.best;
+    if (result.improved) {
+      personalBestLines.push(
+        result.isFirst
+          ? `${player.name}: erster Bestwert mit ${result.best}`
+          : `${player.name}: neuer Bestwert ${result.best}`,
+      );
+    }
+  }
+
+  personalBestByVenue = nextPersonalBestMap;
+  setSetting(SCORE_PERSONAL_BESTS_KEY, personalBestByVenue).catch(() => {});
+
+  const streakUpdate = updateStreakState({ state: scoreStreakState, now: Date.now() });
+  scoreStreakState = streakUpdate.nextState;
+  setSetting(SCORE_STREAK_STATE_KEY, scoreStreakState).catch(() => {});
+  const streakLine = formatStreakLine({
+    streakCount: scoreStreakState.streakCount,
+    bestStreak: scoreStreakState.bestStreak,
+    event: streakUpdate.event,
+  });
+  const progressLine = buildSessionProgress({
+    totalRounds: scoreStreakState.totalRounds,
+    bestStreak: scoreStreakState.bestStreak,
+  });
+
+  const stats = summarizeRoundStats();
+  const bestTotal = Math.min(...scorePlayers.map((player) => scoreTotal(player.scores)));
+  const achievementIds = unlockAchievementProgress({ justFinishedRound: true }, { announce: false });
+
+  scoreFinishMeta = {
+    personalBestLines,
+    achievementIds,
+    nextChallenge: buildNextChallenge({
+      parSum: stats.parSum,
+      total: bestTotal,
+      skippedCount: stats.skippedCount,
+      birdieCount: stats.birdieCount,
+      bogeyFreeCount: stats.bogeyFreeCount,
+    }),
+    streakLine,
+    progressLine,
+  };
+
+  if (achievementIds.length > 0) {
+    showSmartBannerMessage(
+      `Freigeschaltet: ${getAchievementLabel(achievementIds[0])}`,
+      "online",
+      3600,
+      SMART_BANNER_PRIORITY.achievement,
+    );
+  } else if (personalBestLines.length > 0) {
+    showSmartBannerMessage(personalBestLines[0], "online", 3200, SMART_BANNER_PRIORITY.personalBest);
+  } else {
+    showSmartBannerMessage(streakLine, "online", 2800, SMART_BANNER_PRIORITY.streak);
+  }
+}
+
 function clampStroke(value) {
   const n = Number(value);
   if (!Number.isFinite(n)) return 2;
@@ -498,6 +1029,7 @@ function persistScoreSession() {
     history: scoreHistory,
     skips: scoreSkips,
     venueName: scoreVenueName,
+    finishMeta: scoreFinishMeta,
   };
   setSetting(SCORE_SESSION_KEY, payload).catch(() => {});
   scoreLastSavedAt = Date.now();
@@ -551,6 +1083,8 @@ function loadScoreSession(session) {
     scoreVenueName = session.venueName.trim();
     if (scoreVenueNameEl) scoreVenueNameEl.value = scoreVenueName;
   }
+
+  scoreFinishMeta = normalizeScoreFinishMeta(session.finishMeta);
 }
 
 function inferVenueFromContext() {
@@ -659,6 +1193,8 @@ function resetScoreRound({ keepPlayers = true, keepPar = true } = {}) {
   scoreHistory = [];
   scoreSkips = {};
   scoreTiebreaker = {};
+  scoreFinishMeta = { personalBestLines: [], achievementIds: [], nextChallenge: "", streakLine: "", progressLine: "" };
+  scoreMomentFeedback = null;
   scoreResetOptionsEl?.classList.add("is-hidden");
   persistScoreSession();
   renderScorePanel();
@@ -773,6 +1309,36 @@ function renderScoreFinishedCard() {
     return;
   }
 
+  if (scorePersonalBestMetaEl) {
+    const personalBestText = scoreFinishMeta.personalBestLines.join(" • ");
+    scorePersonalBestMetaEl.textContent = personalBestText;
+    scorePersonalBestMetaEl.classList.toggle("is-hidden", !personalBestText);
+  }
+
+  if (scoreStreakMetaEl) {
+    scoreStreakMetaEl.textContent = scoreFinishMeta.streakLine || "";
+    scoreStreakMetaEl.classList.toggle("is-hidden", !scoreFinishMeta.streakLine);
+  }
+
+  if (scoreSessionProgressEl) {
+    const fallback = buildSessionProgress({
+      totalRounds: scoreStreakState.totalRounds,
+      bestStreak: scoreStreakState.bestStreak,
+    });
+    scoreSessionProgressEl.textContent = scoreFinishMeta.progressLine || fallback;
+  }
+
+  if (scoreNextChallengeEl) {
+    scoreNextChallengeEl.textContent = scoreFinishMeta.nextChallenge || buildNextChallenge(summarizeRoundStats());
+  }
+
+  if (scoreAchievementUnlocksEl) {
+    scoreAchievementUnlocksEl.innerHTML = scoreFinishMeta.achievementIds
+      .map((achievementId) => `<li>${getAchievementLabel(achievementId)}</li>`)
+      .join("");
+    scoreAchievementUnlocksEl.classList.toggle("is-hidden", scoreFinishMeta.achievementIds.length === 0);
+  }
+
   const minTotal = ranked[0]._total;
   const leaders = ranked.filter((p) => p._total === minTotal);
   const hasTie = leaders.length > 1;
@@ -850,6 +1416,7 @@ function skipHole(reason) {
   scoreSkipReasonPanelEl?.classList.add("is-hidden");
   if (holeIndex === SCORE_HOLES - 1) {
     scorePhase = "finished";
+    finalizeFinishedRound();
   } else {
     scoreTurn = { holeIndex: holeIndex + 1, playerIndex: 0 };
   }
@@ -945,6 +1512,7 @@ function renderScorePanel() {
   renderScoreResumeBanner();
   renderScoreTable();
   renderOfflineStatus();
+  renderScoreMomentFeedback();
 
   const hasPlayers = scorePlayers.length > 0;
   if (confirmParBtn) confirmParBtn.disabled = !hasPlayers || scorePhase !== "setup";
@@ -975,6 +1543,10 @@ function renderScorePanel() {
     scoreTemplatesRowEl.classList.toggle("is-hidden", scorePhase !== "setup");
   }
 
+  if (scoreQuickRoundBtnEl) {
+    scoreQuickRoundBtnEl.classList.toggle("is-hidden", scorePhase !== "setup");
+  }
+
   // Skip button only visible during play
   if (scoreSkipHoleBtnEl) {
     scoreSkipHoleBtnEl.classList.toggle("is-hidden", scorePhase !== "play");
@@ -999,9 +1571,36 @@ function renderScorePanel() {
   }
   if (scoreUndoTurnBtn) scoreUndoTurnBtn.disabled = scoreHistory.length === 0 || scorePhase === "setup";
   if (scoreNextTurnBtn) scoreNextTurnBtn.disabled = !hasPlayers || scorePhase !== "play";
+  updateWakeLockState().catch(() => {});
 }
 
 function wireScoreEvents() {
+  const startQuickRound = (playerCount = 2) => {
+    scorePlayers = Array.from({ length: playerCount }, (_, index) => createScorePlayer(`Spieler ${index + 1}`, index + 1));
+    scorePar = scorePar.map((value) => clampStroke(value));
+    scorePlayers = scorePlayers.map((player) => ({
+      ...player,
+      scores: Array(SCORE_HOLES).fill(null),
+    }));
+    scorePhase = "play";
+    scoreTurn = { holeIndex: 0, playerIndex: 0 };
+    scoreHistory = [];
+    scoreSkips = {};
+    scoreTiebreaker = {};
+    scoreFinishMeta = { personalBestLines: [], achievementIds: [], nextChallenge: "", streakLine: "", progressLine: "" };
+    scoreResumeNoticeVisible = false;
+    if (!scoreVenueName && scoreVenueNameEl) {
+      const inferredVenue = inferVenueFromContext();
+      if (inferredVenue) {
+        scoreVenueName = inferredVenue;
+        scoreVenueNameEl.value = inferredVenue;
+      }
+    }
+    persistScoreSession();
+    renderScorePanel();
+    scoreStrokeInputEl?.focus();
+  };
+
   const addPlayer = () => {
     if (scorePhase !== "setup") return;
     const name = (scorePlayerNameEl?.value || "").trim();
@@ -1013,6 +1612,11 @@ function wireScoreEvents() {
 
   addScorePlayerBtn?.addEventListener("click", () => {
     addPlayer();
+  });
+
+  scoreQuickRoundBtnEl?.addEventListener("click", () => {
+    if (scorePhase !== "setup") return;
+    startQuickRound(2);
   });
 
   scorePlayerNameEl?.addEventListener("keydown", (event) => {
@@ -1031,6 +1635,8 @@ function wireScoreEvents() {
     scorePhase = "play";
     scoreTurn = { holeIndex: 0, playerIndex: 0 };
     scoreHistory = [];
+    scoreSkips = {};
+    scoreFinishMeta = { personalBestLines: [], achievementIds: [], nextChallenge: "", streakLine: "", progressLine: "" };
     persistScoreSession();
     renderScorePanel();
     scoreStrokeInputEl?.focus();
@@ -1049,11 +1655,14 @@ function wireScoreEvents() {
     player.scores[holeIndex] = stroke;
     scoreHistory.push({ holeIndex, playerIndex, previousValue, newValue: stroke, at: Date.now() });
     scoreResumeNoticeVisible = false;
+    flashScoreMomentFeedback(getHoleFeedback({ stroke, par: scorePar[holeIndex] || 2 }));
+    unlockAchievementProgress({ bogeyFreeHole: stroke <= (scorePar[holeIndex] || 2) });
 
     const isLastPlayerInHole = playerIndex === scorePlayers.length - 1;
     if (isLastPlayerInHole) {
       if (holeIndex === SCORE_HOLES - 1) {
         scorePhase = "finished";
+        finalizeFinishedRound();
       } else {
         scoreTurn = { holeIndex: holeIndex + 1, playerIndex: 0 };
       }
@@ -1377,6 +1986,17 @@ function buildRouteUrl(item) {
 }
 
 function openRoute(item) {
+  if (!navigator.onLine) {
+    const fallbackText = `${item?.name || "Ort"}: ${item?.lat ?? ""},${item?.lng ?? ""}`;
+    navigator.clipboard?.writeText(fallbackText).catch(() => {});
+    showSmartBannerMessage(
+      "Offline: Route kann nicht gestartet werden. Koordinaten wurden in die Zwischenablage kopiert.",
+      "offline",
+      4600,
+      2,
+    );
+    return;
+  }
   const url = buildRouteUrl(item);
   window.open(url, "_blank", "noopener,noreferrer");
 }
@@ -1419,11 +2039,11 @@ function renderActionButtons(item, options = {}) {
     </button>
     <button type="button" class="${favClass}" data-action="favorite" data-id="${item.id}" title="${favLabel}" aria-label="${favLabel}">
       <i class="fa-${favorites.has(item.id) ? "solid" : "regular"} fa-bookmark" aria-hidden="true"></i>
-      <span class="label">${compact ? "Save" : favLabel}</span>
+      <span class="label">${compact ? "Merken" : favLabel}</span>
     </button>
     <button type="button" class="${visitClass}" data-action="visited" data-id="${item.id}" title="${visitLabel}" aria-label="${visitLabel}">
       <i class="fa-solid fa-check-circle" aria-hidden="true"></i>
-      <span class="label">${compact ? "Visited" : visitLabel}</span>
+      <span class="label">${compact ? "Besucht" : visitLabel}</span>
     </button>
   `;
 }
@@ -1452,22 +2072,30 @@ function applyTopFilters(items) {
   return out;
 }
 
+function isNewNearbyCandidate(item, radiusLimitKm = nearbyRadiusKm) {
+  if (!item?.id) return false;
+  if (seenNearbyIds.has(item.id) || favorites.has(item.id) || visited.has(item.id)) return false;
+  if (!Number.isFinite(item._distanceKm)) return false;
+  return item._distanceKm <= radiusLimitKm;
+}
+
 function buildVenueListItem(item, { showRating = false, showTypes = false } = {}) {
   const li = document.createElement("li");
   li.className = "venue-item";
   const distance = typeof item._distanceKm === "number" ? `${item._distanceKm.toFixed(1)} km` : null;
   const rating = showRating && typeof item.rating === "number" ? `★ ${item.rating.toFixed(1)}` : null;
   const types = showTypes ? (item.course_types || []).map((t) => `<span class="chip">${t}</span>`).join(" ") : "";
-  const visitedBadge = visited.has(item.id) ? "<span class='visited-badge'>visited</span>" : "";
+  const visitedBadge = visited.has(item.id) ? "<span class='visited-badge'>besucht</span>" : "";
+  const newNearbyBadge = item._isNewNearby ? "<span class='new-nearby-badge'>Neu in deiner Naehe</span>" : "";
   const poiHint = nearbyPoiHint(item);
   const distLine = [distance, rating].filter(Boolean).join(" • ");
 
   li.innerHTML = `
-    <h3>${item.name}${visitedBadge}</h3>
+    <h3>${item.name}${visitedBadge}${newNearbyBadge}</h3>
     <div class="venue-meta venue-tags">${renderVenueId(item.id)} ${renderCoordinateSource(item)}</div>
     ${distLine ? `<div class="venue-meta">${distLine}</div>` : ""}
     <div class="venue-meta">${item.postcode || ""} ${item.place || ""}</div>
-    ${types ? `<div class="venue-meta">${types || "<span class='chip'>unknown</span>"}</div>` : ""}
+    ${types ? `<div class="venue-meta">${types || "<span class='chip'>unbekannt</span>"}</div>` : ""}
     ${poiHint ? `<div class="poi-note">${poiHint}</div>` : ""}
     <div class="venue-actions">
       ${renderActionButtons(item)}
@@ -1480,7 +2108,12 @@ function buildVenueListItem(item, { showRating = false, showTypes = false } = {}
     const action = target.getAttribute("data-action");
     const itemId = target.getAttribute("data-id");
     if (!action) return;
+    let markedNearby = false;
     if (action === "detail" || action === "fly" || action === "route") {
+      if (item._isNewNearby) {
+        markNearbySeen(item.id);
+        markedNearby = true;
+      }
       lastSelectedVenue = item;
       if (!scoreVenueName && scoreVenueNameEl) {
         scoreVenueNameEl.value = `${item.name}${item.place ? `, ${item.place}` : ""}`;
@@ -1494,6 +2127,8 @@ function buildVenueListItem(item, { showRating = false, showTypes = false } = {}
         .then((isFav) => {
           if (isFav) favorites.add(itemId);
           else favorites.delete(itemId);
+          markNearbySeen(itemId);
+          unlockAchievementProgress({ favoritesCount: favorites.size });
           renderList();
         })
         .catch(() => {});
@@ -1503,9 +2138,14 @@ function buildVenueListItem(item, { showRating = false, showTypes = false } = {}
         .then((isVis) => {
           if (isVis) visited.add(itemId);
           else visited.delete(itemId);
+          markNearbySeen(itemId);
+          unlockAchievementProgress({ visitedCount: visited.size });
           renderList();
         })
         .catch(() => {});
+    }
+    if (markedNearby && action !== "favorite" && action !== "visited") {
+      renderList();
     }
   });
 
@@ -1513,32 +2153,57 @@ function buildVenueListItem(item, { showRating = false, showTypes = false } = {}
 }
 
 async function showDetails(venueId) {
-  detailTitle.textContent = "Loading...";
+  detailTitle.textContent = "Lade Details...";
   detailContent.textContent = "";
   detailDialog.showModal();
 
-  const venue = await getVenueDetailsById(venueId);
+  let venue = null;
+  try {
+    venue = await getVenueDetailsById(venueId);
+  } catch {
+    venue = null;
+  }
+
   if (!venue) {
-    detailTitle.textContent = "No details available";
-    detailContent.textContent = "This venue has no full detail record yet.";
+    const fallbackMarker = markerById(venueId);
+    if (!navigator.onLine || fallbackMarker) {
+      const fallback = buildOfflineDetailFallback(fallbackMarker);
+      detailTitle.textContent = fallback.title;
+      detailContent.innerHTML = fallback.html;
+      return;
+    }
+    detailTitle.textContent = "Keine Details verfuegbar";
+    detailContent.textContent = "Fuer diesen Ort sind noch keine vollstaendigen Details vorhanden.";
     return;
   }
 
-  detailTitle.textContent = venue.name || "Venue";
+  detailTitle.textContent = venue.name || "Ort";
 
   const line1 = [venue.address?.street_name, venue.address?.house_number].filter(Boolean).join(" ");
   const line2 = [venue.address?.postcode, venue.address?.place].filter(Boolean).join(" ");
-  const rating = venue.google?.rating ? `${venue.google.rating} (${venue.google.rating_count || 0})` : "n/a";
+  const rating = venue.google?.rating ? `${venue.google.rating} (${venue.google.rating_count || 0})` : "-";
+  const marker = markerById(venueId);
+  const progress = computeDiscoveryProgress({
+    markers,
+    favorites,
+    visited,
+    place: marker?.place || venue.address?.place || "",
+  });
+  const progressText =
+    progress.total > 0
+      ? `${progress.visited}/${progress.total} besucht, ${progress.saved}/${progress.total} gespeichert in ${progress.place}`
+      : "";
 
   detailContent.innerHTML = `
     <p><strong>ID:</strong> <span class="venue-id">${venue.id || "-"}</span></p>
     <p><strong>Koordinatenquelle:</strong> ${venue.source?.coordinate_source?.label || venue.source?.coordinate_source?.raw_geocode_source || "-"}</p>
     <p><strong>Lat/Lng:</strong> ${venue.coordinates?.lat ?? "-"}, ${venue.coordinates?.lng ?? "-"}</p>
-    <p><strong>Address:</strong> ${line1 || "-"}, ${line2 || "-"}</p>
-    <p><strong>Course Types:</strong> ${(venue.classification?.course_types || []).join(", ") || "-"}</p>
+    <p><strong>Adresse:</strong> ${line1 || "-"}, ${line2 || "-"}</p>
+    <p><strong>Bahnarten:</strong> ${(venue.classification?.course_types || []).join(", ") || "-"}</p>
     <p><strong>Rating:</strong> ${rating}</p>
-    <p><strong>Card Accepted:</strong> ${venue.classification?.accepts_minigolf_card ? "Yes" : "No"}</p>
-    <p><strong>Website:</strong> ${
+    ${progressText ? `<p><strong>Entdeckungsfortschritt:</strong> ${progressText}</p>` : ""}
+    <p><strong>Minigolf-Card:</strong> ${venue.classification?.accepts_minigolf_card ? "Ja" : "Nein"}</p>
+    <p><strong>Webseite:</strong> ${
       venue.contact?.website
         ? `<a href="${venue.contact.website}" target="_blank" rel="noreferrer">${venue.contact.website}</a>`
         : "-"
@@ -1553,7 +2218,7 @@ function renderList() {
   if (currentView === "nearby") {
     listEl.innerHTML = "";
     if (!reference) {
-      if (aroundMeMetaEl) aroundMeMetaEl.textContent = "Aktiviere Standort oder nutze Map-Center/Punkt fuer Nearby-Liste.";
+      if (aroundMeMetaEl) aroundMeMetaEl.textContent = "Aktiviere Standort oder nutze Kartenmitte/Punkt fuer die Liste in deiner Naehe.";
       return;
     }
     const ranked = rankNearby(applyTopFilters(markers), reference);
@@ -1572,13 +2237,31 @@ function renderList() {
       chosen = ranked;
       effectiveRadiusKm = ranked[ranked.length - 1]._distanceKm;
     }
-    if (aroundMeMetaEl) {
-      aroundMeMetaEl.textContent =
-        effectiveRadiusKm > nearbyRadiusKm
-          ? `Radius dynamisch erweitert auf ${effectiveRadiusKm.toFixed(1)} km, damit mindestens ${Math.min(MIN_AROUND_ME_COUNT, ranked.length)} Orte verfuegbar sind (${chosen.length} Treffer).`
-          : `Zeige ${chosen.length} Orte innerhalb ${effectiveRadiusKm.toFixed(1)} km um ${describeReferenceSource(reference.source)}.`;
+
+    const newRadiusLimitKm = newNearbyWithinManualRadius ? nearbyRadiusKm : effectiveRadiusKm;
+
+    let enriched = chosen.map((item) => ({
+      ...item,
+      _isNewNearby: isNewNearbyCandidate(item, newRadiusLimitKm),
+    }));
+
+    if (showOnlyNewNearby) {
+      enriched = enriched.filter((item) => item._isNewNearby);
     }
-    for (const item of chosen) {
+
+    const visibleSavedCount = enriched.filter((item) => favorites.has(item.id)).length;
+    const visibleVisitedCount = enriched.filter((item) => visited.has(item.id)).length;
+    const visibleNewCount = enriched.filter((item) => item._isNewNearby).length;
+
+    if (aroundMeMetaEl) {
+      const base =
+        effectiveRadiusKm > nearbyRadiusKm
+          ? `Radius dynamisch erweitert auf ${effectiveRadiusKm.toFixed(1)} km, damit mindestens ${Math.min(MIN_AROUND_ME_COUNT, ranked.length)} Orte verfuegbar sind.`
+          : `Zeige Orte innerhalb ${effectiveRadiusKm.toFixed(1)} km um ${describeReferenceSource(reference.source)}.`;
+      aroundMeMetaEl.textContent = `${base} Treffer: ${enriched.length} • gespeichert: ${visibleSavedCount} • besucht: ${visibleVisitedCount} • neu: ${visibleNewCount}.`;
+    }
+
+    for (const item of enriched) {
       listEl.appendChild(buildVenueListItem(item, { showRating: true }));
     }
     return;
@@ -1600,7 +2283,8 @@ function renderList() {
       if (reference) return (a._distanceKm || 9999) - (b._distanceKm || 9999);
       return a.name.localeCompare(b.name);
     })
-    .slice(0, 250);
+    .slice(0, 250)
+    .map((item) => ({ ...item, _isNewNearby: isNewNearbyCandidate(item) }));
 
   listEl.innerHTML = "";
   markerLayer.clearLayers();
@@ -1617,6 +2301,8 @@ function renderList() {
       fillOpacity: 0.86,
     }).bindPopup(
       `<strong>${item.name}</strong><br/>${renderVenueId(item.id)}<br/>${renderCoordinateSource(item)}<br/>${item.postcode || ""} ${item.place || ""}${
+        item._isNewNearby ? `<br/><span class="new-nearby-badge">Neu in deiner Naehe</span>` : ""
+      }${
         poiHint ? `<br/><span class="poi-note">${poiHint}</span>` : ""
       }<br/><a href="${buildRouteUrl(item)}" target="_blank" rel="noreferrer">Route starten</a>`,
     );
@@ -1705,6 +2391,18 @@ function hookEvents() {
     renderList();
   });
 
+  showOnlyNewNearbyToggle?.addEventListener("change", () => {
+    showOnlyNewNearby = Boolean(showOnlyNewNearbyToggle.checked);
+    setSetting(SHOW_ONLY_NEW_NEARBY_KEY, showOnlyNewNearby).catch(() => {});
+    renderList();
+  });
+
+  newNearbyWithinManualRadiusToggle?.addEventListener("change", () => {
+    newNearbyWithinManualRadius = Boolean(newNearbyWithinManualRadiusToggle.checked);
+    setSetting(NEW_NEARBY_WITHIN_MANUAL_RADIUS_KEY, newNearbyWithinManualRadius).catch(() => {});
+    renderList();
+  });
+
   followMapToggle.addEventListener("change", () => {
     followMapCenter = followMapToggle.checked;
     setSetting("followMapCenter", followMapCenter).catch(() => {});
@@ -1764,6 +2462,35 @@ function hookEvents() {
   detailClose.addEventListener("click", () => detailDialog.close());
   updateReloadBtn?.addEventListener("click", () => activatePendingUpdate());
   updateDismissBtn?.addEventListener("click", () => hideUpdateBanner());
+  installBannerDismissBtn?.addEventListener("click", () => {
+    installBannerDismissedAt = Date.now();
+    setSetting(INSTALL_DISMISSED_AT_KEY, installBannerDismissedAt).catch(() => {});
+    renderInstallBanner();
+  });
+  installBannerConfirmBtn?.addEventListener("click", async () => {
+    if (installBannerMode === "ios") {
+      showSmartBannerMessage("In Safari: Teilen -> Zum Home-Bildschirm", "online", 4200, 2);
+      return;
+    }
+    if (!deferredInstallPrompt) return;
+    deferredInstallPrompt.prompt();
+    try {
+      const result = await deferredInstallPrompt.userChoice;
+      if (result?.outcome === "accepted") {
+        installBannerInstalled = true;
+        setSetting(INSTALL_INSTALLED_KEY, true).catch(() => {});
+      }
+    } catch {
+      // Ignore prompt errors.
+    }
+    deferredInstallPrompt = null;
+    renderInstallBanner();
+  });
+  window.addEventListener("online", () => setConnectivityState(true));
+  window.addEventListener("offline", () => setConnectivityState(false));
+  document.addEventListener("visibilitychange", () => {
+    updateWakeLockState().catch(() => {});
+  });
 }
 
 async function boot() {
@@ -1781,6 +2508,22 @@ async function boot() {
 
   hideVisited = Boolean(await getSetting("hideVisited").catch(() => false));
   hideVisitedToggle.checked = hideVisited;
+  showOnlyNewNearby = Boolean(await getSetting(SHOW_ONLY_NEW_NEARBY_KEY).catch(() => false));
+  if (showOnlyNewNearbyToggle) showOnlyNewNearbyToggle.checked = showOnlyNewNearby;
+  newNearbyWithinManualRadius = Boolean(await getSetting(NEW_NEARBY_WITHIN_MANUAL_RADIUS_KEY).catch(() => true));
+  if (newNearbyWithinManualRadiusToggle) {
+    newNearbyWithinManualRadiusToggle.checked = newNearbyWithinManualRadius;
+  }
+  seenNearbyIds = new Set(normalizeStringList(await getSetting(NEW_NEARBY_SEEN_IDS_KEY).catch(() => [])));
+
+  installVisitCount = Number(await getSetting(INSTALL_VISITS_KEY).catch(() => 0)) || 0;
+  installBannerDismissedAt = Number(await getSetting(INSTALL_DISMISSED_AT_KEY).catch(() => 0)) || 0;
+  installBannerInstalled = Boolean(await getSetting(INSTALL_INSTALLED_KEY).catch(() => false));
+  unlockedAchievementIds = normalizeAchievementIds(await getSetting(SCORE_ACHIEVEMENTS_KEY).catch(() => []));
+  personalBestByVenue = normalizePersonalBestMap(await getSetting(SCORE_PERSONAL_BESTS_KEY).catch(() => ({})));
+  scoreStreakState = normalizeStreakState(await getSetting(SCORE_STREAK_STATE_KEY).catch(() => ({})));
+  installVisitCount += 1;
+  setSetting(INSTALL_VISITS_KEY, installVisitCount).catch(() => {});
 
   const savedActiveTab = await getSetting("activeTab").catch(() => "map");
   if (["map", "list", "rules", "score"].includes(savedActiveTab)) {
@@ -1831,6 +2574,16 @@ async function boot() {
     currentView = savedCurrentView;
   }
 
+  const launchState = parseLaunchState(window.location.search, { activeTab, currentView });
+  if (launchState.hasExplicitTab) {
+    activeTab = launchState.activeTab;
+  }
+  if (launchState.hasExplicitMode) {
+    currentView = launchState.currentView;
+  }
+
+  handleShareTargetLaunch(window.location.search);
+
   followMapCenter = Boolean(await getSetting("followMapCenter").catch(() => false));
   followMapToggle.checked = followMapCenter;
 
@@ -1847,6 +2600,7 @@ async function boot() {
   wireTabs();
   hookEvents();
   wireScoreEvents();
+  wireInstallPromptHandling();
   showOnboardingIfNeeded();
   renderScorePanel();
   applyScoreDensityMode();
@@ -1857,7 +2611,11 @@ async function boot() {
   updateReferenceModeButtons();
   updateMapMetaText();
   updateLocateButtonState().catch(() => {});
+  renderInstallBanner();
+  renderConnectivityBanner();
   renderList();
+
+  scheduleSmartBannerTimeout();
 
   requestLocation({ shouldFly: false });
 
