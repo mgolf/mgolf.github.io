@@ -1952,6 +1952,10 @@ function initMap(bounds, savedMapView = null) {
     updateMapPointLayers();
     updateReferenceModeButtons();
     updateMapMetaText();
+    const popupOpen = Boolean(map?._popup && map.hasLayer(map._popup));
+    if (popupOpen && activeTab === "map") {
+      return;
+    }
     renderList();
   });
 
@@ -1988,15 +1992,21 @@ function markerById(id) {
   return markers.find((m) => m.id === id) || null;
 }
 
-function renderVenueId(id) {
-  return id ? `<span class="venue-id">ID: ${id}</span>` : "";
-}
-
 function renderCoordinateSource(item) {
   const label = item?.coordinate_source_label || item?.coordinates?.source?.label;
   const raw = item?.coordinate_source_raw || item?.source?.coordinate_source?.raw_geocode_source;
   if (!label && !raw) return "";
   return `<span class="coord-source">Koordinaten: ${label || raw}${label && raw && label !== raw ? ` <span class="coord-source-raw">(${raw})</span>` : ""}</span>`;
+}
+
+function getOpeningHoursText(itemOrVenue) {
+  const raw =
+    itemOrVenue?.opening_hours_text ||
+    itemOrVenue?.google?.opening_hours_text ||
+    itemOrVenue?.opening_hours?.text ||
+    null;
+  const text = String(raw || "").trim();
+  return text || null;
 }
 
 function buildRouteUrl(item) {
@@ -2117,13 +2127,15 @@ function buildVenueListItem(item, { showRating = false, showTypes = false } = {}
   const visitedBadge = visited.has(item.id) ? "<span class='visited-badge'>besucht</span>" : "";
   const newNearbyBadge = item._isNewNearby ? "<span class='new-nearby-badge'>Neu in deiner Naehe</span>" : "";
   const poiHint = nearbyPoiHint(item);
+  const openingHoursText = getOpeningHoursText(item);
   const distLine = [distance, rating].filter(Boolean).join(" • ");
 
   li.innerHTML = `
     <h3>${item.name}${visitedBadge}${newNearbyBadge}</h3>
-    <div class="venue-meta venue-tags">${renderVenueId(item.id)} ${renderCoordinateSource(item)}</div>
+    <div class="venue-meta venue-tags">${renderCoordinateSource(item)}</div>
     ${distLine ? `<div class="venue-meta">${distLine}</div>` : ""}
     <div class="venue-meta">${item.postcode || ""} ${item.place || ""}</div>
+    ${openingHoursText ? `<div class="venue-meta">Oeffnungszeiten: ${openingHoursText}</div>` : ""}
     ${types ? `<div class="venue-meta">${types || "<span class='chip'>unbekannt</span>"}</div>` : ""}
     ${poiHint ? `<div class="poi-note">${poiHint}</div>` : ""}
     <div class="venue-actions">
@@ -2211,6 +2223,7 @@ async function showDetails(venueId) {
   const line1 = [venue.address?.street_name, venue.address?.house_number].filter(Boolean).join(" ");
   const line2 = [venue.address?.postcode, venue.address?.place].filter(Boolean).join(" ");
   const rating = venue.google?.rating ? `${venue.google.rating} (${venue.google.rating_count || 0})` : "-";
+  const openingHoursText = getOpeningHoursText(venue);
   const marker = markerById(venueId);
   const progress = computeDiscoveryProgress({
     markers,
@@ -2224,10 +2237,10 @@ async function showDetails(venueId) {
       : "";
 
   detailContent.innerHTML = `
-    <p><strong>ID:</strong> <span class="venue-id">${venue.id || "-"}</span></p>
     <p><strong>Koordinatenquelle:</strong> ${venue.source?.coordinate_source?.label || venue.source?.coordinate_source?.raw_geocode_source || "-"}</p>
     <p><strong>Lat/Lng:</strong> ${venue.coordinates?.lat ?? "-"}, ${venue.coordinates?.lng ?? "-"}</p>
     <p><strong>Adresse:</strong> ${line1 || "-"}, ${line2 || "-"}</p>
+    ${openingHoursText ? `<p><strong>Oeffnungszeiten:</strong> ${openingHoursText}</p>` : ""}
     <p><strong>Bahnarten:</strong> ${(venue.classification?.course_types || []).join(", ") || "-"}</p>
     <p><strong>Rating:</strong> ${rating}</p>
     ${progressText ? `<p><strong>Entdeckungsfortschritt:</strong> ${progressText}</p>` : ""}
@@ -2325,6 +2338,7 @@ function renderList() {
     listEl.appendChild(buildVenueListItem(item, { showTypes: true }));
 
     const poiHint = nearbyPoiHint(item);
+    const openingHoursText = getOpeningHoursText(item);
     const pin = L.circleMarker([item.lat, item.lng], {
       radius: 5,
       weight: 1,
@@ -2332,11 +2346,14 @@ function renderList() {
       fillColor: item.accepts_minigolf_card ? "#f3b542" : "#0b7c59",
       fillOpacity: 0.86,
     }).bindPopup(
-      `<strong>${item.name}</strong><br/>${renderVenueId(item.id)}<br/>${renderCoordinateSource(item)}<br/>${item.postcode || ""} ${item.place || ""}${
+      `<strong>${item.name}</strong><br/>${renderCoordinateSource(item)}<br/>${item.postcode || ""} ${item.place || ""}${
+        openingHoursText ? `<br/><strong>Oeffnungszeiten:</strong> ${openingHoursText}` : ""
+      }${
         item._isNewNearby ? `<br/><span class="new-nearby-badge">Neu in deiner Naehe</span>` : ""
       }${
         poiHint ? `<br/><span class="poi-note">${poiHint}</span>` : ""
       }<br/><a href="${buildRouteUrl(item)}" target="_blank" rel="noreferrer">Route starten</a>`,
+      { autoClose: false, closeOnClick: false, keepInView: true },
     );
     pin.addTo(markerLayer);
   }
