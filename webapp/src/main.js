@@ -1952,10 +1952,6 @@ function initMap(bounds, savedMapView = null) {
     updateMapPointLayers();
     updateReferenceModeButtons();
     updateMapMetaText();
-    const popupOpen = Boolean(map?._popup && map.hasLayer(map._popup));
-    if (popupOpen && activeTab === "map") {
-      return;
-    }
     renderList();
   });
 
@@ -2259,6 +2255,7 @@ function renderList() {
 
   if (currentView === "nearby") {
     listEl.innerHTML = "";
+    markerLayer.clearLayers();
     if (!reference) {
       if (aroundMeMetaEl) {
         aroundMeMetaEl.textContent = "Keine Referenz aktiv. Tippe auf Standort oder waehle Auto/Standort/Karte.";
@@ -2308,6 +2305,26 @@ function renderList() {
 
     for (const item of enriched) {
       listEl.appendChild(buildVenueListItem(item, { showRating: true }));
+
+      const poiHint = nearbyPoiHint(item);
+      const openingHoursText = getOpeningHoursText(item);
+      const pin = L.circleMarker([item.lat, item.lng], {
+        radius: 5,
+        weight: 1,
+        color: "#074c37",
+        fillColor: item.accepts_minigolf_card ? "#f3b542" : "#0b7c59",
+        fillOpacity: 0.86,
+      }).bindPopup(
+        `<strong>${item.name}</strong><br/>${renderCoordinateSource(item)}<br/>${item.postcode || ""} ${item.place || ""}${
+          openingHoursText ? `<br/><strong>Oeffnungszeiten:</strong> ${openingHoursText}` : ""
+        }${
+          item._isNewNearby ? `<br/><span class="new-nearby-badge">Neu in deiner Naehe</span>` : ""
+        }${
+          poiHint ? `<br/><span class="poi-note">${poiHint}</span>` : ""
+        }<br/><a href="${buildRouteUrl(item)}" target="_blank" rel="noreferrer">Route starten</a>`,
+        { autoClose: false, closeOnClick: false, keepInView: true },
+      );
+      pin.addTo(markerLayer);
     }
     return;
   }
