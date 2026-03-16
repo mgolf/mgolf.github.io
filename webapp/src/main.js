@@ -644,8 +644,10 @@ function getActiveReferencePoint() {
     return mapCenterLatLng ? { ...mapCenterLatLng, source: "map" } : null;
   }
   if (refPointBtn && customPointLatLng) return { ...customPointLatLng, source: "point" };
-  if (userLatLng) return { ...userLatLng, source: "location" };
+  // In auto mode, map center can be the primary reference when follow-map is enabled.
   if (followMapCenter && mapCenterLatLng) return { ...mapCenterLatLng, source: "map" };
+  if (userLatLng) return { ...userLatLng, source: "location" };
+  if (mapCenterLatLng) return { ...mapCenterLatLng, source: "map" };
   return null;
 }
 
