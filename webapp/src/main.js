@@ -2221,7 +2221,9 @@ function renderList() {
   if (currentView === "nearby") {
     listEl.innerHTML = "";
     if (!reference) {
-      if (aroundMeMetaEl) aroundMeMetaEl.textContent = "Aktiviere Standort oder nutze Kartenmitte/Punkt fuer die Liste in deiner Naehe.";
+      if (aroundMeMetaEl) {
+        aroundMeMetaEl.textContent = "Keine Referenz aktiv. Tippe auf Standort oder waehle Auto/Standort/Karte.";
+      }
       return;
     }
     const ranked = rankNearby(applyTopFilters(markers), reference);
@@ -2257,11 +2259,12 @@ function renderList() {
     const visibleNewCount = enriched.filter((item) => item._isNewNearby).length;
 
     if (aroundMeMetaEl) {
-      const base =
+      const sourceLabel = describeReferenceSource(reference.source);
+      const radiusLabel =
         effectiveRadiusKm > nearbyRadiusKm
-          ? `Radius dynamisch erweitert auf ${effectiveRadiusKm.toFixed(1)} km, damit mindestens ${Math.min(MIN_AROUND_ME_COUNT, ranked.length)} Orte verfuegbar sind.`
-          : `Zeige Orte innerhalb ${effectiveRadiusKm.toFixed(1)} km um ${describeReferenceSource(reference.source)}.`;
-      aroundMeMetaEl.textContent = `${base} Treffer: ${enriched.length} • gespeichert: ${visibleSavedCount} • besucht: ${visibleVisitedCount} • neu: ${visibleNewCount}.`;
+          ? `${nearbyRadiusKm.toFixed(0)} km (auto bis ${effectiveRadiusKm.toFixed(1)} km erweitert)`
+          : `${effectiveRadiusKm.toFixed(1)} km`;
+      aroundMeMetaEl.textContent = `Bezug: ${sourceLabel} • Radius: ${radiusLabel} • Orte: ${enriched.length} (neu ${visibleNewCount}, gespeichert ${visibleSavedCount}, besucht ${visibleVisitedCount})`;
     }
 
     for (const item of enriched) {
@@ -2376,9 +2379,11 @@ function ensureLocationWatch() {
   );
 }
 
-function requestLocation({ shouldFly = true } = {}) {
+function requestLocation({ shouldFly = true, showSuccessBanner = true, showErrorBanner = true } = {}) {
   if (!navigator.geolocation) {
-    showSmartBannerMessage("Dieses Geraet unterstuetzt keine Standortabfrage.", "offline", 4200, 2);
+    if (showErrorBanner) {
+      showSmartBannerMessage("Dieses Geraet unterstuetzt keine Standortabfrage.", "offline", 4200, 2);
+    }
     return;
   }
 
@@ -2386,16 +2391,41 @@ function requestLocation({ shouldFly = true } = {}) {
     (pos) => {
       setUserLocation(pos.coords.latitude, pos.coords.longitude, shouldFly);
       ensureLocationWatch();
-      showSmartBannerMessage("Standort aktualisiert.", "online", 2200, 1);
+      if (showSuccessBanner) {
+        showSmartBannerMessage("Standort aktualisiert.", "online", 2200, 1);
+      }
     },
     (error) => {
-      showSmartBannerMessage(geolocationErrorMessage(error), "offline", 4600, 2);
+      if (showErrorBanner) {
+        showSmartBannerMessage(geolocationErrorMessage(error), "offline", 4600, 2);
+      }
       if (lastKnownLatLng && Number(error?.code) !== 1) {
         setUserLocation(lastKnownLatLng.lat, lastKnownLatLng.lng, shouldFly);
       }
     },
     { enableHighAccuracy: true, timeout: 15000, maximumAge: 0 },
   );
+}
+
+async function maybeRefreshLocationSilently() {
+  if (!navigator.geolocation) return;
+
+  let shouldRequest = true;
+  try {
+    if (navigator.permissions?.query) {
+      const result = await navigator.permissions.query({ name: "geolocation" });
+      shouldRequest = result.state === "granted";
+    }
+  } catch {
+    // If permission state cannot be queried, keep default behavior.
+  }
+
+  if (!shouldRequest) {
+    updateLocateButtonState().catch(() => {});
+    return;
+  }
+
+  requestLocation({ shouldFly: false, showSuccessBanner: false, showErrorBanner: false });
 }
 
 function hookEvents() {
@@ -2663,7 +2693,7 @@ async function boot() {
 
   scheduleSmartBannerTimeout();
 
-  requestLocation({ shouldFly: false });
+  maybeRefreshLocationSilently().catch(() => {});
 
   scheduleBackgroundWarmup();
   window.setInterval(() => renderOfflineStatus(), 10000);
